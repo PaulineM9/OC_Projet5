@@ -42,7 +42,7 @@
 	<style>
 		a {
 			text-decoration: none;
-			color: #ffffff;
+			color: rgb(245, 218, 218);
 		}
 		a:hover {
 
@@ -58,8 +58,8 @@
 			<a class="logo-super" href="index.php?action=home"><img alt="super-logo" src="public/images/logo_super!.jpg"></a>
 		</div>
 		<div class="navigation_menu_principal"><!-- ajouter les liens actions -->
-			<a href=""><h2>Accueil</h2></a>
-			<a href=""><h2>Services</h2></a>
+			<a href="index.php?action=home"><h2>Accueil</h2></a>
+			<a href="index.php?action=services"><h2>Services</h2></a>
 			<a href=""><h2>A Propos</h2></a>
 			<a href=""><h2>Portfolio</h2></a>
 			<a href=""><h2>Blog</h2></a>

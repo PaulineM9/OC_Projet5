@@ -280,7 +280,6 @@ footer {
     font-size: 1.6em;
     height: 200px;
     margin-bottom: 90px;
-
 }
 .about_container h2 {
     margin: 0 auto;
@@ -307,4 +306,76 @@ footer {
 .about_page_link:hover {
     color: white!important;
 }
+
+/*----- SERVICES PAGE -----*/
+.title_services {
+    display: flex;
+}
+.title_services h1 {
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+}
+.all_services_container {
+    display: flex;
+    flex-direction: column;
+}
+.web_site_creation_titles,
+.natural_ref_titles,
+.web_redaction_titles,
+.solution_dev_titles {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    color: black;
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 2%;
+    padding: 20px;
+    padding-top: 25px!important;
+}
+.web_site_creation_container h2,
+.natural_ref_container h2,
+.web_redaction_container h2,
+.solution_dev_container h2 {
+    font-size: 1.5em;
+    font-weight: 700;  
+}
+.web_site_creation_container h3,
+.natural_ref_container h3,
+.web_redaction_container h3,
+.solution_dev_container h3 {
+    font-size: 1.2em;
+    font-weight: 700; 
+}
+.web_site_creation_text,
+.natural_ref_text,
+.web_redaction_text,
+.solution_dev_text {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    color: black;
+    width: 62%;
+    margin-left: 30%;
+    margin-bottom: 4%;
+    margin-top: -15px;
+    padding: 20px;
+    padding-top: 25px!important;
+}
+.web_site_creation_container p,
+.natural_ref_container p,
+.web_redaction_container p,
+.solution_dev_container p {
+    font-size: 1em;
+    font-weight: 400;  
+}
+
 

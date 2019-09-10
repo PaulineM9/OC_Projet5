@@ -6,3 +6,11 @@ function home()
     $content = ob_get_clean();
     require("views/frontend/template.php");
 }
+
+function services()
+{   
+    ob_start();
+    include('views/frontend/servicesView.php');
+    $content = ob_get_clean();
+    require("views/frontend/template.php");
+}
