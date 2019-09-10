@@ -1,0 +1,310 @@
+/* PROJET 5 OC: PROJET PERSONNEL */
+/* Reset CSS */ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+a:focus
+{
+outline:0;
+} 
+strong {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+
+/*----- TEMPLATE FRONT PAGE ------*/
+
+body {
+    background-image: url("../public/images/white-painted-concrete-wall-888895_1920.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    background-color:rgba(112, 112, 112, 0.6);
+    height: 90px;
+    /* position: fixed; */
+    z-index: 1;
+    width: 100%;
+}
+.logo {
+    width: 25%;
+}
+.logo img {
+    width: 90%;
+    border-radius: 2px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.navigation_menu_principal {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 25%; 
+    font-family: 'Major Mono Display', monospace;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(112, 112, 112, 0.6);
+    height: 150px;
+    width: 100%;
+}
+.infos_container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px; 
+}
+.contact_infos,
+.ei_infos {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+.contact_infos h4,
+.ei_infos h4 {
+    font-family: 'Major Mono Display', cursive;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+.contact_infos p,
+.ei_infos p {
+    font-family: 'Tajawal', display;
+    font-size: 1em;
+    padding-bottom: 5px;
+    color: white; 
+}
+.footer_logo {
+    display: flex;
+    width: 33%;
+}
+.footer_logo img {
+    width: 40%;
+    margin-left: 10%;
+}
+.copyright_container {
+    display: flex;
+    margin: 0 auto;
+    font-family: 'tajawal', display;
+    font-weight: 500;
+    font-size: 1em;
+    color: white;
+}
+
+/*----- INDEX-VIEW PAGE -----*/
+.intro {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 90%;
+    height: 100%; 
+    margin: 0 auto;
+    margin-top: 100px;  
+
+}
+.intro_container {
+    display: flex;
+    flex-direction: column;
+    margin: 3% auto;
+    background-image: url("../public/images/notebook-2386034_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo_intro_container {
+    width: 50%;
+    border-radius: 2px;
+}
+.intro_container_text {
+    margin-left: 65%;
+    margin-top: 8%;
+}
+.intro_container_text h3 {
+    font-family: 'Tajawal', display;
+    font-weight: 700;
+    font-size: 1.6em;
+   
+}
+.services_container {
+    display: flex;
+    flex-direction: row;
+    margin: 90px;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 60%;
+    padding: 20px;
+}
+.stars {
+    display: flex;
+    flex-direction: column;
+    width: 4%;
+}
+.stars img {
+    padding-bottom: 108%;
+    padding-top: 135%;
+}
+.services_presentation {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    font-family: 'tajawal', display;
+    padding-top: 5px;
+}
+.services_presentation h2 {
+    font-family: 'tajawal', display;
+    font-weight: 700;
+    font-size: 1.6em;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.services_presentation h3 {
+    font-family: 'tajawal', display;
+    font-weight: 700;
+}
+.services_presentation p {
+    font-family: 'tajawal', display;
+    font-weight: 300;
+    padding: 10px;
+}
+.services_page_link {
+    background-color: rgba(245, 218, 218, 0.8);
+    border-radius: 35px;
+    width: 155px;
+    height: 55px;
+    padding-top: 19px;
+    padding-left: 26px;
+    font-family: 'Tajawal', display;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-left: 77%;
+    color:black!important;
+    cursor: pointer;
+    display: inline-block;
+}
+.services_page_link:hover {
+    color: white!important;
+}
+.portfolio_container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px; 
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'tajawal', display;
+    font-weight: 700;
+    font-size: 1.6em;
+    height: 200px;
+    margin-bottom: 90px;
+}
+.portfolio_container h2 {
+    margin: 0 auto;
+}
+.portfolio_page_link {
+    background-color: rgba(245, 218, 218, 0.8);
+    border-radius: 35px;
+    width: 215px;
+    height: 55px;
+    padding-top: 19px;
+    padding-left: 26px;
+    font-size: 0.8em;
+    margin-left: 70%;
+    margin-top: 10%;
+    color:black!important;
+    cursor: pointer;
+    display: inline-block;
+}
+.portfolio_page_link:hover {
+    color: white!important;
+}
+.about_container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px; 
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'tajawal', display;
+    font-weight: 700;
+    font-size: 1.6em;
+    height: 200px;
+    margin-bottom: 90px;
+
+}
+.about_container h2 {
+    margin: 0 auto;
+}
+.about_container p {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 0.8em;
+    padding-top: 20px;
+}
+.about_page_link {
+    background-color: rgba(245, 218, 218, 0.8);
+    border-radius: 35px;
+    width: 155px;
+    height: 55px;
+    padding-top: 19px;
+    padding-left: 26px;
+    font-size: 0.8em;
+    margin-left: 82%;
+    color:black!important;
+    cursor: pointer;
+    display: inline-block;
+}
+.about_page_link:hover {
+    color: white!important;
+}
+
