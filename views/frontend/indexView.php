@@ -14,10 +14,10 @@
 
 <section class="services_container">
     <div class="stars">
-        <img alt="stars" src="public/images/icons8-étoile-50.png" width="20px">
-        <img alt="stars" src="public/images/icons8-étoile-50.png" width="20px">
-        <img alt="stars" src="public/images/icons8-étoile-50.png" width="20px">
-        <img alt="stars" src="public/images/icons8-étoile-50.png" width="20px">
+        <img alt="stars" src="public/images/etoile_pleine_bk.png" width="20px">
+        <img alt="stars" src="public/images/etoile_pleine_bk.png" width="20px">
+        <img alt="stars" src="public/images/etoile_pleine_bk.png" width="20px">
+        <img alt="stars" src="public/images/etoile_pleine_bk.png" width="20px">
     </div>
 
     <div class="services_presentation">

@@ -60,10 +60,10 @@
 		<div class="navigation_menu_principal"><!-- ajouter les liens actions -->
 			<a href="index.php?action=home"><h2>Accueil</h2></a>
 			<a href="index.php?action=services"><h2>Services</h2></a>
-			<a href=""><h2>A Propos</h2></a>
-			<a href=""><h2>Portfolio</h2></a>
-			<a href=""><h2>Blog</h2></a>
-			<a href=""><h2>Contact</h2></a>
+			<a href="index.php?action=about"><h2>A Propos</h2></a>
+			<a href="index.php?action=portfolio"><h2>Portfolio</h2></a>
+			<a href="index.php?action=blog"><h2>Blog</h2></a>
+			<a href="index.php?action=contact"><h2>Contact</h2></a>
 		</div>
     </header>
 
