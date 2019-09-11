@@ -12,6 +12,16 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'about') {
         about();
     }
+    // if ($_GET['action'] == 'portfolio') {
+    //     about();
+    // }
+    // if ($_GET['action'] == 'blog') {
+    //     about();
+    // }
+    if ($_GET['action'] == 'contact') {
+        contact();
+    }
+
 } else {
     home();
 }

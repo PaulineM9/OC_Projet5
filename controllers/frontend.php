@@ -22,3 +22,27 @@ function about()
     $content = ob_get_clean();
     require("views/frontend/template.php");
 }
+
+// function portfolio()
+// {   
+//     ob_start();
+//     include('views/frontend/portfolioView.php');
+//     $content = ob_get_clean();
+//     require("views/frontend/template.php");
+// }
+
+// function blog()
+// {   
+//     ob_start();
+//     include('views/frontend/blogView.php');
+//     $content = ob_get_clean();
+//     require("views/frontend/template.php");
+// }
+
+function contact()
+{   
+    ob_start();
+    include('views/frontend/contactView.php');
+    $content = ob_get_clean();
+    require("views/frontend/template.php");
+}
