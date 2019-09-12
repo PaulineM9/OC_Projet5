@@ -112,10 +112,11 @@ footer {
 .ei_infos {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 25%;
 }
 .contact_infos h4,
-.ei_infos h4 {
+.ei_infos h4,
+.suivez-moi h4 {
     font-family: 'Major Mono Display', cursive;
     font-size: 1.2em;
     padding-bottom: 10px;
@@ -129,7 +130,7 @@ footer {
 }
 .footer_logo {
     display: flex;
-    width: 33%;
+    width: 25%;
 }
 .footer_logo img {
     width: 40%;
@@ -506,4 +507,79 @@ footer {
     margin: 0 auto; 
 }
 
+/*----- CONTACTVIEW PAGE -----*/
+.title_contact {
+    display: flex;
+}
+.title_contact h1 {
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+}
+.contact_container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+.form_container {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    color: black;
+    width: 30%; 
+    padding: 20px;
+    margin: 0 auto;
+}
+.contact_infos_container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    color: black;
+    width: 30%; 
+    padding: 20px;
+    margin: 0 auto;
+}
+.form {
+    font-family: 'tajawal', display;
+    font-size: 1em;
+    margin-bottom: 4px;
+    border: 2px solid #f5dada;
+    height: 20px;
+    width: 98%;
+}
+.content {
+    height: 110px!important;
+}
+.envoyer {
+    margin-top: 10px;
+    width: 30%;
+    margin: 0 auto;
+}
+.contact_infos_container h4 {
+    font-family: 'Major Mono Display', cursive;
+    color: black;
+    margin-bottom: 20px;
+}
+.contact_infos_container p {
+    margin-left: 5%;
+}
+.facebook_icon,
+.instagram_icon {
+    color: black!important;
+}
+.mail_number,
+.entreprise_infos,
+.reseaux_sociaux {
+    margin-bottom: 20px;
+}
 

@@ -42,12 +42,12 @@
 	<style>
 		a {
 			text-decoration: none;
-			color: rgb(245, 218, 218);
+			color: #000000;
 		}
 		a:hover {
 
 			text-decoration: none;
-			color: #000000;
+			color: #f5dada;
 		}
 	</style>
 </head>
@@ -85,6 +85,11 @@
 			<h4>INFOS</h4>
 			<p>Entreprise Individuelle Pauline MARTIN</p>
 			<p>RCS 752 722 744 000 22</p>
+		</div>
+		<div class="suivez-moi">
+			<h4>SUIVEZ-MOI</h4>
+			<a href=""><img class="facebook_icon" alt="icone-facebook" src="public/images/icons8-facebook-50.png" width="30px"></a>
+			<a href=""><img class="instagram_icon" alt="icone-instagram" src="public/images/icons8-instagram-50.png" width="30px"></a>
 		</div>
 	</div>
 	<div class="copyright_container">
