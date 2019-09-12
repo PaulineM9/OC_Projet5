@@ -21,23 +21,23 @@
         <div class="lasts_portraits">
             <h5>Le portrait du mois</h5>
             <p></p><!-- affiche la photo, le titre du dernier portrait -->
-            <a class="lire_plus" href="">Lire plus...</a>
+            <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
         </div>
         <div class="lasts_articles">
             <h5>Dernier article</h5>
             <p></p><!-- affiche la photo, le titre du dernier article -->
-            <a class="lire_plus" href="">Lire plus...</a>
+            <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
         </div>
     </section>
 
     <aside class="archives_container">
         <div class="archives_portraits">
             <h5>Archives des portraits</h5>
-            <a>- </a><!-- affiche le titre des 5 derniers portraits -->
+            <a href="">- </a><!-- affiche le titre des 5 derniers portraits --><!-- ajouter le lien actif -->
         </div>
         <div class="archives_articles">
             <h5>Archives des articles</h5>
-            <a>- </a><!-- affiche le titre des 5 derniers articles -->
+            <a href="">- </a><!-- affiche le titre des 5 derniers articles --><!-- ajouter le lien actif -->
         </div>
     </aside>
 </div>

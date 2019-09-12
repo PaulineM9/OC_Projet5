@@ -14,7 +14,7 @@
     </section>
     <section class="create_comments_portrait">
         <h3>Postez votre commentaire</h3>
-        <h4>Faites nous part de vos expériences, de vos remarques ou posez-moi vos questions en lien avec cet portrait</h4>
+        <h4>Faites nous part de vos expériences, de vos remarques ou posez-moi vos questions en lien avec ce portrait</h4>
         <!-- permet de poster un commentaire -->
     </section>
 </div>

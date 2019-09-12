@@ -608,3 +608,25 @@ footer {
     margin: 0 auto;
     margin-bottom: 20px; 
 }
+
+/*----- INSCRIPTION PAGE -----*/
+header {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 43%;
+}
+header img {
+    width: 200px;
+}
+.login_form {
+    display: flex;
+    margin-top: 200px!important;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    width: 260px; 
+    padding: 20px;
+    margin: 0 auto;
+}
+.login input {
+    width: 210px;
+}
