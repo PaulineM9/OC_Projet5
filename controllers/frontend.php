@@ -23,21 +23,21 @@ function about()
     require("views/frontend/template.php");
 }
 
-// function portfolio()
-// {   
-//     ob_start();
-//     include('views/frontend/portfolioView.php');
-//     $content = ob_get_clean();
-//     require("views/frontend/template.php");
-// }
+function portfolio()
+{   
+    ob_start();
+    include('views/frontend/portfolioView.php');
+    $content = ob_get_clean();
+    require("views/frontend/template.php");
+}
 
-// function blog()
-// {   
-//     ob_start();
-//     include('views/frontend/blogView.php');
-//     $content = ob_get_clean();
-//     require("views/frontend/template.php");
-// }
+function blog()
+{   
+    ob_start();
+    include('views/frontend/indexBlogView.php');
+    $content = ob_get_clean();
+    require("views/frontend/blogTemplate.php");
+}
 
 function contact()
 {   

@@ -53,7 +53,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="front_template_header">
 		<div class="logo">
 			<a class="logo-super" href="index.php?action=home"><img alt="super-logo" src="public/images/logo_super!.jpg"></a>
 		</div>

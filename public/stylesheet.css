@@ -59,7 +59,7 @@ em {
 	font-style: italic;
 }
 
-/*----- TEMPLATE FRONT PAGE ------*/
+/*----- FRONT TEMPLATE PAGE ------*/
 
 body {
     background-image: url("../public/images/white-painted-concrete-wall-888895_1920.jpg");
@@ -69,7 +69,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-header {
+.front_template_header {
     display: flex;
     flex-direction: row;
     background-color:rgba(112, 112, 112, 0.6);
@@ -145,7 +145,7 @@ footer {
     color: white;
 }
 
-/*----- INDEX-VIEW PAGE -----*/
+/*----- INDEXVIEW PAGE -----*/
 .intro {
     display: flex;
     background-color: rgba(255, 255, 255, 0.6);
@@ -176,7 +176,6 @@ footer {
     font-family: 'Tajawal', display;
     font-weight: 700;
     font-size: 1.6em;
-   
 }
 .services_container {
     display: flex;
@@ -203,7 +202,7 @@ footer {
     padding-top: 5px;
 }
 .services_presentation h2 {
-    font-family: 'tajawal', display;
+    font-family: ''tajawal', display';
     font-weight: 700;
     font-size: 1.6em;
     margin: 0 auto;
@@ -583,3 +582,29 @@ footer {
     margin-bottom: 20px;
 }
 
+/*----- PORTFOLIOVIEW PAGE -----*/
+.title_portfolio {
+    display: flex;
+}
+.title_portfolio h1 {
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+}
+.portfolio_projects_container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Tajawal', display;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px; 
+}
