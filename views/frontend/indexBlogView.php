@@ -20,12 +20,12 @@
     <section class="lasts_contents">
         <div class="lasts_portraits">
             <h5>Le portrait du mois</h5>
-            <p></p><!-- affiche la photo, le titre et le sous-titre du dernier portrait -->
+            <p></p><!-- affiche la photo, le titre du dernier portrait -->
             <a class="lire_plus" href="">Lire plus...</a>
         </div>
         <div class="lasts_articles">
             <h5>Dernier article</h5>
-            <p></p><!-- affiche la photo, le titre et le sous-titre du dernier article -->
+            <p></p><!-- affiche la photo, le titre du dernier article -->
             <a class="lire_plus" href="">Lire plus...</a>
         </div>
     </section>
