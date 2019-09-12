@@ -8,11 +8,11 @@
 </section>
 
 <section class="navigation">
-    <a href="index.php?action=articles">
-        <h3>Articles</h3>
-    </a>
     <a href="index.php?action=portraits">
         <h3>Portraits</h3>
+    </a>
+    <a href="index.php?action=articles">
+        <h3>Articles</h3>
     </a>
 </section>
 

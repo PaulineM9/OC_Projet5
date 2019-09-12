@@ -31,6 +31,14 @@ function portfolio()
     require("views/frontend/template.php");
 }
 
+function contact()
+{   
+    ob_start();
+    include('views/frontend/contactView.php');
+    $content = ob_get_clean();
+    require("views/frontend/template.php");
+}
+
 function blog()
 {   
     ob_start();
@@ -38,11 +46,10 @@ function blog()
     $content = ob_get_clean();
     require("views/frontend/blogTemplate.php");
 }
-
-function contact()
+function blogPortraits()
 {   
     ob_start();
-    include('views/frontend/contactView.php');
+    include('views/frontend/portraitsView.php');
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/blogTemplate.php");
 }

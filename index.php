@@ -15,11 +15,14 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'portfolio') {
         portfolio();
     }
+    if ($_GET['action'] == 'contact') {
+        contact();
+    }
     if ($_GET['action'] == 'blog') {
         blog();
     }
-    if ($_GET['action'] == 'contact') {
-        contact();
+    if ($_GET['action'] == 'portraits') {
+        blogPortraits();
     }
 
 } else {

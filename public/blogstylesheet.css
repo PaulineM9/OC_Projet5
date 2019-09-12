@@ -122,7 +122,7 @@ em {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .content_container h5 {
     font-family: 'Tajawal', display;
