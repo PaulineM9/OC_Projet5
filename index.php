@@ -24,7 +24,9 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'portraits') {
         blogPortraits();
     }
-
+    if ($_GET['action'] == 'admin') {
+        admin();
+    }
 } else {
     home();
 }

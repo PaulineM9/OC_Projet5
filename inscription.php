@@ -52,7 +52,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="login_header">
         <a href="index.php?action=home"><img alt="logo-super" src="public/images/logo_super!.jpg"></a>
     </header>
 

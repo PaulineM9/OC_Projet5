@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="public/stylesheet.css" />
+    <link rel="stylesheet" href="public/frontstylesheet.css" />
     <link rel="stylesheet" href="public/blogstylesheet.css" />
     <!-- <link rel="icon" type="image/png" href=""/> -->
     <title><?= $title ?></title>

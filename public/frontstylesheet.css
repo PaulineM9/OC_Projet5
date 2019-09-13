@@ -610,12 +610,12 @@ footer {
 }
 
 /*----- INSCRIPTION PAGE -----*/
-header {
+.login_header {
     display: flex;
     margin-top: 50px;
     margin-left: 43%;
 }
-header img {
+.login_header img {
     width: 200px;
 }
 .login_form {

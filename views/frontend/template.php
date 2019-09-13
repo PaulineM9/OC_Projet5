@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="public/stylesheet.css" />
+	<link rel="stylesheet" href="public/frontstylesheet.css" />
 	<!-- <link rel="icon" type="image/png" href=""/> -->
 	<title><?= $title ?></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
