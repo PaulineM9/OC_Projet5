@@ -61,6 +61,9 @@ em {
 }
 
 /*----- BLOGTEMPLATE PAGE -----*/
+body {
+    background-image: url("../public/images/texture-mur-multico.jpeg")!important;
+}
 .blog_header {
     /* position: fixed;
     z-index: 99; */

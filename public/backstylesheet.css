@@ -62,13 +62,63 @@ em {
 
 /*----- TEMPLATE PAGE -----*/
 body {
-    background-image: url("../public/images/texture-1093313_1920.jpg");
+    background-image: url("../public/images/texture_aquarelle_bleue.jpeg");
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-p {
-    color: red;
+.header_back {
+	background-color: rgba(255, 255, 255, 0.5);
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 90px;
+	justify-content: center;
+	align-items: center;
 }
+.header_back h1 {
+	font-family: 'Major Mono Display', cursive;
+	font-size: 2em; 
+}
+.admin_welcome {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	margin-top: 3%;
+	font-family: 'Tajawal', display;
+	font-size: 1.2em;
+}
+.admin_navigation {
+	display: flex; 
+	flex-direction: row;
+}
+.nav_icons,
+.nav_titles {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.nav_icons {
+	margin-top: 40px;	
+}
+.icons img {
+	background-color:rgba(255, 255, 255, 0.7);
+	border-radius: 80px;
+	padding: 3px;
+	width: 50px;
+	margin-left: 85%;
+	margin-bottom: 10px;
+}
+.nav_titles {
+	font-family: 'Tajawal', display;
+	font-size: 1.2em;
+	font-weight: 500;
+	margin-top: 60px;
+}
+.nav_titles p {
+	margin-bottom: 45px;
+}
+

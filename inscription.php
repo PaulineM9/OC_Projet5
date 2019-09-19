@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="public/stylesheet.css" />
+	<link rel="stylesheet" href="public/frontstylesheet.css" />
 	<!-- <link rel="icon" type="image/png" href=""/> -->
 	<title>SUPER! Création de sites web et blog</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -52,17 +52,17 @@
 </head>
 
 <body>
-    <header class="login_header">
+    <header class="signin_header">
         <a href="index.php?action=home"><img alt="logo-super" src="public/images/logo_super!.jpg"></a>
     </header>
 
-    <section class="login_form">
-        <form action="index.php?action=login" method="post" class="login">
+    <section class="signin_form">
+        <form action="index.php?action=signin" method="post" class="signin">
             <input class="pseudo" type="text" name="pseudo" placeholder="Pseudo" id="pseudo"><br/>
             <input class="email" type="email" name="email" placeholder="Email" id="email"><br/>
             <input class="password" type="password" name="password" placeholder="Mot de passe" id="password"><br/>
             <input class="check_password" type="password" name="check_password" placeholder="Vérification du mot de passe" id="check_password"><br/>
-            <input class="login" type="submit" name="login" placeholder="Inscription" id="login"><br/>
+            <input class="signin" type="submit" name="signin" placeholder="Inscription" id="signin"><br/>
         </form>
     </section>
 </body>

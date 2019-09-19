@@ -52,9 +52,8 @@
 </head>
 
 <body>
-    <header class="back_template_header">
-		
-    </header>
+    
+       <?= $content ?>
+    
 
-    <?= $content ?>
 </body>

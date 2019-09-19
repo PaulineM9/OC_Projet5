@@ -60,9 +60,8 @@ em {
 }
 
 /*----- FRONT TEMPLATE PAGE ------*/
-
 body {
-    background-image: url("../public/images/white-painted-concrete-wall-888895_1920.jpg");
+    background-image: url("../public/images/texture-tache-noire.jpeg");
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -610,15 +609,15 @@ footer {
 }
 
 /*----- INSCRIPTION PAGE -----*/
-.login_header {
+.signin_header {
     display: flex;
     margin-top: 50px;
     margin-left: 43%;
 }
-.login_header img {
+.signin_header img {
     width: 200px;
 }
-.login_form {
+.signin_form {
     display: flex;
     margin-top: 200px!important;
     background-color: rgba(255, 255, 255, 0.6);
@@ -627,6 +626,6 @@ footer {
     padding: 20px;
     margin: 0 auto;
 }
-.login input {
+.signin input {
     width: 210px;
 }
