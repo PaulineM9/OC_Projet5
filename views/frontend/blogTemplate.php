@@ -50,7 +50,7 @@
         a:hover {
 
             text-decoration: none;
-            color: #F5dada;
+            color: #128f8c;
         }
     </style>
 </head>
@@ -64,7 +64,7 @@
             <h2>Le Blog</h2>
         </a>
         <a href="index.php?action=home">
-            <h3>Le Site -></h3>
+            <h3>SUPER! Le Site</h3>
         </a>
     </header>
 

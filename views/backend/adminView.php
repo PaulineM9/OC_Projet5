@@ -21,12 +21,12 @@
         <a class="arrow icons" href="index.php?home"><img alt="icon_arrow" src="public/images/retour-fleche.png"></a>
     </div>
     <div class="nav_titles">
-        <p>Articles</p>
-        <p>Portraits</p>
-        <p>Projets</p>
-        <p>Commentaires</p>
-        <p>Messagerie</p>
-        <p>Gérer mon profil</p>
-        <p>Retour au site</p>
+        <a class="add_article icons" href="index.php?admin_article"><p>Articles</p></a>
+        <a class="add_portrait icons" href="index.php?admin_portrait"><p>Portraits</p></a>
+        <a class="add_projet icons" href="index.php?admin_projet"><p>Projets</p></a>
+        <a class="manage_comments icons" href="index.php?admin_comments"><p>Commentaires</p></a>
+        <a class="manage_messages icons" href="index.php?admin_messages"><p>Messagerie</p></a>
+        <a class="profil icons" href="index.php?admin_profil"><p>Gérer mon profil</p></a>
+        <a class="arrow icons" href="index.php?home"><p>Retour au site</p></a>
     </div>
 </nav>

@@ -48,7 +48,7 @@
 		a:hover {
 
 			text-decoration: none;
-			color: #f5dada;
+			color: #128f8c;
 		}
 	</style>
 </head>
@@ -89,13 +89,13 @@
 		</div>
 		<div class="suivez-moi">
 			<h4>SUIVEZ-MOI</h4>
-			<a href=""><img class="facebook_icon" alt="icone-facebook" src="public/images/icons8-facebook-50.png" width="30px"></a>
-			<a href=""><img class="instagram_icon" alt="icone-instagram" src="public/images/icons8-instagram-50.png" width="30px"></a>
-			<a href=""><img class="linkedin_icon" alt="icone-linkedin" src="public/images/linkedin_pk.png" width="30px"></a>
-			<a href=""><img class="github_icon" alt="icone-github" src="public/images/github_pk.png" width="30px"></a>
+			<a target="new" href=""><img class="facebook_icon" alt="icone-facebook" src="public/images/icons8-facebook-50.png" width="30px"></a>
+			<a target="new" href=""><img class="instagram_icon" alt="icone-instagram" src="public/images/icons8-instagram-50.png" width="30px"></a>
+			<a target="new" href=""><img class="linkedin_icon" alt="icone-linkedin" src="public/images/linkedin_pk.png" width="30px"></a>
+			<a target="new" href=""><img class="github_icon" alt="icone-github" src="public/images/github_pk.png" width="30px"></a>
 		</div>
 	</div>
 	<div class="copyright_container">
-		<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a href="">Mentions Légales</a> / <a href="index.php?action=admin">Connexion</a></p>
+		<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="new" href="">Mentions Légales</a> / <a target="new" href="index.php?action=admin">Connexion</a></p>
 	</div>
 </footer>

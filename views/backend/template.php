@@ -46,7 +46,7 @@
 		}
 		a:hover {
 			text-decoration: none;
-			color: #f5dada;
+			color: #128f8c;
 		}
 	</style>
 </head>

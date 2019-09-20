@@ -95,12 +95,18 @@ body {
     margin-left: 25%; 
     font-family: 'Major Mono Display', monospace;
 }
+.navigation_menu_principal a:hover {
+    color: #f5dada!important;
+}
 footer {
     display: flex;
     flex-direction: column;
     background-color:rgba(112, 112, 112, 0.6);
     height: 150px;
     width: 100%;
+}
+footer a:hover {
+    color: #f5dada!important;
 }
 .infos_container {
     display: flex;
@@ -158,18 +164,22 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 3% auto;
-    background-image: url("../public/images/notebook-2386034_1280.jpg");
+    background-image: url("../public/images/business-2846221_1280.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .logo_intro_container {
-    width: 50%;
+    width: 30%;
     border-radius: 2px;
+    margin-left: 35%;
+    margin-top: 10px;
 }
 .intro_container_text {
-    margin-left: 65%;
-    margin-top: 8%;
+    margin-left: 71%;
+    margin-top: 14%;
+    color: white;
+    font-weight: 900;
 }
 .intro_container_text h3 {
     font-family: 'poiret one', cursive;
@@ -414,7 +424,7 @@ footer {
     font-family: 'poiret one', cursive;
     color: black;
     width: 35%; 
-    margin-left: 20%;
+    margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -466,6 +476,12 @@ footer {
 }
 .experience h2,
 .formation h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.experience h3,
+.formation h3 {
     font-weight: 700;
     margin-bottom: 10px;
     margin-top: 5px;
@@ -525,10 +541,18 @@ footer {
     display: flex;
     flex-direction: row;
 }
+.git a:hover,
+.linkedin a:hover {
+    color: #128f8c;
+} 
 .linkedin p,
 .git p {
     margin-left: 10px;
     margin-top: 10px;
+}
+.linkedin img,
+.git img {
+    margin-right: 10px;
 }
 
 /*----- CONTACTVIEW PAGE -----*/
