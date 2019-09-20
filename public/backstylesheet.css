@@ -135,7 +135,36 @@ body {
 	margin: 0 auto;
 	padding-top: 20px;
 }
-.icons {
-	margin-right: 10px;
+.icones_menu {
+	display: flex;
+	flex-direction: row;
+}
+.icones_menu {
+	background-color:rgba(255, 255, 255, 0.7);
+	border-radius: 80px;
+	padding: 5px;
+	width: 50px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.admin_article {
+	font-family: 'Poiret One', cursive;
+	width: 100%;
+	padding: 20px;
+}
+.admin_article h3,
+.manage_articles h3 {
+	font-size: 1.5em;
+	padding-bottom: 20px;
+}
+.article_title {
+	width: 50%;
+	margin-bottom: 10px;
+}
+.manage_articles {
+	display: flex;
+	font-family: 'Poiret One', cursive;
+	width: 100%;
+	padding: 20px;
 }
 
