@@ -109,7 +109,7 @@ body {
 .icons img {
 	background-color:rgba(255, 255, 255, 0.7);
 	border-radius: 80px;
-	padding: 3px;
+	padding: 5px;
 	width: 50px;
 	margin-left: 90%;
 	margin-bottom: 10px;
@@ -122,5 +122,20 @@ body {
 }
 .nav_titles p {
 	margin-bottom: 45px;
+}
+
+/*----- ARTICLEVIEW PAGE ADMIN ------*/
+.nav_icons_container {
+	display: flex;
+	flex-direction: row;
+}
+.icons_container {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.icons {
+	margin-right: 10px;
 }
 
