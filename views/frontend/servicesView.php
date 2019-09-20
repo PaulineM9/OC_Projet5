@@ -46,7 +46,7 @@
 </section>
 
 <section class="devis_button">
-    <a class="contact_page_link" href="index.php?action=contact">Devis -></a>
+    <a class="contact_page_link" href="index.php?action=contact">Devis</a>
 </section>
 
 

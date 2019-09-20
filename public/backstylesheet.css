@@ -69,6 +69,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*------ ADMINVIEW PAGE -----*/
 .header_back {
 	background-color: rgba(255, 255, 255, 0.5);
 	display: flex;
@@ -88,7 +90,7 @@ body {
 	width: 100%;
 	justify-content: center;
 	margin-top: 3%;
-	font-family: 'Tajawal', display;
+	font-family: 'poiret one', cursive;
 	font-size: 1.2em;
 }
 .admin_navigation {
@@ -109,11 +111,11 @@ body {
 	border-radius: 80px;
 	padding: 3px;
 	width: 50px;
-	margin-left: 85%;
+	margin-left: 90%;
 	margin-bottom: 10px;
 }
 .nav_titles {
-	font-family: 'Tajawal', display;
+	font-family: 'poiret one', cursive;
 	font-size: 1.2em;
 	font-weight: 500;
 	margin-top: 60px;

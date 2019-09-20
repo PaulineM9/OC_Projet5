@@ -62,7 +62,7 @@ em {
 
 /*----- BLOGTEMPLATE PAGE -----*/
 body {
-    background-image: url("../public/images/texture-mur-multico.jpeg")!important;
+    background-image: url("../public/images/texture_geometrique2.jpeg")!important;
 }
 .blog_header {
     /* position: fixed;
@@ -85,7 +85,7 @@ body {
     font-size: 3em;
 }
 .blog_header h3 {
-    font-family: 'Tajawal', display;
+    font-family: 'poiret one', cursive;
     font-size: 1.5em;
     position: absolute;
     margin-top: 2%;
@@ -118,7 +118,7 @@ body {
     padding: 20px;
 }
 .blog_presentation_container h4 {
-    font-family: 'Tajawal', display;
+    font-family: 'poiret one', cursive;
     font-size: 1.1em;
 }
 .content_container {
@@ -128,7 +128,7 @@ body {
     margin: 20px auto;
 }
 .content_container h5 {
-    font-family: 'Tajawal', display;
+    font-family: 'poiret one', cursive;
     font-size: 1.8em;
     padding-bottom: 20px;
 }
@@ -142,7 +142,7 @@ body {
     margin-bottom: 20px;
 }
 .lire_plus {
-    font-family: 'Tajawal', display;
+    font-family: 'poiret one', cursive;
     font-size: 0.8em;
     margin-left: 20px;
 }

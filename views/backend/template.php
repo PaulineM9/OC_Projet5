@@ -51,9 +51,6 @@
 	</style>
 </head>
 
-<body>
-    
+<body>  
        <?= $content ?>
-    
-
 </body>

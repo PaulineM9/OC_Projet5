@@ -18,6 +18,7 @@
         <a class="manage_comments icons" href="index.php?admin_comments"><img alt="icon_comments" src="public/images/commentaires.png"></a>
         <a class="manage_messages icons" href="index.php?admin_messages"><img alt="icon_messages" src="public/images/messagerie.png"></a>
         <a class="profil icons" href="index.php?admin_profil"><img alt="icon_manage_profil" src="public/images/user.png"></a>
+        <a class="arrow icons" href="index.php?home"><img alt="icon_arrow" src="public/images/retour-fleche.png"></a>
     </div>
     <div class="nav_titles">
         <p>Articles</p>
@@ -26,5 +27,6 @@
         <p>Commentaires</p>
         <p>Messagerie</p>
         <p>Gérer mon profil</p>
+        <p>Retour au site</p>
     </div>
 </nav>

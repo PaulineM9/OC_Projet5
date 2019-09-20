@@ -2,7 +2,7 @@
 function admin()
 {   
     ob_start();
-    include('views/backend/admin.php');
+    include('views/backend/adminView.php');
     $content = ob_get_clean();
     require("views/backend/template.php");
 }

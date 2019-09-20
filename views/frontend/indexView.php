@@ -38,13 +38,13 @@
         <h3>CMS OU DÉVELOPPEMENT COMPLET</h3>
         <p>Un bon site internet c'est un outil web dont les spécificités corespondent parfaitement à vos <strong>attentes</strong> et <strong>à vos besoins</strong>. Etablir
             le cahier des charges précis de votre futur projet ensemble, c'est la première démarche essentielle pour développer l'outil qu'il vous faut.</p>
-        <a class="services_page_link" href="index.php?action=services">Services -></a>
+        <a class="services_page_link" href="index.php?action=services">Services</a>
     </div>
 </section>
 
 <section class="portfolio_container">
     <h2>PORTFOLIO</h2>
-    <a class="portfolio_page_link" href="index.php?action=portfolio">Mes Réalisations -></a>
+    <a class="portfolio_page_link" href="index.php?action=portfolio">Mes Réalisations</a>
 </section>
 
 <section class="about_container">
@@ -53,5 +53,5 @@
         professionnel est trés ecléctique. J'aime toucher à tout parce que je suis une grande passionnée. Mais ce que j'aime par-dessus
         tout ce sont les défis.
         Votre projet de site sera mon prochain défis et nous allons le relever ensemble.</p>
-    <a class="about_page_link" href="index.php?action=about">A Propos -></a>
+    <a class="about_page_link" href="index.php?action=about">A Propos</a>
 </section>
