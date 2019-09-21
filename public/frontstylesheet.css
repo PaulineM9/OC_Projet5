@@ -201,7 +201,7 @@ footer a:hover {
 }
 .stars img {
     padding-bottom: 108%;
-    padding-top: 135%;
+    padding-top: 162%;
 }
 .services_presentation {
     display: flex;
@@ -304,7 +304,7 @@ footer a:hover {
     border-radius: 35px;
     width: 155px;
     height: 55px;
-    padding-top: 14px;
+    padding-top: 6px;
     padding-left: 36px;
     font-size: 0.8em;
     margin-left: 82%;
@@ -403,10 +403,10 @@ footer a:hover {
     width: 155px;
     height: 55px;
     padding-top: 18px;
-    padding-left: 57px;
+    padding-left: 55px;
     font-family: 'poiret one', cursive;
     font-weight: 700; 
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 0 auto;
     color:black!important;
     cursor: pointer;
@@ -555,6 +555,33 @@ footer a:hover {
     margin-right: 10px;
 }
 
+/*----- PORTFOLIOVIEW PAGE -----*/
+.title_portfolio {
+    display: flex;
+}
+.title_portfolio h1 {
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'poiret one', cursive;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+}
+.portfolio_projects_container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'poiret one', cursive;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px; 
+}
+
 /*----- CONTACTVIEW PAGE -----*/
 .title_contact {
     display: flex;
@@ -631,32 +658,8 @@ footer a:hover {
 .reseaux_sociaux {
     margin-bottom: 20px;
 }
-
-/*----- PORTFOLIOVIEW PAGE -----*/
-.title_portfolio {
-    display: flex;
-}
-.title_portfolio h1 {
-    margin: 20px auto;
-    padding: 20px;
-    padding-top: 25px;
-    background-color: rgba(255, 255, 255, 0.6);
-    font-family: 'poiret one', cursive;
-    font-size: 2em;
-    font-weight: 700;
-    color: black;
-}
-.portfolio_projects_container {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.6);
-    font-family: 'poiret one', cursive;
-    font-size: 2em;
-    font-weight: 700;
-    color: black;
-    width: 80%;
-    height: 400px;
-    margin: 0 auto;
-    margin-bottom: 20px; 
+.reseaux_sociaux a {
+    margin-left: 5%;
 }
 
 /*----- INSCRIPTION PAGE -----*/

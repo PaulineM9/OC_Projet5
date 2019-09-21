@@ -1,5 +1,5 @@
 <?php
-require_once('Models/Manager.php');
+require_once('models/Manager.php');
 
 class ArticlesManager extends Manager
 {
@@ -18,39 +18,39 @@ class ArticlesManager extends Manager
         } 
     }
 
-    public function get($id) // récupère les articles dans la BDD pour les afficher
+    public function addArticle(Articles $articles) 
+    {
+        $req = $this->_db->prepare('INSERT INTO articles (title, date_article, content) VALUES ( ?, NOW(), ?)');
+        $req->execute([
+            $articles->getTitle(), 
+            $articles->getContent(), 
+        ]);
+    }
+
+    public function get($id) // récupère les articles dans la BDD 
     {
         $req = $this->_db->prepare('SELECT * FROM articles WHERE id = ?');
         $req->execute([
             $id
         ]);
-        $articles = $req->fetch(); // récupère les données et les stocke dans la variable $chapter sous forme de tableau clé / valeur qui récupère de la bdd
+        $articles = $req->fetch(); // récupère les données et les stocke dans la variable $articles sous forme de tableau clé / valeur qui récupère de la bdd
         
         return new Articles($articles);  
     }
 
-    public function getList()
+    public function getList() // on créé une liste dans laquelle on récupère tous les articles pour les afficher
     {
         $list = [];
 
-        $req = $this->_db->prepare('SELECT * FROM articles ORDER BY id');
+        $req = $this->_db->prepare('SELECT * FROM articles ORDER BY id DESC');
         $data = $req->execute();
         
         while ($data = $req->fetch(PDO::FETCH_ASSOC))
         {
             $list [] = new Articles($data);
         }
-        // var_dump($list);  
         return $list;
     }
 
-    public function addArticle(Articles $articles) // permet de créer un article
-    {
-        $req = $this->_db->prepare('INSERT INTO articles (title, date_article, content) VALUES ( ?, NOW(), ?)');
-        $req->execute([
-            $articles->getTitle(), // récupère le getter 'title'
-            $articles->getDateArticle(), // récupère le getter 'article'
-            $articles->getContent(), // récupère le getter 'content'
-        ]);
-    }
+    
 }

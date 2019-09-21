@@ -163,6 +163,7 @@ body {
 }
 .manage_articles {
 	display: flex;
+	flex-direction: column;
 	font-family: 'Poiret One', cursive;
 	width: 100%;
 	padding: 40px;

@@ -20,7 +20,7 @@
     <h3>Ecrire un nouvel article</h3>
     <form class="article_form" action="index.php?action=admin_article" method="post">
         <input class="article_title" type="text" name="title" placeholder="Titre de l'article" id="title"><br/>
-        <textarea class="chapter" id="mytextarea" name="content" placeholder="Votre texte" id="content" cols="30" rows="10"></textarea><br/>
+        <textarea class="article" id="mytextarea" name="content" placeholder="Votre article" id="content" cols="30" rows="10"></textarea><br/>
         <input class="submit" type="submit" name="published" placeholder="Publier" id="published"><br/> 
     </form>    
 </section>
@@ -30,11 +30,11 @@
     <?php if (!empty($articles))
     { foreach ($articles as $cle => $elements) { ?>
         <div class="articles_published">
-        <h3><?= $elements->getTitle() ?></h3><br/>
-        <p><?= $elements->getDateArticle() ?></p>
-        <p><?= $elements->getContent() ?></p>
-        <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier le texte</a>
+            <p>Article publié le <?= $elements->getDateArticle() ?></p>
+            <h3><?= $elements->getTitle() ?></h3>
+            <p><?= $elements->getContent() ?></p>
+            <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier l'article</a>
         </div>   
-        <?php } 
-    } ?>      
+    <?php } 
+    } ?>
 </section>
