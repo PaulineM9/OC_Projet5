@@ -150,7 +150,7 @@ body {
 .admin_article {
 	font-family: 'Poiret One', cursive;
 	width: 100%;
-	padding: 20px;
+	padding: 40px;
 }
 .admin_article h3,
 .manage_articles h3 {
@@ -165,6 +165,6 @@ body {
 	display: flex;
 	font-family: 'Poiret One', cursive;
 	width: 100%;
-	padding: 20px;
+	padding: 40px;
 }
 

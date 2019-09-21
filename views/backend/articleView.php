@@ -27,5 +27,14 @@
 
 <section class="manage_articles">   
     <h3>Gérer les articles</h3>
-         
+    <?php if (!empty($articles))
+    { foreach ($articles as $cle => $elements) { ?>
+        <div class="articles_published">
+        <h3><?= $elements->getTitle() ?></h3><br/>
+        <p><?= $elements->getDateArticle() ?></p>
+        <p><?= $elements->getContent() ?></p>
+        <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier le texte</a>
+        </div>   
+        <?php } 
+    } ?>      
 </section>
