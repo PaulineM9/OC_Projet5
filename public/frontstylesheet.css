@@ -96,7 +96,7 @@ body {
     font-family: 'Major Mono Display', monospace;
 }
 .navigation_menu_principal a:hover {
-    color: #f5dada!important;
+    color: #dde8df!important;
 }
 footer {
     display: flex;
@@ -104,9 +104,6 @@ footer {
     background-color:rgba(112, 112, 112, 0.6);
     height: 150px;
     width: 100%;
-}
-footer a:hover {
-    color: #f5dada!important;
 }
 .infos_container {
     display: flex;
@@ -200,8 +197,8 @@ footer a:hover {
     width: 4%;
 }
 .stars img {
-    padding-bottom: 108%;
-    padding-top: 162%;
+    padding-bottom: 148%;
+    padding-top: 148%;
 }
 .services_presentation {
     display: flex;
@@ -225,9 +222,10 @@ footer a:hover {
     font-family: 'poiret one', cursive;
     font-weight: 300;
     padding: 10px;
+    padding-bottom: 30Px;
 }
 .services_page_link {
-    background-color: rgba(245, 218, 218, 0.8);
+    background-color: #dde8df;
     border-radius: 35px;
     width: 155px;
     height: 55px;
@@ -242,7 +240,7 @@ footer a:hover {
     display: inline-block;
 }
 .services_page_link:hover {
-    color: white!important;
+    color: #128f8c!important;
 }
 .portfolio_container {
     display: flex;
@@ -261,7 +259,7 @@ footer a:hover {
     margin: 0 auto;
 }
 .portfolio_page_link {
-    background-color: rgba(245, 218, 218, 0.8);
+    background-color: #dde8df;
     border-radius: 35px;
     width: 215px;
     height: 55px;
@@ -275,7 +273,7 @@ footer a:hover {
     display: inline-block;
 }
 .portfolio_page_link:hover {
-    color: white!important;
+    color: #128f8c!important;
 }
 .about_container {
     display: flex;
@@ -300,11 +298,11 @@ footer a:hover {
     padding-top: 20px;
 }
 .about_page_link {
-    background-color: rgba(245, 218, 218, 0.8);
+    background-color: #dde8df;
     border-radius: 35px;
     width: 155px;
     height: 55px;
-    padding-top: 6px;
+    padding-top: 14px;
     padding-left: 36px;
     font-size: 0.8em;
     margin-left: 82%;
@@ -313,7 +311,7 @@ footer a:hover {
     display: inline-block;
 }
 .about_page_link:hover {
-    color: white!important;
+    color: #128f8c!important;
 }
 
 /*----- SERVICES PAGE -----*/
@@ -398,7 +396,7 @@ footer a:hover {
     margin-bottom: 20px;
 }
 .contact_page_link {
-    background-color: rgba(245, 218, 218, 0.8);
+    background-color: #128f8c;
     border-radius: 35px;
     width: 155px;
     height: 55px;
@@ -413,7 +411,7 @@ footer a:hover {
     display: inline-block;
 }
 .contact_page_link:hover {
-    color: white!important;
+    color: #dde8df!important;
 }
 
 /*----- ABOUTVIEW PAGE -----*/
@@ -628,7 +626,7 @@ footer a:hover {
     font-family: 'poiret one', cursive;
     font-size: 1em;
     margin-bottom: 4px;
-    border: 1px solid #f5dada;
+    border: 1px solid #128f8c;
     height: 20px;
     width: 98%;
 }
@@ -658,8 +656,9 @@ footer a:hover {
 .reseaux_sociaux {
     margin-bottom: 20px;
 }
-.reseaux_sociaux a {
-    margin-left: 5%;
+.mail_number p,
+.entreprise_infos p {
+    margin-bottom: 3%;
 }
 
 /*----- INSCRIPTION PAGE -----*/
