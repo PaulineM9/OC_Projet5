@@ -21,6 +21,9 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'blog') {
         blog();
     }
+    if ($_GET['action'] == 'articles') {
+        blogArticles();
+    }
     if ($_GET['action'] == 'portraits') {
         blogPortraits();
     }

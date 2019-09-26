@@ -150,16 +150,28 @@ body {
 .admin_article {
 	font-family: 'Poiret One', cursive;
 	width: 100%;
-	padding: 70px;
+}
+.article_form {
+	padding: 0px 70px;
 }
 .admin_article h3,
-.manage_articles h3 {
+.all_articles h3 {
 	font-size: 1.5em;
 	padding-bottom: 20px;
+	font-family: 'Poiret One', cursive;
+	padding: 70px;
+	background-color:rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	width: 350px;
+	margin: 30px 70px;
 }
 .article_title {
 	width: 50%;
 	margin-bottom: 10px;
+}
+.all_articles {
+	display: flex;
+	flex-direction: column
 }
 .manage_articles {
 	display: flex;
@@ -167,6 +179,17 @@ body {
 	font-family: 'Poiret One', cursive;
 	width: 100%; 
 	padding: 70px; 
+}
+.manage_articles h3 {
+	font-size: 1.2em;
+	padding-bottom: 20px;
+	font-family: 'Poiret One', cursive;
+	padding: 70px;
+	background-color:rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	width: 350px;
+	margin: 0px 100px;
+	margin-bottom: 40px;
 }
 .articles_published {
 	display: flex;
@@ -187,6 +210,7 @@ body {
 	font-size: 0.9em;
 	margin-bottom: 5px;
 	font-style: italic;
+	margin-bottom: 20px;
 }
 .articles_published a {
 	font-size: 0.8em;
@@ -194,6 +218,19 @@ body {
 	font-style: italic;
 	margin-bottom: 50px;
 	margin-left: 2%;
+	background-color:rgba(255, 255, 255, 0.7);
+	padding: 10px;
+	width: 115px;
+}
+.pagePagination {
+	display: flex;
+	background-color:rgba(255, 255, 255, 0.7);
+	margin-left: 70px;
+	margin-right: 70px;
+	padding: 10px;
+	width: 30%;
+	margin-bottom: 50px;
+	font-family: 'poiret one', cursive;
 }
 
 

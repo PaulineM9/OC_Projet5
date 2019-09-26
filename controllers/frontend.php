@@ -46,6 +46,15 @@ function blog()
     $content = ob_get_clean();
     require("views/frontend/blogTemplate.php");
 }
+
+function blogArticles()
+{   
+    ob_start();
+    include('views/frontend/articlesView.php');
+    $content = ob_get_clean();
+    require("views/frontend/blogTemplate.php");
+}
+
 function blogPortraits()
 {   
     ob_start();

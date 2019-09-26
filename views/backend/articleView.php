@@ -25,26 +25,29 @@
     </form>
 </section>
 
-<section class="manage_articles">
+<section class="all_articles">
     <h3>Gérer les articles</h3>
-    <?php if (!empty($articles)) {
-        foreach ($articles as $cle => $elements) { ?>
-            <div class="articles_published">
-                <h4><?= $elements->getTitle() ?></h4>
-                <p class="publication">Article publié le <?= $elements->getDateArticle() ?></p>
-                <h5><?= $elements->getContent() ?></h5>
-                <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier l'article</a>
-            </div>
-    <?php }
-    } ?>
-</section>
+    <section class="manage_articles">
+        <h3 class="general_articles">Tous les articles</h3>
+        <?php if (!empty($articles)) {
+            foreach ($articles as $cle => $elements) { ?>
+                <div class="articles_published">
+                    <h4><?= $elements->getTitle() ?></h4>
+                    <p class="publication">Article publié le <?= $elements->getDateArticle() ?></p>
+                    <h5><?= $elements->getContent() ?></h5>
+                    <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier l'article</a>
+                </div>
+        <?php }
+        } ?>
+    </section>
 
-<section class="pagePagination">
-    <?php for ($i = 1; $i <= $nbPage; $i++) {
-        if ($i == $cPage) {
-            echo " $i /";
-        } else {
-            echo " <a href=\"index.php?action=admin_article&p=$i\">$i</a> /";
-        }
-    } ?>
+    <section class="pagePagination">
+        <?php for ($i = 1; $i <= $nbPage; $i++) {
+            if ($i == $cPage) {
+                echo " $i /";
+            } else {
+                echo " <a href=\"index.php?action=admin_article&p=$i\">$i</a> /";
+            }
+        } ?>
+    </section>
 </section>
