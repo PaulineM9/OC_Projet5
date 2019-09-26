@@ -91,7 +91,9 @@ body {
     margin-top: 2%;
     margin-left: 25%;   
 }
-
+.copyright_container {
+    justify-content: center;
+}
 /*----- INDEXBLOGVIEW PAGE -----*/
 .navigation {
     display: flex;
