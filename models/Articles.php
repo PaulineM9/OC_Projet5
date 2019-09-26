@@ -24,7 +24,7 @@ class Articles
         }
         if (isset($data['date_article']))
         {
-            $this->setTitle($data['date_article']);
+            $this->setDateArticle($data['date_article']);
         }
         if (isset($data['content']))
         {

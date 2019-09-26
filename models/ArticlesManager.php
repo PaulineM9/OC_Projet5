@@ -18,7 +18,7 @@ class ArticlesManager extends Manager
         } 
     }
 
-    public function addArticle(Articles $articles) 
+    public function addArticle(Articles $articles) // créé un article et insère les informations en post / get dans la BDD
     {
         $req = $this->_db->prepare('INSERT INTO articles (title, date_article, content) VALUES ( ?, NOW(), ?)');
         $req->execute([
@@ -52,5 +52,27 @@ class ArticlesManager extends Manager
         return $list;
     }
 
-    
+    public function getCount() // permet de compter les articles écrits
+    {
+        $req = $this->_db->prepare('SELECT COUNT(id) as nbArt FROM articles');
+        $req->execute();
+        $data = $req->fetch();
+
+        return $data['nbArt'];
+    }
+
+    public function getArticleForPagination($perPage2, $perPage) // permet l'affichage en pagination
+    {
+        $list = [];
+
+        $req = $this->_db->prepare('SELECT * FROM articles LIMIT '.$perPage2.', '.$perPage.'');
+        $req->execute();
+
+        while ($data = $req->fetch(PDO::FETCH_ASSOC))
+        {
+            $list [] = new Articles($data);
+        }
+        
+        return $list;
+    }
 }

@@ -20,7 +20,7 @@ function admin_article()
     // get an article and modifie it
     $articleManager = new ArticlesManager(); 
     $articles = $articleManager->getList(); 
-
+    
     // get all informations about new articles
     if (isset($_POST['title']) && isset($_POST['content']) && !empty($_POST['title']) && !empty($_POST['content'])) 
     {   
@@ -29,10 +29,29 @@ function admin_article()
             'content' => $_POST['content']
         ]);
         $articleManager->addArticle($articles); 
-
+        
         header('Location: index.php?action=admin_article');
         exit();
     }
+
+    // count articles into the table
+    $nbArticle = $articleManager->getCount();
+    $nbArt = $nbArticle;
+    $perPage = 4;
+    $nbPage = ceil($nbArt / $perPage);
+
+    // pagination
+    if (isset($_GET['p']) && $_GET['p'] > 0 && $_GET['p'] <= $nbPage) {
+        $cPage = $_GET['p'];
+    } else {
+        $cPage = 1;
+    }
+
+    $perPage2 = (($cPage - 1) * $perPage);
+
+    // article for pagination
+    $articles = $articleManager->getArticleForPagination($perPage2, $perPage);
+    
     ob_start();
     include('views/backend/articleView.php');
     $content = ob_get_clean();

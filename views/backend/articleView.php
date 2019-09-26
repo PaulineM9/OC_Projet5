@@ -19,22 +19,32 @@
 <section class="admin_article">
     <h3>Ecrire un nouvel article</h3>
     <form class="article_form" action="index.php?action=admin_article" method="post">
-        <input class="article_title" type="text" name="title" placeholder="Titre de l'article" id="title"><br/>
-        <textarea class="article" id="mytextarea" name="content" placeholder="Votre article" id="content" cols="30" rows="10"></textarea><br/>
-        <input class="submit" type="submit" name="published" placeholder="Publier" id="published"><br/> 
-    </form>    
+        <input class="article_title" type="text" name="title" placeholder="Titre de l'article" id="title"><br />
+        <textarea class="article" id="mytextarea" name="content" placeholder="Votre article" id="content" cols="30" rows="10"></textarea><br />
+        <input class="submit" type="submit" name="published" placeholder="Publier" id="published"><br />
+    </form>
 </section>
 
-<section class="manage_articles">   
+<section class="manage_articles">
     <h3>Gérer les articles</h3>
-    <?php if (!empty($articles))
-    { foreach ($articles as $cle => $elements) { ?>
-        <div class="articles_published">
-            <p>Article publié le <?= $elements->getDateArticle() ?></p>
-            <h3><?= $elements->getTitle() ?></h3>
-            <p><?= $elements->getContent() ?></p>
-            <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier l'article</a>
-        </div>   
-    <?php } 
+    <?php if (!empty($articles)) {
+        foreach ($articles as $cle => $elements) { ?>
+            <div class="articles_published">
+                <h4><?= $elements->getTitle() ?></h4>
+                <p class="publication">Article publié le <?= $elements->getDateArticle() ?></p>
+                <h5><?= $elements->getContent() ?></h5>
+                <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier l'article</a>
+            </div>
+    <?php }
+    } ?>
+</section>
+
+<section class="pagePagination">
+    <?php for ($i = 1; $i <= $nbPage; $i++) {
+        if ($i == $cPage) {
+            echo " $i /";
+        } else {
+            echo " <a href=\"index.php?action=admin_article&p=$i\">$i</a> /";
+        }
     } ?>
 </section>

@@ -150,7 +150,7 @@ body {
 .admin_article {
 	font-family: 'Poiret One', cursive;
 	width: 100%;
-	padding: 40px;
+	padding: 70px;
 }
 .admin_article h3,
 .manage_articles h3 {
@@ -165,7 +165,35 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Poiret One', cursive;
-	width: 100%;
-	padding: 40px;
+	width: 100%; 
+	padding: 70px; 
 }
+.articles_published {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.articles_published h4 {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.articles_published h5 {
+	font-size: 1.1em;
+	margin-bottom: 15px;
+}
+.publication {
+	font-size: 0.9em;
+	margin-bottom: 5px;
+	font-style: italic;
+}
+.articles_published a {
+	font-size: 0.8em;
+	margin-bottom: 5px;
+	font-style: italic;
+	margin-bottom: 50px;
+	margin-left: 2%;
+}
+
 
