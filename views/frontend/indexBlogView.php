@@ -9,10 +9,10 @@
 
 <section class="navigation">
     <a href="index.php?action=portraits">
-        <h3>Portraits</h3>
+        <h3>PORTRAITS</h3>
     </a>
     <a href="index.php?action=articles">
-        <h3>Articles</h3>
+        <h3>ARTICLES</h3>
     </a>
 </section>
 
@@ -21,23 +21,57 @@
         <div class="lasts_portraits">
             <h5>Le portrait du mois</h5>
             <p></p><!-- affiche la photo, le titre du dernier portrait -->
-            <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
+            <?php if (!empty($portraits)) {
+                foreach ($portraits as $cle => $elements) { ?>
+                    <div class="last_portrait_published">
+                        <h3><?= $elements->getTitle() ?></h3>
+                        <p> Publié le <?= $elements->getDatePortrait() ?></p>
+                        <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
+                    </div>
+            <?php }
+            } ?>
         </div>
         <div class="lasts_articles">
             <h5>Dernier article</h5>
-            <p></p><!-- affiche la photo, le titre du dernier article -->
-            <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
+            <p>
+                <!-- affiche la photo, le titre du dernier article -->
+                <?php if (!empty($articles)) {
+                    foreach ($articles as $cle => $elements) { ?>
+                        <div class="last_article_published">
+                            <h3><?= $elements->getTitle() ?></h3>
+                            <p> Publié le <?= $elements->getDateArticle() ?></p>
+                            <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
+                        </div>
+                <?php }
+                } ?>
+            </p>
         </div>
     </section>
 
     <aside class="archives_container">
         <div class="archives_portraits">
             <h5>Archives des portraits</h5>
-            <a href="">- </a><!-- affiche le titre des 5 derniers portraits --><!-- ajouter le lien actif -->
+            <?php if (!empty($tree_portraits)) {
+                foreach ($tree_portraits as $cle => $elements) { ?>
+                    <div class="last_tree_portraits">
+                        <a href="index.php?action=portraits">
+                            <h3>- <?= $elements->getTitle() ?></h3>
+                        </a>
+                    </div>
+            <?php }
+            } ?>
         </div>
         <div class="archives_articles">
             <h5>Archives des articles</h5>
-            <a href="">- </a><!-- affiche le titre des 5 derniers articles --><!-- ajouter le lien actif -->
+            <?php if (!empty($tree_articles)) {
+                foreach ($tree_articles as $cle => $elements) { ?>
+                    <div class="last_tree_articles">
+                        <a href="index.php?action=articles">
+                            <h3>- <?= $elements->getTitle() ?></h3>
+                        </a>
+                    </div>
+            <?php }
+            } ?>
         </div>
     </aside>
 </div>

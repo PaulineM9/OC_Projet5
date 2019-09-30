@@ -15,3 +15,39 @@
         <a class="arrow icones_menu" href="index.php?action=home"><img alt="icon_arrow" src="public/images/retour-fleche.png"></a>
     </div>
 </nav>
+
+<section class="admin_portrait">
+    <h3>Ecrire un nouveau portrait</h3>
+    <form class="portrait_form" action="index.php?action=admin_portrait" method="post">
+        <input class="portrait_title" type="text" name="title" placeholder="Titre du portrait" id="title"><br />
+        <textarea class="portrait" id="mytextarea" name="content" placeholder="Votre portrait" id="content" cols="30" rows="10"></textarea><br />
+        <input class="submit" type="submit" name="published" placeholder="Publier" id="published"><br />
+    </form>
+</section>
+
+<section class="all_portraits">
+    <h3>Gérer les portraits</h3>
+    <section class="manage_portraits">
+        <h3 class="general_portraits">Tous les portraits</h3>
+        <?php if (!empty($portraits)) {
+            foreach ($portraits as $cle => $elements) { ?>
+                <div class="portraits_published">
+                    <h4><?= $elements->getTitle() ?></h4>
+                    <p class="publication">Portrait publié le <?= $elements->getDatePortrait() ?></p>
+                    <h5><?= $elements->getContent() ?></h5>
+                    <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier le portrait</a>
+                </div>
+        <?php }
+        } ?>
+    </section>
+
+    <section class="pagePagination">
+        <?php for ($i = 1; $i <= $nbPage; $i++) {
+            if ($i == $cPage) {
+                echo " $i /";
+            } else {
+                echo " <a href=\"index.php?action=admin_portrait&p=$i\">$i</a> /";
+            }
+        } ?>
+    </section>
+</section>

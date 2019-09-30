@@ -124,7 +124,7 @@ body {
 	margin-bottom: 45px;
 }
 
-/*----- ARTICLEVIEW PAGE ADMIN ------*/
+/*----- ARTICLEVIEW AND PORTRAITVIEW PAGE ADMIN ------*/
 .nav_icons_container {
 	display: flex;
 	flex-direction: row;
@@ -147,15 +147,19 @@ body {
 	margin-left: 10px;
 	margin-bottom: 10px;
 }
-.admin_article {
+.admin_article,
+.admin_portrait {
 	font-family: 'Poiret One', cursive;
 	width: 100%;
 }
-.article_form {
+.article_form,
+.portrait_form {
 	padding: 0px 70px;
 }
 .admin_article h3,
-.all_articles h3 {
+.all_articles h3,
+.admin_portrait h3,
+.all_portraits h3 {
 	font-size: 1.5em;
 	padding-bottom: 20px;
 	font-family: 'Poiret One', cursive;
@@ -165,22 +169,26 @@ body {
 	width: 350px;
 	margin: 30px 70px;
 }
-.article_title {
+.article_title,
+.portraits_title {
 	width: 50%;
 	margin-bottom: 10px;
 }
-.all_articles {
+.all_articles,
+.all_portraits {
 	display: flex;
 	flex-direction: column
 }
-.manage_articles {
+.manage_articles,
+.manage_portraits {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Poiret One', cursive;
 	width: 100%; 
 	padding: 70px; 
 }
-.manage_articles h3 {
+.manage_articles h3,
+.manage_portraits h3 {
 	font-size: 1.2em;
 	padding-bottom: 20px;
 	font-family: 'Poiret One', cursive;
@@ -191,18 +199,21 @@ body {
 	margin: 0px 100px;
 	margin-bottom: 40px;
 }
-.articles_published {
+.articles_published,
+.portraits_published {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
-.articles_published h4 {
+.articles_published h4,
+.portraits_published h4 {
 	text-transform: uppercase;
 	font-size: 1.2em;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
-.articles_published h5 {
+.articles_published h5,
+.portraits_published h5 {
 	font-size: 1.1em;
 	margin-bottom: 15px;
 }
@@ -212,7 +223,8 @@ body {
 	font-style: italic;
 	margin-bottom: 20px;
 }
-.articles_published a {
+.articles_published a,
+.portraits_published a {
 	font-size: 0.8em;
 	margin-bottom: 5px;
 	font-style: italic;
