@@ -35,7 +35,7 @@
                     <h4><?= $elements->getTitle() ?></h4>
                     <p class="publication">Article publié le <?= $elements->getDateArticle() ?></p>
                     <h5><?= $elements->getContent() ?></h5>
-                    <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier l'article</a>
+                    <a href="index.php?action=update_article&id=<?= $elements->getId() ?>">Modifier l'article</a>
                 </div>
         <?php }
         } ?>

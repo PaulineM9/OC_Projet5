@@ -33,8 +33,14 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'admin_article') {
         admin_article();
     }
+    if ($_GET['action'] == 'update_article') {
+        update_article();
+    }
     if ($_GET['action'] == 'admin_portrait') {
         admin_portrait();
+    }
+    if ($_GET['action'] == 'update_portrait') {
+        update_portrait();
     }
     if ($_GET['action'] == 'admin_projet') {
         admin_projet();

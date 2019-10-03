@@ -100,4 +100,14 @@ class PortraitsManager extends Manager
 
         return $list;
     }
+
+    public function update(Portraits $portraits)
+    {
+        $req_modif = $this->_db->prepare('UPDATE portraits SET title = :title, content = :content  WHERE id = :id');
+        $req_modif->execute([
+            'id' => $portraits->getId(),
+            'title'  => $portraits->getTitle(),
+            'content' => $portraits->getContent()
+        ]);
+    }
 }

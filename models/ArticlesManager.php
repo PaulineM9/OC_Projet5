@@ -100,4 +100,14 @@ class ArticlesManager extends Manager
 
         return $list;
     }
+
+    public function update(Articles $articles)
+    {
+        $req_modif = $this->_db->prepare('UPDATE articles SET title = :title, content = :content  WHERE id = :id');
+        $req_modif->execute([
+            'id' => $articles->getId(),
+            'title'  => $articles->getTitle(),
+            'content' => $articles->getContent()
+        ]);
+    }
 }
