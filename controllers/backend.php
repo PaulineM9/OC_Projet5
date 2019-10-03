@@ -144,7 +144,7 @@ function update_portrait()
             'title'  => $_POST['title'],
             'content' => $_POST['content']
         ]);
-        $portraitManager = new PorletraitsManager();
+        $portraitManager = new PortraitsManager();
         $portraitManager->update($portraits);
 
         header('Location: index.php?action=update_portrait&id=' . $_GET['id']);

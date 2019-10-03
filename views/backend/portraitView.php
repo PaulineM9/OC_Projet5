@@ -35,7 +35,7 @@
                     <h4><?= $elements->getTitle() ?></h4>
                     <p class="publication">Portrait publié le <?= $elements->getDatePortrait() ?></p>
                     <h5><?= $elements->getContent() ?></h5>
-                    <a href="index.php?action=update&id=<?= $elements->getId() ?>">Modifier le portrait</a>
+                    <a href="index.php?action=update_portrait&id=<?= $elements->getId() ?>">Modifier le portrait</a>
                 </div>
         <?php }
         } ?>
