@@ -78,7 +78,7 @@ class ArticlesManager extends Manager
         return $list;
     }
 
-    public function getCount() // permet de compter les articles écrits
+    public function getCount() // count all the articles
     {
         $req = $this->_db->prepare('SELECT COUNT(id) as nbArt FROM articles');
         $req->execute();
@@ -87,7 +87,7 @@ class ArticlesManager extends Manager
         return $data['nbArt'];
     }
 
-    public function getArticleForPagination($perPage2, $perPage) // permet l'affichage en pagination
+    public function getArticleForPagination($perPage2, $perPage) // get pagination 
     {
         $list = [];
 

@@ -75,7 +75,7 @@ function update_article()
         $articleManager = new ArticlesManager();
         $articleManager->update($articles);
 
-        header('Location: index.php?action=update_article&id=' . $_GET['id']);
+        header('Location: index.php?action=admin_article&id=' . $_GET['id']);
         exit();
     }
 
@@ -147,7 +147,7 @@ function update_portrait()
         $portraitManager = new PortraitsManager();
         $portraitManager->update($portraits);
 
-        header('Location: index.php?action=update_portrait&id=' . $_GET['id']);
+        header('Location: index.php?action=admin_portrait&id=' . $_GET['id']);
         exit();
     }
 
