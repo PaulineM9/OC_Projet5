@@ -161,7 +161,7 @@ function update_portrait()
 function admin_projet()
 {
     ob_start();
-    include('views/backend/projetView.php');
+    include('views/backend/projectView.php');
     $content = ob_get_clean();
     require("views/backend/template.php");
 }
@@ -169,7 +169,7 @@ function admin_projet()
 function admin_comments()
 {
     ob_start();
-    include('views/backend/commentsView.php');
+    include('views/backend/commentView.php');
     $content = ob_get_clean();
     require("views/backend/template.php");
 }
@@ -177,7 +177,7 @@ function admin_comments()
 function admin_messages()
 {
     ob_start();
-    include('views/backend/messagesView.php');
+    include('views/backend/messageView.php');
     $content = ob_get_clean();
     require("views/backend/template.php");
 }

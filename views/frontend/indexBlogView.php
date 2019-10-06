@@ -26,7 +26,7 @@
                     <div class="last_portrait_published">
                         <h3><?= $elements->getTitle() ?></h3>
                         <p> Publié le <?= $elements->getDatePortrait() ?></p>
-                        <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
+                        <a class="lire_plus" href="index.php?action=portraits&id=<?= $elements->getId() ?>">Lire plus...</a><!-- ajouter le lien actif -->
                     </div>
             <?php }
             } ?>
@@ -40,7 +40,7 @@
                         <div class="last_article_published">
                             <h3><?= $elements->getTitle() ?></h3>
                             <p> Publié le <?= $elements->getDateArticle() ?></p>
-                            <a class="lire_plus" href="">Lire plus...</a><!-- ajouter le lien actif -->
+                            <a class="lire_plus" href="index.php?action=articles&id=<?= $elements->getId() ?>">Lire plus...</a><!-- ajouter le lien actif -->
                         </div>
                 <?php }
                 } ?>
@@ -54,7 +54,7 @@
             <?php if (!empty($tree_portraits)) {
                 foreach ($tree_portraits as $cle => $elements) { ?>
                     <div class="last_tree_portraits">
-                        <a href="index.php?action=portraits">
+                        <a href="index.php?action=portraits&id=<?= $elements->getId() ?>">
                             <h3>- <?= $elements->getTitle() ?></h3>
                         </a>
                     </div>
@@ -66,7 +66,7 @@
             <?php if (!empty($tree_articles)) {
                 foreach ($tree_articles as $cle => $elements) { ?>
                     <div class="last_tree_articles">
-                        <a href="index.php?action=articles">
+                        <a href="index.php?action=articles&id=<?= $elements->getId() ?>">
                             <h3>- <?= $elements->getTitle() ?></h3>
                         </a>
                     </div>
