@@ -44,6 +44,13 @@
 
 <section class="portfolio_container">
     <h2>PORTFOLIO</h2>
+    <div class="projects_navigation">
+    <?php foreach ($projects as $project) { ?>
+                <div class="projects_published">
+                    <h3><?= $project->getTitle() ?></h3>
+                </div>
+            <?php } ?>
+    </div>
     <a class="portfolio_page_link" href="index.php?action=portfolio">Mes Réalisations</a>
 </section>
 

@@ -1,11 +1,11 @@
 <?php
 
-class Portraits
+class Projects
 {
     private $_id,
         $_title,
-        $_date_portrait,
-        $_content;
+        $_description,
+        $_link;
 
     public function __construct(array $data)
     {
@@ -20,11 +20,11 @@ class Portraits
         if (isset($data['title'])) {
             $this->setTitle($data['title']);
         }
-        if (isset($data['date_portrait'])) {
-            $this->setDatePortrait($data['date_portrait']);
+        if (isset($data['description'])) {
+            $this->setDescription($data['description']);
         }
-        if (isset($data['content'])) {
-            $this->setContent($data['content']);
+        if (isset($data['link'])) {
+            $this->setLink($data['link']);
         }
     }
 
@@ -39,14 +39,14 @@ class Portraits
         return $this->_title;
     }
 
-    public function getDatePortrait()
+    public function getDescription()
     {
-        return $this->_date_portrait;
+        return $this->_description;
     }
 
-    public function getContent()
+    public function getLink()
     {
-        return $this->_content;
+        return $this->_link;
     }
 
     //SETTERS:
@@ -65,15 +65,15 @@ class Portraits
         }
     }
 
-    public function setDatePortrait($date_portrait)
+    public function setDescription($description)
     {
-        $this->_date_portrait = $date_portrait;
+        if (is_string($description)) {
+            $this->_description = $description;
+        }
     }
 
-    public function setContent($content)
+    public function setLink($link)
     {
-        if (is_string($content)) {
-            $this->_content = $content;
-        }
+        $this->_link = $link;
     }
 }

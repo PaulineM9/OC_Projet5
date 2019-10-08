@@ -245,5 +245,20 @@ body {
 	font-family: 'poiret one', cursive;
 }
 
+/*------ PROJECTS VIEW ------*/
+.insert_new_project {
+    display: flex;
+    margin: 0 auto;
+}
+.new_projects_form {
+	margin: 40px auto;
+}
+.new_projects_form textarea,
+.new_projects_form input {
+    font-family: 'poiret one', cursive;
+    font-size: 1em;
+	border: 1px solid #128f8c;
+}
+
 
 

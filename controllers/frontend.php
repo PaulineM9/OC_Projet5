@@ -1,6 +1,9 @@
 <?php
 function home()
 {
+    $projectManager = new ProjectsManager();
+    $projects = $projectManager->getList();
+
     ob_start();
     include('views/frontend/indexView.php');
     $content = ob_get_clean();
@@ -25,6 +28,10 @@ function about()
 
 function portfolio()
 {
+    // get projects
+    $projectManager =  new ProjectsManager();
+    $projects = $projectManager->getList();
+    
     ob_start();
     include('views/frontend/portfolioView.php');
     $content = ob_get_clean();
@@ -59,6 +66,10 @@ function blog()
 
 function blogArticles()
 {
+    $articleManager = new ArticlesManager();
+    $allArticles = $articleManager->getAllArticles();
+    $article = $articleManager->get($_GET['id']); 
+
     ob_start();
     include('views/frontend/articlesView.php');
     $content = ob_get_clean();
@@ -67,6 +78,10 @@ function blogArticles()
 
 function blogPortraits()
 {
+    $portraitManager = new PortraitsManager();
+    $allPortraits = $portraitManager->getAllPortraits();
+    $portrait = $portraitManager->get($_GET['id']);
+
     ob_start();
     include('views/frontend/portraitsView.php');
     $content = ob_get_clean();

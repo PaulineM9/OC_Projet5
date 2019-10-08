@@ -15,3 +15,16 @@
         <a class="arrow icones_menu" href="index.php?action=home"><img alt="icon_arrow" src="public/images/retour-fleche.png"></a>
     </div>
 </nav>
+
+<section class="projects_container">
+    <div class="insert_new_project">
+        <form class="new_projects_form" action="index.php?action=admin_projet&id=<?= $_GET['id'] ?>" method="post">
+            <!-- insérer une photo / image dans la bdd puis l'afficher-->
+            <textarea class="title" type="text" name="title" placeholder="Titre" id="title" cols="80"></textarea><br/>
+            <textarea class="description" name="description" placeholder="Description du projet" id="description" cols="80" rows="10"></textarea><br/>
+            <textarea class="link" name="link" placeholder="Lien vers le projet" id="comment" cols="80"></textarea><br/>
+            <input class="submit" type="submit" name="submit" placeholder="Envoyer" id="submit"><br/>
+        </form> 
+        <!-- insérer un lien pour modifier le projet -->
+    </div>
+</section>

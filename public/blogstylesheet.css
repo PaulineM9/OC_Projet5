@@ -209,3 +209,91 @@ body {
 .last_tree_portraits a:hover {
     color: darkgrey;
 }
+
+/*----- ARTICLES VIEW AND PORTRAITS VIEW PAGE -----*/
+.nav_articles,
+.nav_portraits {
+    display: flex;
+    flex-direction: row;
+    font-family: 'poiret one', cursive;
+}
+.show_article,
+.show_portrait {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px;
+}
+.all_portraits_list,
+.all_articles_list {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.portrait_container,
+.article_container,
+.comments,
+.comments_portrait,
+.create_comments_portrait,
+.comments_article,
+.create_comments_article {
+    display: flex;
+    flex-direction: column;
+}
+.portrait_container,
+.article_container {
+    margin-bottom: 50px;
+}
+.portrait_container h2,
+.article_container h2,
+.comments_portrait h3,
+.article_portrait h3 {
+    font-size: 1.8em;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 60%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.comments_portrait h3,
+.article_portrait h3 {
+    font-size: 0.9em!important;
+    width: 30%;
+}
+.create_comments_portrait h3,
+.create_comments_article h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.create_comments_portrait h4,
+.create_comments_article h4 {
+    margin-bottom: 30px;
+}
+.comments_form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20Px;
+}
+.comments_form input,
+.comments_form textarea {
+    font-family: 'poiret one', cursive;
+    margin-bottom: 5px;
+    border: 1px solid #128f8c;
+}
+.all_portraits_list h5,
+.all_articles_list h5 {
+    font-size: 1.8em;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 90%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.all_portraits h3, 
+.all_articles h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}

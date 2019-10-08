@@ -148,6 +148,7 @@ footer {
 }
 
 /*----- INDEXVIEW PAGE -----*/
+        /*----- HEADER AND INTRO -----*/
 .intro {
     display: flex;
     background-color: rgba(255, 255, 255, 0.6);
@@ -183,6 +184,8 @@ footer {
     font-weight: 700;
     font-size: 1.6em;
 }
+
+        /*----- SERVICES ----*/
 .services_container {
     display: flex;
     flex-direction: row;
@@ -242,6 +245,8 @@ footer {
 .services_page_link:hover {
     color: #128f8c!important;
 }
+
+        /*----- PORTFOLIO -----*/
 .portfolio_container {
     display: flex;
     flex-direction: column;
@@ -252,13 +257,27 @@ footer {
     font-family: 'poiret one', cursive;
     font-weight: 700;
     font-size: 1.6em;
-    height: 200px;
+    height: 300px;
     margin-bottom: 90px;
 }
 .portfolio_container h2 {
     margin: 0 auto;
+    margin-bottom: 40px;
+}
+.portfolio_page_link:hover {
+    color: #128f8c!important;
+}
+.projects_published {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.projects_published h3 {
+    margin-bottom: 20px;
+    font-size: 0.6em;
 }
 .portfolio_page_link {
+    position: absolute;
     background-color: #dde8df;
     border-radius: 35px;
     width: 215px;
@@ -266,15 +285,14 @@ footer {
     padding-top: 14px;
     padding-left: 37px;
     font-size: 0.8em;
-    margin-left: 70%;
-    margin-top: 10%;
+    margin-top: 14%;
+    margin-left: 41%;
     color:black!important;
     cursor: pointer;
     display: inline-block;
 }
-.portfolio_page_link:hover {
-    color: #128f8c!important;
-}
+
+        /*----- ABOUT -----*/
 .about_container {
     display: flex;
     flex-direction: column;
@@ -576,8 +594,7 @@ footer {
     color: black;
     width: 80%;
     height: 400px;
-    margin: 0 auto;
-    margin-bottom: 20px; 
+    margin: 0px auto;
 }
 
 /*----- CONTACTVIEW PAGE -----*/
@@ -677,7 +694,7 @@ footer {
     font-family: 'poiret one', cursive;
     width: 260px; 
     padding: 20px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 .signin input {
     width: 210px;

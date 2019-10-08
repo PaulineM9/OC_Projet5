@@ -17,7 +17,7 @@ function admin_article()
 {
     // $sessionConnect = sessionConnect();
 
-    // get an article and modifie it
+    // get articles
     $articleManager = new ArticlesManager();
     $articles = $articleManager->getList();
 
@@ -89,7 +89,7 @@ function admin_portrait()
 {
     // $sessionConnect = sessionConnect();
 
-    // get an portrait and modifie it
+    // get portraits
     $portraitManager = new PortraitsManager();
     $portraits = $portraitManager->getList();
 
@@ -158,8 +158,26 @@ function update_portrait()
 }
 
 
-function admin_projet()
+function admin_project()
 {
+    // get projects
+    $projectManager =  new ProjectsManager();
+    $projects = $projectManager->getList();
+
+    // get all informations about new portraits
+    if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['link']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['link'])) {
+        $projects = new Projects([
+            'title' => $_POST['title'],
+            'description' => $_POST['description'],
+            'link' => $_POST['link'],
+        ]);
+        $projectManager =  new ProjectsManager();
+        $projectManager->addProject($projects);
+
+        header('Location: index.php?action=admin_projet');
+        exit();
+    }
+
     ob_start();
     include('views/backend/projectView.php');
     $content = ob_get_clean();

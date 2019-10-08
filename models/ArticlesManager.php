@@ -78,6 +78,19 @@ class ArticlesManager extends Manager
         return $list;
     }
 
+    public function getAllArticles() // show articles into a list of archives
+    {
+        $list = [];
+
+        $req = $this->_db->prepare('SELECT * FROM articles ORDER BY id DESC');
+        $data = $req->execute();
+
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $list[] = new Articles($data);
+        }
+        return $list;
+    }
+
     public function getCount() // count all the articles
     {
         $req = $this->_db->prepare('SELECT COUNT(id) as nbArt FROM articles');

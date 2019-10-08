@@ -78,6 +78,19 @@ class PortraitsManager extends Manager
         return $list;
     }
 
+    public function getAllPortraits() // show portraits into a list of archives
+    {
+        $list = [];
+
+        $req = $this->_db->prepare('SELECT * FROM portraits ORDER BY id DESC');
+        $data = $req->execute();
+
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $list[] = new Portraits($data);
+        }
+        return $list;
+    }
+
     public function getCount() // permet de compter les portraits écrits
     {
         $req = $this->_db->prepare('SELECT COUNT(id) as nbPort FROM portraits');

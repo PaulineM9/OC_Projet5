@@ -43,7 +43,7 @@ if (isset($_GET['action'])) {
         update_portrait();
     }
     if ($_GET['action'] == 'admin_projet') {
-        admin_projet();
+        admin_project();
     }
     if ($_GET['action'] == 'admin_comments') {
         admin_comments();

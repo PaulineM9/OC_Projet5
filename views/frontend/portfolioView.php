@@ -7,5 +7,8 @@
 </section>
 
 <section class="portfolio_projects_container">
+    <div class="projet_1">
+        <!-- insérer une capture du projet -->
+    </div>
 
 </section>
