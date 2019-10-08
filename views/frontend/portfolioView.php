@@ -6,9 +6,12 @@
     </div>
 </section>
 
-<section class="portfolio_projects_container">
-    <div class="projet_1">
-        <!-- insérer une capture du projet -->
-    </div>
-
+<section class="portfolio_projects_container">   
+    <?php foreach ($projects as $project) { ?>
+            <div class="all_projects_published">
+                <h3><?= $project->getTitle() ?></h3>
+                    <!-- insérer une capture du projet -->
+                <a href="index.php&<?= $project->getLink() ?>">Visiter le site</a>
+            </div>
+    <?php } ?>  
 </section>

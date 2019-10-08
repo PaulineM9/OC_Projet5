@@ -271,6 +271,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 50%;
 }
 .projects_published h3 {
     margin-bottom: 20px;
@@ -594,7 +595,22 @@ footer {
     color: black;
     width: 80%;
     height: 400px;
-    margin: 0px auto;
+    margin: 20px auto;
+}
+.all_projects_published {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 25%;
+}
+.all_projects_published h3 {
+    font-size: 0.7em;
+    margin: 0 auto;
+}
+.all_projects_published a {
+    font-size: 0.5em;
+    margin: 0 auto;
 }
 
 /*----- CONTACTVIEW PAGE -----*/

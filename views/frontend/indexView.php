@@ -48,6 +48,7 @@
     <?php foreach ($projects as $project) { ?>
                 <div class="projects_published">
                     <h3><?= $project->getTitle() ?></h3>
+                        <!-- insérer une capture du projet -->
                 </div>
             <?php } ?>
     </div>
