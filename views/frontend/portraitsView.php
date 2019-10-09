@@ -17,7 +17,7 @@
             <section class="create_comments_portrait">
                 <h3>Postez votre commentaire</h3>
                 <h4>Faites nous part de vos <strong>expériences</strong>, de vos remarques ou posez-moi vos questions en lien avec ce portrait</h4>
-                <form class="comments_form" action="index.php?action=portrait&id=<?= $_GET['id'] ?>" method="post">
+                <form class="comments_form" action="index.php?action=portraits&id=<?= $_GET['id'] ?>" method="post">
                     <input class="pseudo" type="text" name="pseudo" placeholder="Pseudo" id="pseudo"><br/>
                     <input class="mail" type="email" name="mail" placeholder="Email" id="mail"><br/>
                     <textarea class="comment" name="comment" placeholder="Votre commentaire" id="comment" cols="30" rows="10"></textarea><br/>

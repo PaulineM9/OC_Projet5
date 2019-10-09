@@ -5,7 +5,7 @@
         <div class="article_container">
             <p><!--insérer la photo de l'article --></p>
             <h2><?= $article->getTitle() ?></h2><br/>
-            <h3>Publié le <?= $portrait->getDateArticle() ?></h3><br/>
+            <h3>Publié le <?= $article->getDateArticle() ?></h3><br/>
             <p><?= $article->getContent() ?></p><br/>
         </div>
 
@@ -17,7 +17,7 @@
             <section class="create_comments_article">
                 <h3>Postez votre commentaire</h3>
                 <h4>Faites nous part de vos <strong>expériences</strong>, de vos remarques ou posez-moi vos questions en lien avec cet article</h4>
-                <form class="comments_form" action="index.php?action=article&id=<?= $_GET['id'] ?>" method="post">
+                <form class="comments_form" action="index.php?action=articles&id=<?= $_GET['id'] ?>" method="post">
                     <input class="pseudo" type="text" name="pseudo" placeholder="Pseudo" id="pseudo"><br/>
                     <input class="mail" type="email" name="mail" placeholder="Email" id="mail"><br/>
                     <textarea class="comment" name="comment" placeholder="Votre commentaire" id="comment" cols="30" rows="10"></textarea><br/>

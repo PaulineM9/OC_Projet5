@@ -8,14 +8,28 @@
 
 <section class="contact_container">
     <section class="form_container">
-        <form class="contact_form" action="index.php?action=contact" method="post"> 
-            <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname"><br/>
-            <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname"><br/>
-            <input class="email form" type="email" name="email" placeholder="Email" id="email"><br/>
-            <input class="object form" type="text" name="object" placeholder="Objet" id="object"><br/>
-            <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10"></textarea><br/>
+        <form class="contact_form" method="post"> 
+            <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required><br/>
+            <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname" required><br/>
+            <input class="email form" type="email" name="email" placeholder="Email" id="email" required><br/>
+            <input class="object form" type="text" name="object" placeholder="Objet" id="object" required><br/>
+            <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10" required></textarea><br/>
             <input class="envoyer form" type="submit" name="envoyer" placeholder="Envoyer" id="envoyer"><br/>
         </form>
+        <?php
+            if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['object']) && isset($_POST['content'])) {
+                $position_arobase = strpos($_POST['email'], '@');
+                if ($position_arobase === false)
+                    echo '<p>Votre email doit comporter un arobase.</p>';
+                else {
+                    $retour = mail('contact.super.web@gmail.com', 'Envoi depuis la page Contact du site SUPER!', $_POST['content'], 'From: ' . $_POST['email']);
+                    if($retour)
+                        echo '<p>Votre message a été envoyé.</p>';
+                    else
+                        echo '<p>Erreur. <br/> Merci de remplir tous les champs du formulaire.</p>';
+                }
+            }
+        ?>
     </section>
 
     <aside class="contact_infos_container">
