@@ -31,7 +31,7 @@ function portfolio()
     // get projects
     $projectManager =  new ProjectsManager();
     $projects = $projectManager->getList();
-    
+
     ob_start();
     include('views/frontend/portfolioView.php');
     $content = ob_get_clean();
@@ -69,6 +69,36 @@ function blogArticles()
     $articleManager = new ArticlesManager();
     $allArticles = $articleManager->getAllArticles();
     $article = $articleManager->get($_GET['id']); 
+
+    // create a comment for an article
+    if (isset($_POST['pseudo']) && isset($_POST['mail']) && isset($_POST['content']) && !empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['content'])) 
+    {
+        $comment = new CommentsArticles([
+            $_GET['id'],
+            $_POST['pseudo'],
+            $_POST['mail'],
+            $_POST['comment'],
+        ]);
+        $commentArticle = new CommentsArticlesManager();
+        $commentArticle->getAdd($comment);
+        
+        header('Location: index.php?action=articles&id=' . $_GET['id']);
+        exit();
+    }
+
+    // get all comments about an article clicked 
+    $commentArticle = new CommentsArticlesManager();
+    $commentedArticle = $commentArticle->getArticleComment($_GET['id']);
+
+    // signal a comment to the administration
+    if (isset($_GET['signaled'])) {
+        $comments = new CommentsArticles([
+            'id' => $_GET['idComment']
+        ]);
+        $commentArticle->getSignal($comments);
+
+        // $message = "Ce commentaire a été signalé à l'administrateur";
+    }
 
     ob_start();
     include('views/frontend/articlesView.php');

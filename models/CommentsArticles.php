@@ -1,6 +1,6 @@
 <?php
 
-class Comments
+class CommentsArticles
 {
     private $_id,
         $_id_article,
@@ -111,7 +111,7 @@ class Comments
     public function setContent($content)
     {
         if (is_string($content)) {
-            $this->_content = $content;
+            $this->_content = htmlspecialchars($content);
         }
     }
 
