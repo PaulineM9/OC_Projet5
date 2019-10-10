@@ -327,3 +327,6 @@ hr {
     font-size: 1.6em;
     margin-bottom: 10px;
 }
+.signal_message {
+    color: red;
+}

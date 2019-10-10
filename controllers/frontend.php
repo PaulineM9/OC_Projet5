@@ -70,7 +70,7 @@ function blogArticles()
     $allArticles = $articleManager->getAllArticles();
     $article = $articleManager->get($_GET['id']); 
 
-    // create a comment for an article
+    // create a comment about an article
     if (isset($_POST['pseudo']) && isset($_POST['mail']) && isset($_POST['content']) && !empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['content'])) 
     {
         $comment = new CommentsArticles([
@@ -97,7 +97,7 @@ function blogArticles()
         ]);
         $commentArticle->getSignal($comments);
 
-        // $message = "Ce commentaire a été signalé à l'administrateur";
+        $message = "Ce commentaire a été signalé à l'administrateur";
     }
 
     ob_start();
@@ -111,6 +111,37 @@ function blogPortraits()
     $portraitManager = new PortraitsManager();
     $allPortraits = $portraitManager->getAllPortraits();
     $portrait = $portraitManager->get($_GET['id']);
+
+    // create a comment about a portrait 
+    if (isset($_POST['pseudo']) && isset($_POST['mail']) && isset($_POST['content']) && !empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['content'])) 
+    {
+        $comment = new CommentsPortraits([
+            $_GET['id'],
+            $_POST['pseudo'],
+            $_POST['mail'],
+            $_POST['comment'],
+        ]);
+        $commentPortrait = new CommentsPortraitsManager();
+        $commentPortrait->getAdd($comment);
+        
+        header('Location: index.php?action=portraits&id=' . $_GET['id']);
+        exit();
+    }
+
+    // get all comments about a portrait clicked 
+    $commentPortrait = new CommentsPortraitsManager();
+    $commentedPortrait = $commentPortrait->getPortraitComment($_GET['id']);
+
+    // signal a comment to the administration
+    if (isset($_GET['signaled'])) {
+        $comments = new CommentsPortraits([
+            'id' => $_GET['idComment']
+        ]);
+        $commentPortrait->getSignal($comments);
+
+        $message = "Ce commentaire a été signalé à l'administrateur";
+    }
+
 
     ob_start();
     include('views/frontend/portraitsView.php');
