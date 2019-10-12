@@ -30,6 +30,9 @@ if (isset($_GET['action'])) {
         blogPortraits();
     }
     // BACKEND
+    if ($_GET['action'] == 'sign_in') {
+        signIn();
+    }
     if ($_GET['action'] == 'admin') {
         admin();
     }

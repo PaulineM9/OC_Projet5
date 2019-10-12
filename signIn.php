@@ -57,12 +57,12 @@
     </header>
 
     <section class="signin_form">
-        <form action="index.php?action=signin" method="post" class="signin">
-            <input class="pseudo" type="text" name="pseudo" placeholder="Pseudo" id="pseudo"><br/>
+        <form action="index.php?action=sign_in" method="post" class="signin">
+            <input class="identifiant" type="text" name="identifiant" placeholder="Identifiant" id="identifiant"><br/>
             <input class="email" type="email" name="email" placeholder="Email" id="email"><br/>
             <input class="password" type="password" name="password" placeholder="Mot de passe" id="password"><br/>
             <input class="check_password" type="password" name="check_password" placeholder="Vérification du mot de passe" id="check_password"><br/>
-            <input class="signin" type="submit" name="signin" placeholder="Inscription" id="signin"><br/>
+            <input class="submit" type="submit" name="submit" placeholder="Inscription" id="submit"><br/>
         </form>
     </section>
 </body>
