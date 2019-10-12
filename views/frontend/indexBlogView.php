@@ -7,15 +7,6 @@
     </h4>
 </section>
 
-<section class="navigation">
-    <a href="index.php?action=portraits">
-        <h3>PORTRAITS</h3>
-    </a>
-    <a href="index.php?action=articles">
-        <h3>ARTICLES</h3>
-    </a>
-</section>
-
 <div class="content_container">
     <section class="lasts_contents">
         <div class="lasts_portraits">

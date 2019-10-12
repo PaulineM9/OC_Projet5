@@ -34,7 +34,7 @@ class CommentsPortraitsManager extends Manager
     {
         $list = [];
 
-        $req = $this->_db->prepare('SELECT id_portrait, pseudo, mail, date_comment, content DATE_FORMAT (date_comment, "%d/%m/%Y à %Hh%imin%ss") AS date_creation_comment FROM comments_portraits ORDER BY date_comment DESC');
+        $req = $this->_db->prepare('SELECT id_portrait, pseudo, mail, date_comment, content, DATE_FORMAT (date_comment, "%d/%m/%Y à %Hh%imin%ss") AS date_creation_comment FROM comments_portraits ORDER BY date_comment DESC');
         $req->execute();
 
         $req_join = $this->_db->prepare('SELECT * FROM portraits, comments_portraits WHERE portraits.id=comments_portraits.id_portrait ORDER BY date_comment DESC');
@@ -92,5 +92,13 @@ class CommentsPortraitsManager extends Manager
             }
         }
         return $list;
+    }
+
+    public function getDelete($commentsDelete)
+    {
+        $req_delete = $this->_db->prepare('DELETE FROM comments_portraits WHERE id = :id');
+        $req_delete->execute([
+            'id' => $commentsDelete->getId() 
+        ]);
     }
 }

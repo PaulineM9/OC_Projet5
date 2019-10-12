@@ -142,7 +142,6 @@ function blogPortraits()
         $message = "Ce commentaire a été signalé à l'administrateur";
     }
 
-
     ob_start();
     include('views/frontend/portraitsView.php');
     $content = ob_get_clean();

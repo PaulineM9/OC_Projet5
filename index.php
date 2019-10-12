@@ -3,6 +3,7 @@ require("controllers/frontend.php");
 require("controllers/backend.php");
 
 if (isset($_GET['action'])) {
+    // FRONTEND
     if ($_GET['action'] == 'home') {
         home();
     }
@@ -18,6 +19,7 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'contact') {
         contact();
     }
+    // FRONTEND BLOG
     if ($_GET['action'] == 'blog') {
         blog();
     }
@@ -27,6 +29,7 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'portraits') {
         blogPortraits();
     }
+    // BACKEND
     if ($_GET['action'] == 'admin') {
         admin();
     }
@@ -47,9 +50,6 @@ if (isset($_GET['action'])) {
     }
     if ($_GET['action'] == 'admin_comments') {
         admin_comments();
-    }
-    if ($_GET['action'] == 'admin_messages') {
-        admin_messages();
     }
     if ($_GET['action'] == 'admin_profil') {
         admin_profil();

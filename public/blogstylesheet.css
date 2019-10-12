@@ -109,27 +109,6 @@ body {
     font-family: 'poiret one', cursive;
     font-size: 1.1em;
 }
-.navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.navigation h3 {
-    margin: 20px;
-    padding: 20px;
-    padding-top: 25px;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-.navigation a {
-    margin: 20px;
-    padding: 20px;
-    padding-top: 25px;
-    background-color: rgba(255, 255, 255, 0.6);
-    font-family: 'poiret one', cursive;
-    font-size: 1.3em;
-    font-weight: 700;
-    color: black;
-}
 
             /*----- CONTENT ARTICLES AND PORTRAITS -----*/
 .content_container {

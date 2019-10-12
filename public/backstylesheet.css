@@ -260,5 +260,68 @@ body {
 	border: 1px solid #128f8c;
 }
 
+/*----- COMMENTS VIEW -----*/
+.comments_articles_portraits_container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-family: 'poiret one', 'cursive';
+}
+.container_all_articles_comments,
+.container_all_portraits_comments {
+	display: flex;
+	flex-direction: row;
+	padding: 40px 20px;
+}
+.all_articles_comments,
+.all_articles_comments_signaled,
+.all_portraits_comments,
+.all_portraits_comments_signaled {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.all_articles_comments h3,
+.all_portraits_comments h3,
+.all_articles_comments_signaled h3,
+.all_portraits_comments_signaled h3 {
+	background-color:rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	width: 80%;
+	margin-bottom: 20px;
+	font-size: 1.3em;
+}
+.all_articles_comments h4,
+.all_portraits_comments h4,
+.all_articles_comments_signaled h4,
+.all_portraits_comments_signaled h4 {
+	margin-bottom: 10px;
+}
+.all_articles_comments h5,
+.all_portraits_comments h5,
+.all_articles_comments_signaled h5,
+.all_portraits_comments_signaled h5 {
+	margin-bottom: 20px;
+}
+.all_articles_comments p,
+.all_portraits_comments p,
+.all_articles_comments_signaled p,
+.all_portraits_comments_signaled p {
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+.fa-times {
+	color: red!important;
+}
+.fa-check {
+	margin-left: 10px;
+	color: green!important;
+}
+.fas:hover, 
+.fa-times:hover {
+	color: coral!important;
+}
+
+
 
 

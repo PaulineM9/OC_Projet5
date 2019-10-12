@@ -186,16 +186,50 @@ function admin_project()
 
 function admin_comments()
 {
+    /*----- ARTICLES -----*/
+    // join tables for getting all comments and article title 
+    $commentArticleManager = new CommentsArticlesManager();
+    $commentArticle = $commentArticleManager->getListAllArticles();
+
+    // get all comments with signal alert about articles
+    $commentArticleSigManager = new CommentsArticlesManager();
+    $commentArticleSignaled = $commentArticleSigManager->getListSignaled();
+
+    // delete comments about articles
+    if (isset($_GET['delete'])) {
+        $commentsDelete = new CommentsArticles([
+            'id' => $_GET['id']
+        ]);
+        $commentsArticleManager = new CommentsArticlesManager();
+        $commentsArticleManager->getDelete($commentsDelete);
+
+        header('Location: index.php?action=admin_comments');
+        exit();
+    }
+
+    /*----- PORTRAITS -----*/
+    // join tables for getting all comments and portrait title 
+    $commentPortraitManager = new CommentsPortraitsManager();
+    $commentPortrait = $commentPortraitManager->getListAllPortraits();
+
+    // get all comments with signal alert about portrait
+    $commentPortraitSigManager = new CommentsPortraitsManager();
+    $commentPortraitSignaled = $commentPortraitSigManager->getListSignaled();
+
+    // delete comments about portraits
+    if (isset($_GET['delete'])) {
+        $commentsDelete = new CommentsPortraits([
+            'id' => $_GET['id']
+        ]);
+        $commentsPortraitManager = new CommentsPortraitsManager();
+        $commentsPortraitManager->getDelete($commentsDelete);
+
+        header('Location: index.php?action=admin_comments');
+        exit();
+    }
+
     ob_start();
     include('views/backend/commentView.php');
-    $content = ob_get_clean();
-    require("views/backend/template.php");
-}
-
-function admin_messages()
-{
-    ob_start();
-    include('views/backend/messageView.php');
     $content = ob_get_clean();
     require("views/backend/template.php");
 }
