@@ -23,16 +23,8 @@
                 foreach ($commentArticle as $cle => $elements) { ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete"><i class="fas fa-times"></i></i></a>
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&checked"><i class="fas fa-check"></i></a></h5><br />
+                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_article"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
-
-                    <!-- permet de gérer la validation des commentaires via la page directement -->
-                    <!-- <?php if (isset($_GET['check'])) {
-                        foreach ($commentArticle as $cle => $elements) {
-                            echo 'Le commentaire a été validé';
-                        }
-                    } ?> -->
             <?php }
             } ?>
         </div>
@@ -42,8 +34,7 @@
                 foreach ($commentArticleSignaled as $cle => $elements) { ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete"><i class="fas fa-times"></i></i></a>
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&check"><i class="fas fa-check"></i></a></h5><br />
+                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_article"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
             <?php }
             } ?>
@@ -57,8 +48,7 @@
                 foreach ($commentPortrait as $cle => $elements) { ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete"><i class="fas fa-times"></i></i></a>
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&check"><i class="fas fa-check"></i></a></h5><br />
+                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_portrait"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
             <?php }
             } ?>
@@ -69,8 +59,7 @@
                 foreach ($commentPortraitSignaled as $cle => $elements) { ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete"><i class="fas fa-times"></i></i></a>
-                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&check"><i class="fas fa-check"></i></a></h5><br />
+                        <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_portrait"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
             <?php }
             } ?>

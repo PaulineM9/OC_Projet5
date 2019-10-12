@@ -101,9 +101,4 @@ class CommentsArticlesManager extends Manager
             'id' => $commentsDelete->getId() 
         ]);
     }
-    
-    public function getValid($commentsValid)
-    {
-        
-    }
 }

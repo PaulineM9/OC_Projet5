@@ -77,7 +77,7 @@ function blogArticles()
             $_GET['id'],
             $_POST['pseudo'],
             $_POST['mail'],
-            $_POST['comment'],
+            $_POST['content'],
         ]);
         $commentArticle = new CommentsArticlesManager();
         $commentArticle->getAdd($comment);

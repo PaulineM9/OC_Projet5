@@ -196,7 +196,7 @@ function admin_comments()
     $commentArticleSignaled = $commentArticleSigManager->getListSignaled();
 
     // delete comments about articles
-    if (isset($_GET['delete'])) {
+    if (isset($_GET['delete_article'])) {
         $commentsDelete = new CommentsArticles([
             'id' => $_GET['id']
         ]);
@@ -212,12 +212,12 @@ function admin_comments()
     $commentPortraitManager = new CommentsPortraitsManager();
     $commentPortrait = $commentPortraitManager->getListAllPortraits();
 
-    // get all comments with signal alert about portrait
+    // get all comments with signal alert about portraits
     $commentPortraitSigManager = new CommentsPortraitsManager();
     $commentPortraitSignaled = $commentPortraitSigManager->getListSignaled();
 
     // delete comments about portraits
-    if (isset($_GET['delete'])) {
+    if (isset($_GET['delete_portrait'])) {
         $commentsDelete = new CommentsPortraits([
             'id' => $_GET['id']
         ]);
