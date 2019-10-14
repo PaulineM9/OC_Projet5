@@ -70,6 +70,40 @@ body {
     background-size: cover;
 }
 
+/*----- INSCRIPTION PAGE -----*/
+.signin_header {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 43%;
+}
+.signin_header img {
+    width: 200px;
+}
+.signin_form {
+	display: flex;
+	flex-direction: column;
+    margin-top: 200px!important;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'poiret one', cursive;
+    width: 260px; 
+    padding: 20px;
+    margin: 0px auto;
+}
+.signin input {
+    width: 210px;
+}
+.signin_form p {
+	margin: 10px 0px;
+}
+#message_erreur {
+	color: red;
+	font-size: 1.4em;
+}
+#message_ok {
+	color: darkcyan;
+	font-size: 1.4em;
+}
+
 /*------ ADMINVIEW PAGE -----*/
 .header_back {
 	background-color: rgba(255, 255, 255, 0.5);

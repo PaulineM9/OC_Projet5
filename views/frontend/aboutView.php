@@ -1,15 +1,5 @@
 <?php $title = 'SUPER! Création de sites web et blog' ?>
 
-<section class="portrait_perso">
-    <div class="portrait_photo">
-        <img class="portrait_myself" alt="portrait_pauline_martin" src="public/images/portrait.jpg" width="80%">
-    </div>
-
-    <div class="citation">
-        <h4>"L'audace réussit à ceux qui savent profiter des occasions."<br /> Marcel PROUST</h4>
-    </div>
-</section>
-
 <section class="cv_container">
     <div class="experience_container">
         <div class="experience_title">
@@ -49,6 +39,16 @@
             </div>
         </div>
     </div>
+
+    <section class="portrait_perso">
+        <div class="portrait_photo">
+            <img class="portrait_myself" alt="portrait_pauline_martin" src="public/images/portrait.jpg" width="80%">
+        </div>
+
+        <div class="citation">
+            <h4>"L'audace réussit à ceux qui savent profiter des occasions."<br /> Marcel PROUST</h4>
+        </div>
+    </section>
 
     <div class="competences_container">
         <div class="comp_pro">

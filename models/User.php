@@ -3,63 +3,61 @@
 class User
 {
     private $_id,
-            $_identifiant,
-            $_email,
-            $_password;
+        $_identifiant,
+        $_email,
+        $_password;
 
-    public function __construct(array $data) 
+    public function __construct(array $data)
     {
-        $this->hydrate($data); 
+        $this->hydrate($data);
     }
-    
-    public function hydrate(array $data) 
+
+    public function hydrate(array $data)
     {
-        if (isset($data['id'])) 
-        {
-            $this->setId($data['id']); 
+        if (isset($data['id'])) {
+            $this->setId($data['id']);
         }
-        if (isset($data['identifiant']))
-        {
+
+        if (isset($data['identifiant'])) {
             $this->setIdentifiant($data['identifiant']);
         }
-        if (isset($data['email']))
-        {
+
+        if (isset($data['email'])) {
             $this->setEmail($data['email']);
         }
-        if (isset($data['password']))
-        {
+
+        if (isset($data['password'])) {
             $this->setPassword($data['password']);
         }
     }
 
     // GETTERS:
-    public function getId() 
+    public function getId()
     {
         return $this->_id;
     }
 
-    public function getIdentifiant() 
+    public function getIdentifiant()
     {
         return $this->_identifiant;
     }
 
-    public function getEmail() 
+    public function getEmail()
     {
         return $this->_email;
     }
 
-    public function getPassword() 
+    public function getPassword()
     {
         return $this->_password;
     }
 
     //SETTERS:
-    public function setId($id) 
+    public function setId($id)
     {
-        $id = (int)$id;
-        if ($id > 0)
-        {
-            $this->_id = $id; 
+        $id = (int) $id;
+        if ($id > 0) {
+            $this->_id = $id;
         }
     }
 

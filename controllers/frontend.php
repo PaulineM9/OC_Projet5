@@ -147,3 +147,44 @@ function blogPortraits()
     $content = ob_get_clean();
     require("views/frontend/blogTemplate.php");
 }
+
+function login()
+{
+    // connexion to the administration space
+    if (!empty($_POST)) {
+        $validation = true;
+
+        $profil = new User([
+            'identifiant' => $_POST['identifiant']
+        ]);
+        $profilAcount = new UserManager();
+        $profilManager = $profilAcount->getConnect($profil);
+
+        $passwordCorrect = password_verify($_POST['password'], $profilManager->getPassword());
+
+        if ($profilManager === false) {
+            $validation = false;
+        }
+
+        if (!$passwordCorrect) {
+            $validation = false;
+        }
+
+        if ($validation === true) {
+            $_SESSION['user'] = $profilManager->getId();
+            $_SESSION['identifiant'] = $profilManager->getIdentifiant();
+            $_SESSION['email'] = $profilManager->getEmail();
+            $_SESSION['password'] = $profilManager->getPassword();
+
+            header('Location: index.php?action=admin');
+            exit();
+        } else {
+            $messageErreur = "L'identifiant ou le mot de passe est incorrect.";
+        }
+    }
+    
+    ob_start();
+    include('views/frontend/loginView.php');  
+    $content = ob_get_clean();
+    require("views/frontend/template.php");
+}

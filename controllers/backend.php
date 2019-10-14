@@ -10,7 +10,7 @@ function signIn()
     // get inscription for administration
     if (isset($_POST['submit'])) {
         $validation = true;
-
+        
         $identifiantAdmin = htmlspecialchars($_POST['identifiant']);
         $emailAdmin = htmlspecialchars($_POST['email']);
         $passwordAdmin = htmlspecialchars($_POST['password']);
@@ -52,16 +52,17 @@ function signIn()
 
             $profilManager = new UserManager();
             $profilManager->getInscription($profil);
-
             $acountOk = "Votre compte administrateur a bien été  créé.";
         }
     }
-    
+
     include("signIn.php");
 }
 
 function admin()
 {
+    // $sessionConnect = sessionConnect();
+
     ob_start();
     include('views/backend/adminView.php');
     $content = ob_get_clean();
@@ -215,6 +216,8 @@ function update_portrait()
 
 function admin_project()
 {
+    // $sessionConnect = sessionConnect();
+
     // get projects
     $projectManager =  new ProjectsManager();
     $projects = $projectManager->getList();
@@ -241,6 +244,7 @@ function admin_project()
 
 function admin_comments()
 {
+    // $sessionConnect = sessionConnect();
     /*----- ARTICLES -----*/
     // join tables for getting all comments and article title 
     $commentArticleManager = new CommentsArticlesManager();
@@ -291,8 +295,26 @@ function admin_comments()
 
 function admin_profil()
 {
+    // $sessionConnect = sessionConnect();
+
     ob_start();
     include('views/backend/profilView.php');
     $content = ob_get_clean();
     require("views/backend/template.php");
+}
+
+function logout()
+{
+    unset($_SESSION['user']);
+    session_destroy();
+    header('location: index.php?action=login');
+    exit();
+}
+
+function sessionConnect()
+{
+    if (!isset($_SESSION['user'])) {
+        header('Location: index.php?action=login');
+        exit();
+    }
 }

@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="public/frontstylesheet.css" />
+	<link rel="stylesheet" href="public/backstylesheet.css" />
 	<!-- <link rel="icon" type="image/png" href=""/> -->
 	<title>SUPER! Création de sites web et blog</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,28 @@
     </header>
 
     <section class="signin_form">
-        <form action="index.php?action=sign_in" method="post" class="signin">
-            <input class="identifiant" type="text" name="identifiant" placeholder="Identifiant" id="identifiant"><br/>
-            <input class="email" type="email" name="email" placeholder="Email" id="email"><br/>
-            <input class="password" type="password" name="password" placeholder="Mot de passe" id="password"><br/>
-            <input class="check_password" type="password" name="check_password" placeholder="Vérification du mot de passe" id="check_password"><br/>
-            <input class="submit" type="submit" name="submit" placeholder="Inscription" id="submit"><br/>
+		<form class="signin" action="index.php?action=sign_in" method="post">
+            <input class="identifiant" type="text" name="identifiant" size=60 placeholder="Identifiant" id="identifiant" required><br />
+            <input class="email" type="email" name="email" placeholder="Votre email" id="email" required><br />
+            <input class="password" type="password" name="password" placeholder="Mot de passe" id="password" required><br />
+            <input class="check" type="password" name="check_password" placeholder="Confirmation du mot de passe" id="check_password" required><br />
+            <input class="submit" type="submit" name="submit" value="Inscription" id="submit"><br />
         </form>
+        <p>Le mot de passe doit contenir plus de 6 caractères <br /> dont au moins une majuscule et un caractère spécial.</p>
+        <p id="message_erreur"><?php if (isset($errorData)) {
+                                    echo $errorData;
+                                } ?></p>
+        <p id="message_erreur"><?php if (isset($errorPassword)) {
+                                    echo $errorPassword;
+                                } ?></p>
+        <p id="message_erreur"><?php if (isset($errorPwCheck)) {
+                                    echo $errorPwCheck;
+                                } ?></p>
+        <p id="message_erreur"><?php if (isset($errorRegex)) {
+                                    echo $errorRegex;
+                                } ?></p>
+        <p id="message_ok"><?php if (isset($acountOk)) {
+                                echo $acountOk;
+                            } ?></p>
     </section>
 </body>

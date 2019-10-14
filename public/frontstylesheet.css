@@ -461,6 +461,7 @@ footer {
 .cv_container {
     display: flex;
     flex-direction: column;
+    margin-top: 20Px;
 }
 .experience_container {
     display: flex;
@@ -693,24 +694,20 @@ footer {
     margin-bottom: 3%;
 }
 
-/*----- INSCRIPTION PAGE -----*/
-.signin_header {
+/*----- LOGINVIEW PAGE -----*/
+.connexion_container {
     display: flex;
-    margin-top: 50px;
-    margin-left: 43%;
+    flex-direction: column;
 }
-.signin_header img {
-    width: 200px;
-}
-.signin_form {
+.connexion_form {
     display: flex;
-    margin-top: 200px!important;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.6);
-    font-family: 'poiret one', cursive;
-    width: 260px; 
     padding: 20px;
-    margin: 0px auto;
+    margin: 220px auto;
+    width: 20%;
 }
-.signin input {
-    width: 210px;
+.connex_form {
+    font-family: 'poiret one', 'cursive';
+    margin-bottom: 10px;
 }

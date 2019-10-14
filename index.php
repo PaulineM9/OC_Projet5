@@ -19,6 +19,9 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'contact') {
         contact();
     }
+    if ($_GET['action'] == 'login') {
+        login();
+    }
     // FRONTEND BLOG
     if ($_GET['action'] == 'blog') {
         blog();
