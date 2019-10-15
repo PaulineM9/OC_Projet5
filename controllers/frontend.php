@@ -162,7 +162,7 @@ function login()
 
         $passwordCorrect = password_verify($_POST['password'], $profilManager->getPassword());
 
-        if ($profilManager === false) {
+        if (!$profilManager) {
             $validation = false;
         }
 

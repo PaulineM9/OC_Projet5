@@ -1,5 +1,5 @@
 <?php 
-class Manager 
+abstract class Manager 
 {
     protected function dbConnect()
     {
@@ -10,6 +10,7 @@ class Manager
                 'root',
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
             );
+        return $db;
         } catch (Exception $e) {
             die('erreur : ' . $e->getMessage());
         }
