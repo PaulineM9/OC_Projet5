@@ -182,7 +182,7 @@ function login()
             $messageErreur = "L'identifiant ou le mot de passe est incorrect.";
         }
     }
-    
+
     ob_start();
     include('views/frontend/loginView.php');  
     $content = ob_get_clean();

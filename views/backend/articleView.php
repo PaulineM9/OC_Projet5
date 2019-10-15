@@ -25,7 +25,7 @@
             tinymce.init({
                 selector: "textarea#test",
                 plugins: ["paste"],
-                paste_data_images: true
+                paste_data_images: true,
             });
             var AddPics = function(butt, textarea) {
                 var d = document;

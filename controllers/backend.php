@@ -20,6 +20,9 @@ function signIn()
 
         $acount = new UserManager();
         $newAcount = $acount->get();
+        // var_dump($newAcount);
+        // die(); = j'ai bien mon objet mais tout le contenu est NULL même si j'ai un compte de créé en bdd  et la condition 
+        // me renvoie qu'un compte existe déjà même si je n'ai rien dans la bdd
 
         if ($newAcount != false) {
             $validation = false;

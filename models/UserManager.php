@@ -44,7 +44,7 @@ class UserManager extends Manager
         $req->execute([
             'identifiant' => $profil->getIdentifiant()
         ]);
-        $data = $req->fetch();
+        $data[] = $req->fetch();
 
         return new User($data);
     }
