@@ -187,40 +187,27 @@ footer {
         /*----- SERVICES ----*/
 .services_container {
     display: flex;
-    flex-direction: row;
-    margin: 90px;
+    flex-direction: column;
+    font-family: 'poiret one', cursive;
     background-color: rgba(255, 255, 255, 0.6);
     width: 60%;
     padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10%;
 }
-.stars {
-    display: flex;
-    flex-direction: column;
-    width: 4%;
-}
-.stars img {
-    padding-bottom: 148%;
-    padding-top: 148%;
-}
-.services_presentation {
-    display: flex;
-    flex-direction: column;
-    width: 96%;
-    font-family: 'poiret one', cursive;
-    padding-top: 5px;
-}
-.services_presentation h2 {
+.services_container h2 {
     font-family: 'poiret one', cursive;
     font-weight: 700;
     font-size: 1.6em;
     margin: 0 auto;
     padding-bottom: 20px;
 }
-.services_presentation h3 {
+.services_container h3 {
     font-family: 'poiret one', cursive;
     font-weight: 700;
 }
-.services_presentation p {
+.services_container p {
     font-family: 'poiret one', cursive;
     font-weight: 300;
     padding: 10px;
@@ -439,9 +426,8 @@ footer {
     background-color: rgba(255, 255, 255, 0.6);
     font-family: 'poiret one', cursive;
     color: black;
-    width: 35%; 
+    width: 25%; 
     margin: 0 auto;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 .portrait_photo {
@@ -454,6 +440,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
+    margin-left: 20px;
 }
 .citation h4 {
     margin: 0 auto;
