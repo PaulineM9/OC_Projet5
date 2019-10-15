@@ -7,7 +7,7 @@ class ArticlesManager extends Manager
 
     public function __construct()
     {
-        $this->$_db = $this->dbConnect();
+        $this->_db = $this->dbConnect();
     }
 
     public function addArticle(Articles $articles) // créé un article et insère les informations en post / get dans la BDD
