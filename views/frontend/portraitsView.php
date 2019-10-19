@@ -3,7 +3,6 @@
 <section class="nav_portraits">
     <section class="show_portrait">
         <div class="portrait_container">
-            <p><!--insérer la photo du portrait --></p>
             <h2><?= $portrait->getTitle() ?></h2><br/>
             <h3>Publié le <?= $portrait->getDatePortrait() ?></h3><br/>
             <p><?= $portrait->getContent() ?></p><br/>
@@ -12,7 +11,6 @@
         <div class="comments"></div>
             <section class="comments_portrait">
                 <h3>COMMENTAIRES</h3>
-                <!-- affiche les commentaires ds l'ordre de parution avec pagination -->
                 <div class="comment_container">
                     <?php if (!empty($commentedPortrait))
                         { foreach ($commentedPortrait as $cle => $elements) { ?>
@@ -26,6 +24,7 @@
                 </div>
                 <hr>   
             </section>
+            
             <section class="create_comments_portrait">
                 <h3>Postez votre commentaire</h3>
                 <h4>Faites nous part de vos <strong>expériences</strong>, de vos remarques ou posez-moi vos questions en lien avec ce portrait</h4>

@@ -3,7 +3,6 @@
 <section class="nav_articles">
     <section class="show_article">
         <div class="article_container">
-            <p><!--insérer la photo de l'article --></p>
             <h2><?= $article->getTitle() ?></h2><br/>
             <h3>Publié le <?= $article->getDateArticle() ?></h3><br/>
             <p><?= $article->getContent() ?></p><br/>
@@ -12,7 +11,6 @@
         <div class="comments"></div>
             <section class="comments_article">
                 <h3>COMMENTAIRES</h3>
-                <!-- commentaires dans une fenêtre dédidée active en JS au click => affiche les commentaires ds l'ordre de parution avec pagination -->
                 <div class="comment_container">
                     <?php if (!empty($commentedArticle))
                         { foreach ($commentedArticle as $cle => $elements) { ?>

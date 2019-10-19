@@ -232,7 +232,7 @@ body {
 }
 .portrait_container,
 .article_container {
-    margin-bottom: 80px;
+    margin-bottom: 8    0px;
 }
 .article_container h3,
 .portrait_container h3 {
@@ -256,18 +256,8 @@ hr {
     width: 400px;
     margin: 20px 0!important;
 }
-.comments_article h3,
-.comments_portrait h3 {
-    font-size: 1.2em;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    width: 60%;
-    margin-bottom: 30px; 
-}
 .portrait_container h2,
-.article_container h2,
-.comments_portrait h3,
-.article_portrait h3 {
+.article_container h2 {
     font-size: 1.8em;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
@@ -276,9 +266,14 @@ hr {
     margin-bottom: 20px;
 }
 .comments_portrait h3,
-.article_portrait h3 {
+.comments_article h3 {
     font-size: 0.9em!important;
     width: 30%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 60%;
+    margin-top: 40px;
+    margin-bottom: 30px; 
 }
 .create_comments_portrait h3,
 .create_comments_article h3 {

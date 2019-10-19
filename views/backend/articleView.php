@@ -19,7 +19,6 @@
     <h3>Ecrire un nouvel article</h3>
     <form class="article_form" action="index.php?action=admin_article" method="post">
         <input class="article_title" type="text" name="title" placeholder="Titre de l'article" id="title"><br />
-        <!-- <input class="file" type="file" id="UploadPics"><br /> -->
         <textarea class="article" id="mytextarea" name="content" placeholder="Votre article" id="content" cols="30" rows="10"></textarea><br />
         <input class="submit" type="submit" name="published" placeholder="Publier" id="published"><br />
     </form>
@@ -32,7 +31,6 @@
         <?php if (!empty($articles)) {
             foreach ($articles as $cle => $elements) { ?>
                 <div class="articles_published">
-                    <p class="image_article"></p> <!-- permet d'afficher l'image -->
                     <h4><?= $elements->getTitle() ?></h4>
                     <p class="publication">Article publié le <?= $elements->getDateArticle() ?></p>
                     <h5><?= $elements->getContent() ?></h5>
