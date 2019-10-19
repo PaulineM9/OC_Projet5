@@ -24,7 +24,7 @@ function signIn()
         // die(); = j'ai bien mon objet mais tout le contenu est NULL même si j'ai un compte de créé en bdd  et la condition 
         // me renvoie qu'un compte existe déjà même si je n'ai rien dans la bdd
 
-        if (!$newAcount) {
+        if ($newAcount != false) {
             $validation = false;
             $errorData = "Un compte administrateur a déjà été créé. Merci de contacter l'auteur.";
         }
@@ -64,7 +64,7 @@ function signIn()
 
 function admin()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     ob_start();
     include('views/backend/adminView.php');
@@ -74,7 +74,7 @@ function admin()
 
 function admin_article()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     // get articles
     $articleManager = new ArticlesManager();
@@ -118,7 +118,7 @@ function admin_article()
 
 function update_article()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     // get article title and content 
     $articleManager = new ArticlesManager(); 
@@ -146,7 +146,7 @@ function update_article()
 
 function admin_portrait()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     // get portraits
     $portraitManager = new PortraitsManager();
@@ -190,7 +190,7 @@ function admin_portrait()
 
 function update_portrait()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     // get article title and content 
     $portraitManager = new PortraitsManager(); 
@@ -219,7 +219,7 @@ function update_portrait()
 
 function admin_project()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     // get projects
     $projectManager =  new ProjectsManager();
@@ -247,7 +247,7 @@ function admin_project()
 
 function admin_comments()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
     /*----- ARTICLES -----*/
     // join tables for getting all comments and article title 
     $commentArticleManager = new CommentsArticlesManager();
@@ -298,7 +298,7 @@ function admin_comments()
 
 function admin_profil()
 {
-    $sessionConnect = sessionConnect();
+    // $sessionConnect = sessionConnect();
 
     ob_start();
     include('views/backend/profilView.php');

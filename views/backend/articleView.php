@@ -19,35 +19,7 @@
     <h3>Ecrire un nouvel article</h3>
     <form class="article_form" action="index.php?action=admin_article" method="post">
         <input class="article_title" type="text" name="title" placeholder="Titre de l'article" id="title"><br />
-        <input class="file" type="file" id="UploadPics"><br />
-        <textarea class="file" id="test"></textarea>
-        <script>
-            tinymce.init({
-                selector: "textarea#test",
-                plugins: ["paste"],
-                paste_data_images: true,
-            });
-            var AddPics = function(butt, textarea) {
-                var d = document;
-                d.getElementById(butt).setAttribute('link', textarea);
-                d.getElementById(butt).addEventListener('change',
-                    function(e) {
-                        var f = e.target.files[0],
-                            r = new FileReader();
-                        r.textarea = e.target.getAttribute('link');
-                        if (!f) return alert("Failed to load file");
-                        r.onload = function(e) {
-                            var ed = tinyMCE.get(e.target.textarea);
-                            var newNode = ed.getDoc().createElement("img");
-                            newNode.src = e.target.result;
-                            ed.selection.getRng().insertNode(newNode);
-                        }
-                        r.readAsDataURL(f);
-                    });
-            };
-
-            AddPics("UploadPics", 'test');
-        </script>
+        <!-- <input class="file" type="file" id="UploadPics"><br /> -->
         <textarea class="article" id="mytextarea" name="content" placeholder="Votre article" id="content" cols="30" rows="10"></textarea><br />
         <input class="submit" type="submit" name="published" placeholder="Publier" id="published"><br />
     </form>

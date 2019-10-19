@@ -22,8 +22,8 @@
 			selector: "#mytextarea",
 			language_url: "./public/langs/fr_FR.js",
 			language: "fr_FR",
-			plugins: ["paste"],
-			paste_data_images: true, 
+			toolbar: "image",
+  			plugins: "image imagetools",
 		});
 	</script>
 

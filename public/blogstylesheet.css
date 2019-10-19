@@ -131,6 +131,9 @@ body {
     padding: 20px;
     margin-bottom: 20px;
 }
+.lasts_portraits {
+    margin-bottom: 100px;
+}
 .last_article_published,
 .last_portrait_published {
     display: flex;
@@ -144,7 +147,8 @@ body {
     padding: 20px;
     font-size: 1.4em;
     margin-left: 50px;
-    width: 87%;
+    width: 60%;
+    margin-bottom: 20px;
 }
 .last_article_published p,
 .last_portrait_published p {
@@ -154,8 +158,8 @@ body {
 .lire_plus {
     color: #128f8c;
     font-size: 1em;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 500px;
 }
 .lire_plus:hover {
     color: darkgrey;
@@ -170,6 +174,13 @@ body {
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
+}
+.archives_container h6 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.archives_portraits {
+    margin-bottom: 30px;
 }
 .last_tree_articles,
 .last_tree_portraits {
@@ -221,7 +232,7 @@ body {
 }
 .portrait_container,
 .article_container {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 .article_container h3,
 .portrait_container h3 {
@@ -289,7 +300,6 @@ hr {
 .comments_form textarea {
     font-family: 'poiret one', cursive;
     margin-bottom: 5px;
-    border: 1px solid #128f8c;
 }
 .all_portraits_list h5,
 .all_articles_list h5 {
