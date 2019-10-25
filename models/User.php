@@ -9,11 +9,6 @@ class User
 
     public function __construct(array $data)
     {
-        var_dump($data);
-        var_dump($data[0]['id']); 
-        var_dump($data[0]['identifiant']); 
-        var_dump($data[0]['email']); 
-        var_dump($data[0]['password']);
         $this->hydrate($data);
     }
 

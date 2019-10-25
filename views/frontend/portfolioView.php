@@ -10,8 +10,9 @@
     <?php foreach ($projects as $project) { ?>
             <div class="all_projects_published">
                 <h3><?= $project->getTitle() ?></h3>
-                    <!-- insérer une capture du projet -->
-                <a href="index.php&<?= $project->getLink() ?>">Visiter le site</a>
+                <h4><?= $project->getImage() ?></h4>
+                <a href="<?= $project->getLink() ?>">Visiter le site</a>
+                <a class="description" href="">Description</a>
             </div>
     <?php } ?>  
 </section>

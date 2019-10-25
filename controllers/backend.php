@@ -10,7 +10,7 @@ function signIn()
     // get inscription for administration
     if (isset($_POST['submit'])) {
         $validation = true;
-        
+
         $identifiantAdmin = htmlspecialchars($_POST['identifiant']);
         $emailAdmin = htmlspecialchars($_POST['email']);
         $passwordAdmin = htmlspecialchars($_POST['password']);
@@ -19,29 +19,27 @@ function signIn()
         $regex_specials = preg_match("#[\#\.\!\$\(\)\[\]\{\}\?\+\=\*\|]{1}#", $passwordAdmin);
 
         $acount = new UserManager();
-        $newAcount = $acount->get();
-        // var_dump($newAcount);
-        // die(); = j'ai bien mon objet mais tout le contenu est NULL même si j'ai un compte de créé en bdd  et la condition 
-        // me renvoie qu'un compte existe déjà même si je n'ai rien dans la bdd
+        $newAcount = $acount->verifyUser();
+        $_SESSION['flash']['danger'] = '';
 
         if ($newAcount != false) {
             $validation = false;
-            $errorData = "Un compte administrateur a déjà été créé. Merci de contacter l'auteur.";
+            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Un compte administrateur a déjà été créé. Merci de contacter l'auteur." . '<br/>';
         }
 
         if (strlen($passwordAdmin) < 6) {
             $validation = false;
-            $errorPassword = "Mot de passe < 6 caractères";
+            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Mot de passe < 6 caractères." . '<br/>';
         }
 
         if ($passwordAdmin != $checkPassword) {
             $validation = false;
-            $errorPwCheck = "Les mots de passe ne correspondent pas.";
+            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Les mots de passe ne correspondent pas." . '<br/>';
         }
 
         if (!$regex_specials or !$regex_letters) {
             $validation = false;
-            $errorRegex = "Votre mot de passe doit contenir au moins 6 caractères, 1 majuscule et 1 caractère spécial.";
+            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Votre mot de passe doit contenir au moins 6 caractères, 1 majuscule et 1 caractère spécial." . '<br/>';
         }
 
         if ($validation) {
@@ -55,7 +53,10 @@ function signIn()
 
             $profilManager = new UserManager();
             $profilManager->getInscription($profil);
-            $acountOk = "Votre compte administrateur a bien été  créé.";
+            $_SESSION['flash']['succes'] = $_SESSION['flash']['danger'] . "Votre compte administrateur a bien été  créé." . '<br/>';
+
+            header('Location: index.php?action=login');
+            exit();
         }
     }
 
@@ -64,8 +65,8 @@ function signIn()
 
 function admin()
 {
-    // $sessionConnect = sessionConnect();
-
+    $sessionConnect = sessionConnect();
+    
     ob_start();
     include('views/backend/adminView.php');
     $content = ob_get_clean();
@@ -74,7 +75,7 @@ function admin()
 
 function admin_article()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
 
     // get articles
     $articleManager = new ArticlesManager();
@@ -118,7 +119,7 @@ function admin_article()
 
 function update_article()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
 
     // get article title and content 
     $articleManager = new ArticlesManager(); 
@@ -146,7 +147,7 @@ function update_article()
 
 function admin_portrait()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
 
     // get portraits
     $portraitManager = new PortraitsManager();
@@ -190,7 +191,7 @@ function admin_portrait()
 
 function update_portrait()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
 
     // get article title and content 
     $portraitManager = new PortraitsManager(); 
@@ -219,16 +220,17 @@ function update_portrait()
 
 function admin_project()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
 
     // get projects
     $projectManager =  new ProjectsManager();
     $projects = $projectManager->getList();
 
     // get all informations about new portraits
-    if (isset($_POST['title']) && isset($_POST['description']) && isset($_POST['link']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['link'])) {
+    if (isset($_POST['title']) && isset($_POST['image']) && isset($_POST['description']) && isset($_POST['link']) && !empty($_POST['title']) && !empty($_POST['image']) && !empty($_POST['description']) && !empty($_POST['link'])) {
         $projects = new Projects([
             'title' => $_POST['title'],
+            'image' => $_POST['image'],
             'description' => $_POST['description'],
             'link' => $_POST['link'],
         ]);
@@ -247,7 +249,7 @@ function admin_project()
 
 function admin_comments()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
     /*----- ARTICLES -----*/
     // join tables for getting all comments and article title 
     $commentArticleManager = new CommentsArticlesManager();
@@ -298,7 +300,7 @@ function admin_comments()
 
 function admin_profil()
 {
-    // $sessionConnect = sessionConnect();
+    $sessionConnect = sessionConnect();
 
     ob_start();
     include('views/backend/profilView.php');

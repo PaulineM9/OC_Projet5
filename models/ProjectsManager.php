@@ -38,9 +38,10 @@ class ProjectsManager extends Manager
 
     public function addProject(Projects $project) 
     {
-        $req = $this->_db->prepare('INSERT INTO projects (title, description, link) VALUES ( ?, ?, ?)');
+        $req = $this->_db->prepare('INSERT INTO projects (title, image, description, link) VALUES ( ?, ?, ?, ?)');
         $req->execute([
-            $project->getTitle(), 
+            $project->getTitle(),
+            $project->getImage(), 
             $project->getDescription(), 
             $project->getLink(),
         ]);

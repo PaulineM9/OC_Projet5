@@ -18,12 +18,12 @@
 <section class="projects_container">
     <div class="insert_new_project">
         <form class="new_projects_form" action="index.php?action=admin_projet&id=<?= $_GET['id'] ?>" method="post">
-            <!-- insérer une photo / image dans la bdd puis l'afficher-->
             <textarea class="title" type="text" name="title" placeholder="Titre" id="title" cols="80"></textarea><br/>
-            <textarea class="description" name="description" placeholder="Description du projet" id="description" cols="80" rows="10"></textarea><br/>
-            <textarea class="link" name="link" placeholder="Lien vers le projet" id="comment" cols="80"></textarea><br/>
+            <textarea class="image" id="mytextarea" name="image" placeholder="Image" id="image" cols="80" rows="30"></textarea><br/>
+            <!-- format de l'image à insérer: largeur = 200 -->
+            <textarea class="description" id="mytextarea" name="description" placeholder="Description" id="content" cols="80" rows="30"></textarea><br/>
+            <textarea class="link" id="textarea" name="link" placeholder="Lien vers le projet" cols="80"></textarea><br/>
             <input class="submit" type="submit" name="submit" placeholder="Envoyer" id="submit"><br/>
         </form> 
-        <!-- insérer un lien pour modifier le projet -->
     </div>
 </section>

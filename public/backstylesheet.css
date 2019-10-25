@@ -104,6 +104,21 @@ body {
 	font-size: 1.4em;
 }
 
+/*----- FLASH MESSAGES -----*/
+.danger {
+	font-family: 'poiret one', 'cursive';
+	font-size: 1.4em;
+	color: coral;
+	text-align: center;
+	margin-top: 20px;
+}
+/* .succes {
+	font-family: 'poiret one', 'cursive';
+	font-size: 1.4em;
+	color: lightgreen;
+	text-align: center;
+} */
+
 /*------ ADMINVIEW PAGE -----*/
 .header_back {
 	background-color: rgba(255, 255, 255, 0.5);

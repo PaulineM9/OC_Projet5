@@ -155,12 +155,14 @@ function login()
         $validation = true;
 
         $profil = new User([
-            'identifiant' => $_POST['identifiant']
+            'identifiant' => $_POST['identifiant'],
         ]);
         $profilAcount = new UserManager();
         $profilManager = $profilAcount->getConnect($profil);
 
         $passwordCorrect = password_verify($_POST['password'], $profilManager->getPassword());
+
+        $_SESSION['flash']['danger'] = '';
 
         if ($profilManager === false) {
             $validation = false;
@@ -179,7 +181,7 @@ function login()
             header('Location: index.php?action=admin');
             exit();
         } else {
-            $messageErreur = "L'identifiant ou le mot de passe est incorrect.";
+            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "L'identifiant ou le mot de passe est incorrect." . '<br/>';
         }
     }
 

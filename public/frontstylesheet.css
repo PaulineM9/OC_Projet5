@@ -236,6 +236,7 @@ footer {
 .portfolio_container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px; 
     width: 60%;
@@ -243,40 +244,44 @@ footer {
     font-family: 'poiret one', cursive;
     font-weight: 700;
     font-size: 1.6em;
-    height: 300px;
     margin-bottom: 90px;
+    text-align: center;
 }
 .portfolio_container h2 {
     margin: 0 auto;
     margin-bottom: 40px;
 }
-.portfolio_page_link:hover {
-    color: #128f8c!important;
-}
-.projects_published {
+.projects_navigation {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.projects_published {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 50%;
+    margin-bottom: 40px;
 }
 .projects_published h3 {
     margin-bottom: 20px;
     font-size: 0.6em;
 }
 .portfolio_page_link {
-    position: absolute;
     background-color: #dde8df;
     border-radius: 35px;
     width: 215px;
     height: 55px;
     padding-top: 14px;
-    padding-left: 37px;
+    padding-left: 5px;
     font-size: 0.8em;
-    margin-top: 14%;
-    margin-left: 41%;
+    margin-left: 38%;
     color:black!important;
     cursor: pointer;
     display: inline-block;
+}
+.portfolio_page_link:hover {
+    color: #128f8c!important;
 }
 
         /*----- ABOUT -----*/
@@ -575,29 +580,40 @@ footer {
 }
 .portfolio_projects_container {
     display: flex;
-    background-color: rgba(255, 255, 255, 0.6);
+    flex-direction: row;
+    flex-wrap: wrap;
     font-family: 'poiret one', cursive;
     font-size: 2em;
     font-weight: 700;
     color: black;
-    width: 80%;
-    height: 400px;
+    height: auto;
     margin: 20px auto;
 }
 .all_projects_published {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
-    width: 25%;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 25px;
 }
 .all_projects_published h3 {
     font-size: 0.7em;
+    width: 140px;
     margin: 0 auto;
+    margin-bottom: 10px;
+}
+.all_projects_published h4 {
+    width: 200px;
+    margin-bottom: 10px;
 }
 .all_projects_published a {
     font-size: 0.5em;
+    width: 100px;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 /*----- CONTACTVIEW PAGE -----*/
@@ -698,3 +714,18 @@ footer {
     font-family: 'poiret one', 'cursive';
     margin-bottom: 10px;
 }
+
+/*----- FLASH MESSAGES -----*/
+.danger {
+	font-family: 'poiret one', 'cursive';
+	font-size: 1.4em;
+	color: coral;
+	text-align: center;
+	margin-top: 20px;
+}
+/* .succes {
+	font-family: 'poiret one', 'cursive';
+	font-size: 1.4em;
+	color: lightgreen;
+	text-align: center;
+} */

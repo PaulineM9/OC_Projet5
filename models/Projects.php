@@ -4,6 +4,7 @@ class Projects
 {
     private $_id,
         $_title,
+        $_image,
         $_description,
         $_link;
 
@@ -16,6 +17,9 @@ class Projects
     {
         if (isset($data['id'])) {
             $this->setId($data['id']);
+        }
+        if (isset($data['image'])) {
+            $this->setImage($data['image']);
         }
         if (isset($data['title'])) {
             $this->setTitle($data['title']);
@@ -32,6 +36,11 @@ class Projects
     public function getId()
     {
         return $this->_id;
+    }
+
+    public function getImage()
+    {
+        return $this->_image;
     }
 
     public function getTitle()
@@ -55,6 +64,13 @@ class Projects
         $id = (int) $id;
         if ($id > 0) {
             $this->_id = $id;
+        }
+    }
+
+    public function setImage($image)
+    {
+        if (is_string($image)) {
+            $this->_image = $image;
         }
     }
 

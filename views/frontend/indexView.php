@@ -39,11 +39,11 @@
         <?php foreach ($projects as $project) { ?>
             <div class="projects_published">
                 <h3><?= $project->getTitle() ?></h3>
-                <!-- insérer une capture du projet -->
+                <h4><?= $project->getImage() ?></h4>
             </div>
         <?php } ?>
+        <a class="portfolio_page_link" href="index.php?action=portfolio">Mes Réalisations</a>
     </div>
-    <a class="portfolio_page_link" href="index.php?action=portfolio">Mes Réalisations</a>
 </section>
 
 <section class="about_container">
