@@ -190,3 +190,11 @@ function login()
     $content = ob_get_clean();
     require("views/frontend/template.php");
 }
+
+function mentions_legales()
+{
+    ob_start();
+    include('views/frontend/mentionsLegalesView.php');  
+    $content = ob_get_clean();
+    require("views/frontend/template.php");
+}

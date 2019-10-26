@@ -23,6 +23,9 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'login') {
         login();
     }
+    if ($_GET['action'] == 'mentions_legales') {
+        mentions_legales();
+    }
     // FRONTEND BLOG
     if ($_GET['action'] == 'blog') {
         blog();

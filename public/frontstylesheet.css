@@ -723,9 +723,24 @@ footer {
 	text-align: center;
 	margin-top: 20px;
 }
-/* .succes {
-	font-family: 'poiret one', 'cursive';
-	font-size: 1.4em;
-	color: lightgreen;
-	text-align: center;
-} */
+
+/*----- MENTIONSLEGALES VIEW -----*/
+.mentions_legales {
+    display: flex;
+    flex-direction: column;
+    font-family: 'poiret one', 'cursive';
+    padding: 30px;
+}
+.mentions_legales h1 {
+    font-size: 1.6em;
+    margin-top: 20px;
+    text-align: center;
+}
+.mentions_legales h2 {
+    font-size: 1.4em;
+    margin-top: 30px;
+}
+.mentions_legales h3 {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
