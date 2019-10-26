@@ -16,14 +16,14 @@
 </nav>
 
 <?php if (!isset($_GET['modif'])) { ?>
-<section class="profil">
+<section class="profil_infos">
     <h2>Modifier mes informations personnelles</h2>
-    <p>mon identifiant: <?php echo $_SESSION['identifiant'] ?></p><br/>
-    <p>mon adresse mail: <?php echo $_SESSION['email'] ?></p>
+    <p>mon identifiant: <?= $_SESSION['identifiant'] ?></p><br/>
+    <p>mon adresse mail: <?= $_SESSION['email'] ?></p>
 </section>
 
 <div class="modif">
-    <a href="index.php?action=admin_profil&id=<?= $_GET['id'] ?>&modif">Modifier mon profil ou mon mot de passe</a>
+    <a class="modif_profil_link" href="index.php?action=admin_profil&id=<?= $_GET['id'] ?>&modif">Modifier mon profil ou mon mot de passe</a>
     <?php } ?>
     <?php if (isset($_GET['modif'])) { ?>
     <form class="sign_in_modif" action="index.php?action=admin_profil&id=<?= $_GET['id']?>&modif" method="post">
@@ -31,7 +31,7 @@
         <input class="email_admin" type="email" name="email" placeholder="Votre email" id="email" value="<?= $_SESSION['email'] ?>"><br/>
         <input class="password_admin" type="password" name="password" placeholder="Nouveau mot de passe" id="password"><br/>
         <input class="check_password" type="password" name="check_password" placeholder="Confirmation du mot de passe" id="check_password"><br/>
-        <input class="submit_admin" type="submit" name="submit" value="Inscription" id="submit"><br/>
+        <input class="submit_admin" type="submit" name="submit" value="Modifier" id="submit"><br/>
     </form>
     <p id="pw_message">Le mot de passe doit contenir plus de 6 caractères <br/> dont au moins une majuscule et un caractère spécial.</p>
     <?php if(isset($_SESSION)) { 

@@ -371,6 +371,51 @@ body {
 	color: coral!important;
 }
 
+/*----- PROFILVIEW PAGE -----*/
+.profil_infos,
+.modif {
+	display: flex;
+	flex-direction: column;
+	font-family: 'poiret one', 'cursive';
+	font-size: 1.2em;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+.profil_infos {
+	margin-bottom: 80px;
+}
+.profil_infos h2 {
+	background-color:rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	width: 300px;
+	margin-bottom: 20px;
+}
+.modif_profil_link {
+	background-color:rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	width: 300px;
+	color: darkcyan;
+	font-style: italic;
+	font-size: 0.8em;
+}
+.profil_infos p {
+	margin-left: 20px;
+}
+.sign_in_modif input,
+#pw_message {
+	font-family: 'poiret one', 'cursive';
+	font-size: 1em;
+	text-align: center;
+}
+.sign_in_modif input {
+	width: 300px;
+}
+.sign_in_modif {
+	margin-top: 100Px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
 
 
 

@@ -6,7 +6,7 @@
 
 <section class="admin_welcome">
     <h2 class="admin_title">
-        Bonjour <?php $_SESSION['identifiant'] ?>, bienvenue dans votre espace administrateur.
+        Bonjour <?= $_SESSION['identifiant'] ?>, bienvenue dans votre espace administrateur.
     </h2>
 </section>
 

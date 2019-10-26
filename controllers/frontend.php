@@ -164,7 +164,7 @@ function login()
 
         $_SESSION['flash']['danger'] = '';
 
-        if ($profilManager === false) {
+        if (!$profilManager) {
             $validation = false;
         }
 
