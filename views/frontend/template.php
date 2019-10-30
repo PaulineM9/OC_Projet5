@@ -68,7 +68,8 @@
 		</div>
     </header>
 
-    <?= $content ?>
+	<?= $content ?>
+
 </body>
 
 <footer>
@@ -99,3 +100,9 @@
 		<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="new" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="new" href="index.php?action=login">Connexion</a></p>
 	</div>
 </footer> 
+
+<!-- JS -->
+<!-- <script type="javascript" src="public/js/utils.js"></script> -->
+<!-- <script type="javascript" src="public/js/projectsDescription.js"></script> -->
+<!-- <script type="javascript" src="public/js/controler.js"></script>  -->
+
