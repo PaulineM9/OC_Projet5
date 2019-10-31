@@ -77,11 +77,8 @@ body {
     z-index: 1;
     width: 100%;
 }
-.logo {
-    width: 25%;
-}
 .logo img {
-    width: 90%;
+    width: 233px;
     border-radius: 2px;
     margin-top: 7px;
     margin-left: 10px;
@@ -89,6 +86,7 @@ body {
 .navigation_menu_principal {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 80%;
     align-items: center;
     justify-content: space-around;
@@ -797,3 +795,615 @@ footer {
 /*----- MEDIA QUERIES ------*/
 /*--------------------------*/
 
+/*----- FRONT TEMPLATE PAGE ------*/
+@media all and (min-width: 320px) and (max-width: 374px){
+    .front_template_header {
+        flex-direction: column;
+        height: 175px;
+        width: 320px;
+    }
+    .logo {
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .logo img {
+        margin-left: 0px;
+    }
+    .navigation_menu_principal {
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+    footer {
+        height: auto;
+    }
+    .footer_logo img {
+        width: 200px;
+        margin-bottom: 20px;
+        margin-left: 20%;
+    }
+    .infos_container {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .copyright_container {
+        padding: 20px;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .front_template_header {
+        flex-direction: column;
+        height: 175px;
+        width: 375px;
+    }
+    .logo {
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .logo img {
+        margin-left: 0px;
+    }
+    .navigation_menu_principal {
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+    footer {
+        height: auto;
+    }
+    .footer_logo img {
+        width: 200px;
+        margin-bottom: 20px;
+        margin-left: 35%;
+    }
+    .infos_container {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .copyright_container {
+        padding: 20px;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .front_template_header {
+        flex-direction: column;
+        height: 175px;
+        width: 425px;
+    }
+    .logo {
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .logo img {
+        margin-left: 0px;
+    }
+    .navigation_menu_principal {
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+    footer {
+        height: auto;
+    }
+    .footer_logo img {
+        width: 200px;
+        margin-bottom: 20px;
+        margin-left: 48%;
+    }
+    .infos_container {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .copyright_container {
+        padding: 20px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1024px){
+    footer {
+        height: auto;
+    }
+    .footer_logo {
+        width: 23%;
+    }
+    .footer_logo img {
+        width: 140px;
+        margin-bottom: 20px;
+        margin-left: 2%;
+    }
+    .infos_container {
+        flex-direction: row;
+        margin-left: 20px;
+    }
+    .contact_infos {
+        width: 28%;
+    }
+    .copyright_container {
+        padding: 20px;
+    }
+}
+@media all and (min-width: 1025px) and (max-width: 1439px){
+    footer {
+        height: auto;
+    }
+    .footer_logo {
+        width: 23%;
+    }
+    .footer_logo img {
+        width: 140px;
+        margin-bottom: 20px;
+        margin-left: 2%;
+    }
+    .infos_container {
+        flex-direction: row;
+        margin-left: 20px;
+    }
+    .contact_infos {
+        width: 28%;
+    }
+    .copyright_container {
+        padding: 20px;
+    }
+}
+
+/*----- INDEXVIEW PAGE ------*/
+@media all and (min-width: 320px) and (max-width: 374px){
+    .intro {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .intro_container_text {
+        margin-left: 20%;
+    }
+    .services_container {
+        width: 80%;
+    }
+    .services_page_link {
+        margin-left: 15%;
+    }
+    .portfolio_container {
+        width: 90%;
+    }
+    .projects_navigation {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .portfolio_page_link {
+        margin-left: 0%;
+    }
+    .about_container {
+        height: 460px;
+    }
+    .about_page_link {
+        margin-left: 15%;
+        margin-top: 20px;
+        padding-top: 6px;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .intro {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .intro_container_text {
+        margin-left: 10%;
+    }
+    .services_container {
+        width: 80%;
+    }
+    .services_page_link {
+        margin-left: 15%;
+    }
+    .portfolio_container {
+        width: 90%;
+    }
+    .projects_navigation {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .portfolio_page_link {
+        margin-left: 0%;
+    }
+    .about_container {
+        height: 460px;
+    }
+    .about_page_link {
+        margin-left: 15%;
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .intro {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .intro_container_text {
+        margin-left: 10%;
+    }
+    .services_container {
+        width: 80%;
+    }
+    .services_page_link {
+        margin-left: 25%;
+    }
+    .portfolio_container {
+        width: 90%;
+    }
+    .projects_navigation {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .portfolio_page_link {
+        margin-left: 0%;
+    }
+    .about_container {
+        height: 390px;
+    }
+    .about_page_link {
+        margin-left: 25%;
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .intro {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .intro_container_text {
+        margin-left: 57%;
+        margin-top: 28%;
+    }
+    .services_container {
+        width: 80%;
+    }
+    .services_page_link {
+        margin-left: 70%;
+    }
+    .portfolio_container {
+        width: 90%;
+    }
+    .projects_navigation {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .portfolio_page_link {
+        margin-left: 0%;
+    }
+    .about_container {
+        height: auto;
+    }
+    .about_page_link {
+        margin-left: 73%;
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    .intro {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .intro_container_text {
+        margin-left: 57%;
+        margin-top: 18%;
+    }
+    .services_container {
+        width: 80%;
+    }
+    .services_page_link {
+        margin-left: 70%;
+    }
+    .portfolio_container {
+        width: 90%;
+    }
+    .projects_navigation {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .portfolio_page_link {
+        margin-left: 0%;
+    }
+    .about_container {
+        height: auto;
+    }
+    .about_page_link {
+        margin-left: 73%;
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+}
+
+/*------ SERVICES PAGE -----*/
+@media all and (min-width: 319px) and (max-width: 374px){
+    .web_site_creation_titles,
+    .solution_dev_titles,
+    .natural_ref_titles,
+    .web_redaction_titles {
+        width: 80%;
+    }
+    .web_site_creation_titles h2,
+    .solution_dev_titles h2,
+    .natural_ref_titles h2,
+    .web_redaction_titles h2 {
+        font-size: 1.2em;
+    }
+    .web_site_creation_titles h3,
+    .solution_dev_titles h3,
+    .natural_ref_titles h3,
+    .web_redaction_titles h3 {
+        font-size: 1em;
+    }
+    .web_site_creation_text,
+    .solution_dev_text,
+    .natural_ref_text,
+    .web_redaction_text {
+        width: 76%;
+        margin-left: 19%;
+    }
+    .devis_button {
+        width: 62%;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .web_site_creation_titles,
+    .solution_dev_titles,
+    .natural_ref_titles,
+    .web_redaction_titles {
+        width: 80%;
+    }
+    .web_site_creation_titles h2,
+    .solution_dev_titles h2,
+    .natural_ref_titles h2,
+    .web_redaction_titles h2 {
+        font-size: 1.2em;
+    }
+    .web_site_creation_titles h3,
+    .solution_dev_titles h3,
+    .natural_ref_titles h3,
+    .web_redaction_titles h3 {
+        font-size: 1em;
+    }
+    .web_site_creation_text,
+    .solution_dev_text,
+    .natural_ref_text,
+    .web_redaction_text {
+        width: 76%;
+        margin-left: 19%;
+    }
+    .devis_button {
+        width: 62%;
+    }
+
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .web_site_creation_titles,
+    .solution_dev_titles,
+    .natural_ref_titles,
+    .web_redaction_titles {
+        width: 80%;
+    }
+    .web_site_creation_titles h2,
+    .solution_dev_titles h2,
+    .natural_ref_titles h2,
+    .web_redaction_titles h2 {
+        font-size: 1.2em;
+    }
+    .web_site_creation_titles h3,
+    .solution_dev_titles h3,
+    .natural_ref_titles h3,
+    .web_redaction_titles h3 {
+        font-size: 1em;
+    }
+    .web_site_creation_text,
+    .solution_dev_text,
+    .natural_ref_text,
+    .web_redaction_text {
+        width: 76%;
+        margin-left: 19%;
+    }
+    .devis_button {
+        width: 62%;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .web_site_creation_titles,
+    .solution_dev_titles,
+    .natural_ref_titles,
+    .web_redaction_titles {
+        width: 80%;
+    }
+    .web_site_creation_titles h2,
+    .solution_dev_titles h2,
+    .natural_ref_titles h2,
+    .web_redaction_titles h2 {
+        font-size: 1.2em;
+    }
+    .web_site_creation_titles h3,
+    .solution_dev_titles h3,
+    .natural_ref_titles h3,
+    .web_redaction_titles h3 {
+        font-size: 1em;
+    }
+    .web_site_creation_text,
+    .solution_dev_text,
+    .natural_ref_text,
+    .web_redaction_text {
+        width: 76%;
+        margin-left: 19%;
+    }
+    .devis_button {
+        width: 35%;
+    }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    .web_site_creation_titles,
+    .solution_dev_titles,
+    .natural_ref_titles,
+    .web_redaction_titles {
+        width: 80%;
+    }
+    .web_site_creation_titles h2,
+    .solution_dev_titles h2,
+    .natural_ref_titles h2,
+    .web_redaction_titles h2 {
+        font-size: 1.2em;
+    }
+    .web_site_creation_titles h3,
+    .solution_dev_titles h3,
+    .natural_ref_titles h3,
+    .web_redaction_titles h3 {
+        font-size: 1em;
+    }
+    .web_site_creation_text,
+    .solution_dev_text,
+    .natural_ref_text,
+    .web_redaction_text {
+        width: 76%;
+        margin-left: 19%;
+    }
+    .devis_button {
+        width: 30%;
+    }
+}
+
+/*------ ABOUTVIEW PAGE -----*/
+@media all and (min-width: 320px) and (max-width: 374px){
+    .experience_container {
+        width: 84%;
+    }
+    .portrait_perso {
+        width: 55%;
+    }
+    .competences_container {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .formation_container {
+        width: 90%;
+    }
+    .links {
+        width: 29%;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .experience_container {
+        width: 84%;
+    }
+    .portrait_perso {
+        width: 55%;
+    }
+    .competences_container {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .formation_container {
+        width: 90%;
+    }
+    .links {
+        width: 29%;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .experience_container {
+        width: 84%;
+    }
+    .portrait_perso {
+        width: 55%;
+    }
+    .competences_container {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .formation_container {
+        width: 90%;
+    }
+    .links {
+        width: 29%;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+
+}
+
+/*------ PORTFOLIOVIEW PAGE -----*/
+@media all and (min-width: 320px) and (max-width: 374px){
+    .all_projects_published {
+        margin-left: 39px;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .all_projects_published {
+        margin-left: 66px;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .all_projects_published {
+        margin-left: 92px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .all_projects_published {
+        margin-left: 92px;
+    }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    .all_projects_published {
+        margin-left: 70px;
+    }
+}
+
+/*------ CONTACTVIEW PAGE -----*/
+@media all and (min-width: 320px) and (max-width: 374px){
+    .contact_container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .form_container,
+    .contact_infos_container {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .contact_container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .form_container,
+    .contact_infos_container {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .contact_container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .form_container,
+    .contact_infos_container {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .contact_container {
+        margin-top: 20px;
+    }
+    .form_container,
+    .contact_infos_container {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    .contact_container {
+        margin-top: 20px;
+    }
+    .form_container,
+    .contact_infos_container {
+        width: 45%;
+        margin-bottom: 70px;
+    }
+}

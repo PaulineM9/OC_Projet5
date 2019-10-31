@@ -58,7 +58,7 @@
 		<div class="logo">
 			<a class="logo-super" href="index.php?action=home"><img alt="super-logo" src="public/images/logo_super!.jpg"></a>
 		</div>
-		<div class="navigation_menu_principal"><!-- ajouter les liens actions -->
+		<div class="navigation_menu_principal">
 			<a href="index.php?action=home"><h2>Accueil</h2></a>
 			<a href="index.php?action=services"><h2>Services</h2></a>
 			<a href="index.php?action=about"><h2>A Propos</h2></a>
