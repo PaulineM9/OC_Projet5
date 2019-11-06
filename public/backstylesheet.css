@@ -187,14 +187,16 @@ body {
 .icones_menu {
 	display: flex;
 	flex-direction: row;
-}
-.icones_menu {
 	background-color:rgba(255, 255, 255, 0.7);
 	border-radius: 80px;
 	padding: 5px;
 	width: 50px;
+	height: 50px;
 	margin-left: 10px;
 	margin-bottom: 10px;
+}
+.icones_menu img {
+	width: 40px;
 }
 .admin_article,
 .admin_portrait {
@@ -470,45 +472,333 @@ body {
 	}
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-	.header_back,
-	.admin_welcome {
-		padding: 20px;
-	}
-	.icons img {
-		margin-left: 80%;
-	}
-	.nav_titles {
-		width: 43%;
-	}
+	
 }
 
 /*------ ARTICLEVIEW AND PORTRAITVIEW PAGE -----*/
 @media all and (min-width: 320px) and (max-width: 374px){
-    .admin_article, .admin_portrait {
-		width: 222%;
+	.icones_menu {
+		margin-left: 2px;
+	}
+	.all_articles h3,  
+	.all_portraits h3 {
+		width: 297px;
+		margin: 15px 3px;
+	}
+	.admin_article h3,
+	.admin_portrait h3 {
+		margin: 30px 10px;
+		width: 90%;
+	}
+	.article_form, 
+	.portrait_form {
+		padding: 0px 8px;
+	}
+	.manage_articles,
+	.manage_portraits {
+		padding: 0px;
+	}
+	.articles_published,
+	.portraits_published {
+		margin: 0px 10px;
+	}
+	.articles_published p,
+	.portraits_published p {
+		width: 90%;
 	}
 	.articles_published img,
 	.portraits_published img {
-		width: 570px;
-		height: 322px;
-	}
-	.manage_articles, 
-	.manage_portraits {
-		width: 217%;
+		width: 300px;
+		height: 160px;	
 	}
 }
 @media all and (min-width: 375px) and (max-width: 424px){
-    
+    .icones_menu {
+		margin-left: 2px;
+	}
+	.all_articles h3,  
+	.all_portraits h3 {
+		width: 297px;
+		margin: 15px 3px;
+	}
+	.admin_article h3,
+	.admin_portrait h3 {
+		margin: 30px 10px;
+		width: 90%;
+	}
+	.article_form, 
+	.portrait_form {
+		padding: 0px 8px;
+	}
+	.manage_articles,
+	.manage_portraits {
+		padding: 0px;
+	}
+	.articles_published,
+	.portraits_published {
+		margin: 0px 10px;
+	}
+	.articles_published p,
+	.portraits_published p {
+		width: 90%;
+	}
+	.articles_published img,
+	.portraits_published img {
+		width: 300px;
+		height: 160px;	
+	}
 }
 @media all and (min-width: 425px) and (max-width: 767px){
-    
+    .icones_menu {
+		margin-left: 2px;
+	}
+	.all_articles h3,  
+	.all_portraits h3 {
+		width: 297px;
+		margin: 15px 3px;
+	}
+	.admin_article h3,
+	.admin_portrait h3 {
+		margin: 30px 10px;
+		width: 90%;
+	}
+	.article_form, 
+	.portrait_form {
+		padding: 0px 8px;
+	}
+	.manage_articles,
+	.manage_portraits {
+		padding: 0px;
+	}
+	.articles_published,
+	.portraits_published {
+		margin: 0px 10px;
+	}
+	.articles_published p,
+	.portraits_published p {
+		width: 90%;
+	}
+	.articles_published img,
+	.portraits_published img {
+		width: 300px;
+		height: 160px;	
+	}
 }
 @media all and (min-width: 768px) and (max-width: 1023px){
-    
+    .icones_menu {
+		margin-left: 2px;
+	}
+	.all_articles h3,  
+	.all_portraits h3 {
+		width: 297px;
+		margin: 15px 3px;
+	}
+	.admin_article h3,
+	.admin_portrait h3 {
+		margin: 30px 10px;
+		width: 90%;
+	}
+	.article_form, 
+	.portrait_form {
+		padding: 0px 8px;
+	}
+	.manage_articles,
+	.manage_portraits {
+		padding: 0px;
+	}
+	.articles_published,
+	.portraits_published {
+		margin: 0px 10px;
+	}
+	.articles_published p,
+	.portraits_published p {
+		width: 90%;
+	}
+	.articles_published img,
+	.portraits_published img {
+		width: 300px;
+		height: 160px;	
+	}
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
     
 }
+
+/*----- PROJECTVIEW PAGE -----*/
+@media all and (min-width: 320px) and (max-width: 374px){
+	.new_projects_form,
+	.new_projects_form textarea {
+		width:90%;
+	}	
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .new_projects_form,
+	.new_projects_form textarea {
+		width:90%;
+	}	
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .new_projects_form,
+	.new_projects_form textarea {
+		width:90%;
+	}	
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .new_projects_form,
+	.new_projects_form textarea {
+		width:90%;
+	}	
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    
+}
+
+/*----- COMMENTSVIEW PAGE -----*/
+@media all and (min-width: 320px) and (max-width: 374px){
+	.container_all_articles_comments, 
+	.container_all_portraits_comments {
+		padding: 40px 4px;
+	}
+	.all_articles_comments h3, 
+	.all_portraits_comments h3, 
+	.all_articles_comments_signaled h3, 
+	.all_portraits_comments_signaled h3 {
+		width: 94%;
+	}
+	.all_articles_comments h5, 
+	.all_portraits_comments h5, 
+	.all_articles_comments_signaled h5, 
+	.all_portraits_comments_signaled h5 {
+		font-size: 0.8em;
+	}
+	.all_articles_comments p,
+	.all_portraits_comments p, 
+	.all_articles_comments_signaled p, 
+	.all_portraits_comments_signaled p {
+		margin-left: 0px;
+		padding: 0px 3px;
+	}
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .container_all_articles_comments, 
+	.container_all_portraits_comments {
+		padding: 40px 4px;
+	}
+	.all_articles_comments h3, 
+	.all_portraits_comments h3, 
+	.all_articles_comments_signaled h3, 
+	.all_portraits_comments_signaled h3 {
+		width: 94%;
+	}
+	.all_articles_comments h5, 
+	.all_portraits_comments h5, 
+	.all_articles_comments_signaled h5, 
+	.all_portraits_comments_signaled h5 {
+		font-size: 0.8em;
+	}
+	.all_articles_comments p,
+	.all_portraits_comments p, 
+	.all_articles_comments_signaled p, 
+	.all_portraits_comments_signaled p {
+		margin-left: 0px;
+		padding: 0px 3px;
+	}
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .container_all_articles_comments, 
+	.container_all_portraits_comments {
+		padding: 40px 4px;
+	}
+	.all_articles_comments, 
+	.all_articles_comments_signaled, 
+	.all_portraits_comments, 
+	.all_portraits_comments_signaled {
+		margin-left: 10px;
+	}
+	.all_articles_comments h3, 
+	.all_portraits_comments h3, 
+	.all_articles_comments_signaled h3, 
+	.all_portraits_comments_signaled h3 {
+		width: 94%;
+	}
+	.all_articles_comments h5, 
+	.all_portraits_comments h5, 
+	.all_articles_comments_signaled h5, 
+	.all_portraits_comments_signaled h5 {
+		font-size: 0.8em;
+	}
+	.all_articles_comments p,
+	.all_portraits_comments p, 
+	.all_articles_comments_signaled p, 
+	.all_portraits_comments_signaled p {
+		margin-left: 0px;
+		padding: 0px 3px;
+	}
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .container_all_articles_comments, 
+	.container_all_portraits_comments {
+		padding: 40px 4px;
+	}
+	.all_articles_comments, 
+	.all_articles_comments_signaled, 
+	.all_portraits_comments, 
+	.all_portraits_comments_signaled {
+		margin-left: 15px;
+	}
+	.all_articles_comments h3, 
+	.all_portraits_comments h3, 
+	.all_articles_comments_signaled h3, 
+	.all_portraits_comments_signaled h3 {
+		width: 94%;
+	}
+	.all_articles_comments h5, 
+	.all_portraits_comments h5, 
+	.all_articles_comments_signaled h5, 
+	.all_portraits_comments_signaled h5 {
+		font-size: 0.8em;
+	}
+	.all_articles_comments p,
+	.all_portraits_comments p, 
+	.all_articles_comments_signaled p, 
+	.all_portraits_comments_signaled p {
+		margin-left: 0px;
+		padding: 0px 3px;
+	}
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    
+}
+
+/*----- PROFILVIEW PAGE  -----*/
+@media all and (min-width: 320px) and (max-width: 374px){
+	.profil_infos, 
+	.modif {
+		margin-left: 10Px;
+	}
+}
+@media all and (min-width: 375px) and (max-width: 424px){
+    .profil_infos, 
+	.modif {
+		margin-left: 10Px;
+	}
+}
+@media all and (min-width: 425px) and (max-width: 767px){
+    .profil_infos, 
+	.modif {
+		margin-left: 10Px;
+	}
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .profil_infos, 
+	.modif {
+		margin-left: 10Px;
+	}
+}
+@media all and (min-width: 1024px) and (max-width: 1439px){
+    
+}
+
 
 
 

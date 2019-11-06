@@ -404,7 +404,7 @@ footer {
     margin-bottom: 20px;
 }
 .contact_page_link {
-    background-color: #128f8c;
+    background-color: #dde8df;
     border-radius: 35px;
     width: 155px;
     height: 55px;
@@ -438,6 +438,7 @@ footer {
 }
 .portrait_myself {
     margin: 40px auto;
+    height: 80%;
 }
 .citation {
     display: flex;
@@ -919,27 +920,7 @@ footer {
     }
 }
 @media all and (min-width: 1025px) and (max-width: 1439px){
-    footer {
-        height: auto;
-    }
-    .footer_logo {
-        width: 23%;
-    }
-    .footer_logo img {
-        width: 140px;
-        margin-bottom: 20px;
-        margin-left: 2%;
-    }
-    .infos_container {
-        flex-direction: row;
-        margin-left: 20px;
-    }
-    .contact_infos {
-        width: 28%;
-    }
-    .copyright_container {
-        padding: 20px;
-    }
+    
 }
 
 /*----- INDEXVIEW PAGE ------*/
@@ -1077,38 +1058,7 @@ footer {
     }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-    .intro {
-        margin-top: 20px;
-        padding: 20px;
-    }
-    .intro_container_text {
-        margin-left: 57%;
-        margin-top: 18%;
-    }
-    .services_container {
-        width: 80%;
-    }
-    .services_page_link {
-        margin-left: 70%;
-    }
-    .portfolio_container {
-        width: 90%;
-    }
-    .projects_navigation {
-        flex-direction: column;
-        margin: 0 auto;
-    }
-    .portfolio_page_link {
-        margin-left: 0%;
-    }
-    .about_container {
-        height: auto;
-    }
-    .about_page_link {
-        margin-left: 73%;
-        margin-top: 20px;
-        padding-top: 15px;
-    }
+    
 }
 
 /*------ SERVICES PAGE -----*/
@@ -1234,34 +1184,7 @@ footer {
     }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-    .web_site_creation_titles,
-    .solution_dev_titles,
-    .natural_ref_titles,
-    .web_redaction_titles {
-        width: 80%;
-    }
-    .web_site_creation_titles h2,
-    .solution_dev_titles h2,
-    .natural_ref_titles h2,
-    .web_redaction_titles h2 {
-        font-size: 1.2em;
-    }
-    .web_site_creation_titles h3,
-    .solution_dev_titles h3,
-    .natural_ref_titles h3,
-    .web_redaction_titles h3 {
-        font-size: 1em;
-    }
-    .web_site_creation_text,
-    .solution_dev_text,
-    .natural_ref_text,
-    .web_redaction_text {
-        width: 76%;
-        margin-left: 19%;
-    }
-    .devis_button {
-        width: 30%;
-    }
+    
 }
 
 /*------ ABOUTVIEW PAGE -----*/
@@ -1348,9 +1271,7 @@ footer {
     }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-    .all_projects_published {
-        margin-left: 70px;
-    }
+    
 }
 
 /*------ CONTACTVIEW PAGE -----*/
@@ -1398,14 +1319,7 @@ footer {
     }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-    .contact_container {
-        margin-top: 20px;
-    }
-    .form_container,
-    .contact_infos_container {
-        width: 45%;
-        margin-bottom: 70px;
-    }
+    
 }
 
 /*------ LOGIN PAGE -----*/
@@ -1434,8 +1348,5 @@ footer {
     } 
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-    .connexion_form {
-        margin: 225px auto;
-        width: 40%;
-    } 
+    
 }
