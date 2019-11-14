@@ -1,5 +1,5 @@
 <?php
-require_once('models/Manager.php');
+// require_once('models/Manager.php');
 
 class PortraitsManager extends Manager
 {

@@ -1,4 +1,6 @@
 <?php
+// use \Models\ProjectsManager.php; ...
+
 function home()
 {
     $projectManager = new ProjectsManager();
@@ -160,15 +162,15 @@ function login()
         $profilAcount = new UserManager();
         $profilManager = $profilAcount->getConnect($profil);
 
-        $passwordCorrect = password_verify($_POST['password'], $profilManager->getPassword());
-
         $_SESSION['flash']['danger'] = '';
 
-        if (!$profilManager) {
+        if ($profilManager) {
+            $passwordCorrect = password_verify($_POST['password'], $profilManager->getPassword());
+        } else {
             $validation = false;
         }
 
-        if (!$passwordCorrect) {
+        if (!$profilManager) {
             $validation = false;
         }
 

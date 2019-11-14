@@ -1,4 +1,7 @@
 <?php 
+// namespaces Models;
+// use \PDO;
+
 abstract class Manager 
 {
     protected function dbConnect()

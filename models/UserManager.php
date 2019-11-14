@@ -1,5 +1,5 @@
 <?php
-require_once('models/Manager.php');
+// require_once('models/Manager.php');
 
 class UserManager extends Manager
 {
@@ -37,7 +37,11 @@ class UserManager extends Manager
         ]);
         $data = $req->fetch();
 
-        return new User($data);
+        if ($data) {
+            return new User($data);    
+        } else {
+            return false;
+        }
     }
 
     public function getChanges(User $profil)

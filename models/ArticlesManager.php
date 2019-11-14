@@ -1,5 +1,6 @@
 <?php
-require_once('models/Manager.php');
+// namespaces Models;
+// use \PDO;
 
 class ArticlesManager extends Manager
 {
