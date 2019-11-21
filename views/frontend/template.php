@@ -70,39 +70,38 @@
 
 	<?= $content ?>
 
+	<footer>
+		<div class="infos_container">
+			<div class="footer_logo">
+				<a class="footer_logo_super " href="index.php?action=home"><img alt="super-logo" src="public/images/logo_super!.jpg"></a>
+			</div>
+			<div class="contact_infos">
+				<h4>CONTACT</h4>
+				<p><a href="mailto:contact.super.web@gmail.com">contact.super.web@gmail.com</a></p>
+				<p>+33 6 18 06 19 26</p>
+				<p><a href="">Formulaire de contact</a></p>
+			</div>
+			<div class="ei_infos">
+				<h4>INFOS</h4>
+				<p>Entreprise Individuelle Pauline MARTIN</p>
+				<p>RCS 752 722 744 000 22</p>
+			</div>
+			<div class="suivez-moi">
+				<h4>SUIVEZ-MOI</h4>
+				<a target="new" href=""><img class="facebook_icon" alt="icone-facebook" src="public/images/fb_bk.png" width="30px"></a>
+				<a target="new" href=""><img class="instagram_icon" alt="icone-instagram" src="public/images/insta_bk.png" width="30px"></a>
+				<a target="new" href=""><img class="linkedin_icon" alt="icone-linkedin" src="public/images/linkedin_bk.png" width="30px"></a>
+				<a target="new" href=""><img class="github_icon" alt="icone-github" src="public/images/github_bk.png" width="30px"></a>
+			</div>
+		</div>
+		<div class="copyright_container">
+			<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="new" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="new" href="index.php?action=login">Connexion</a></p>
+		</div>
+	</footer> 
+
+	<script type="text/javascript" src="./public/js/functionAddEvent.js"></script>
+	<script type="text/javascript" src="./public/js/contact.js"></script>
+	<script type="text/javascript" src="./public/js/xmlHttp.js"></script>
 </body>
 
-<footer>
-	<div class="infos_container">
-		<div class="footer_logo">
-			<a class="footer_logo_super " href="index.php?action=home"><img alt="super-logo" src="public/images/logo_super!.jpg"></a>
-		</div>
-		<div class="contact_infos">
-			<h4>CONTACT</h4>
-			<p><a href="mailto:contact.super.web@gmail.com">contact.super.web@gmail.com</a></p>
-			<p>+33 6 18 06 19 26</p>
-			<p><a href="">Formulaire de contact</a></p>
-		</div>
-		<div class="ei_infos">
-			<h4>INFOS</h4>
-			<p>Entreprise Individuelle Pauline MARTIN</p>
-			<p>RCS 752 722 744 000 22</p>
-		</div>
-		<div class="suivez-moi">
-			<h4>SUIVEZ-MOI</h4>
-			<a target="new" href=""><img class="facebook_icon" alt="icone-facebook" src="public/images/fb_bk.png" width="30px"></a>
-			<a target="new" href=""><img class="instagram_icon" alt="icone-instagram" src="public/images/insta_bk.png" width="30px"></a>
-			<a target="new" href=""><img class="linkedin_icon" alt="icone-linkedin" src="public/images/linkedin_bk.png" width="30px"></a>
-			<a target="new" href=""><img class="github_icon" alt="icone-github" src="public/images/github_bk.png" width="30px"></a>
-		</div>
-	</div>
-	<div class="copyright_container">
-		<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="new" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="new" href="index.php?action=login">Connexion</a></p>
-	</div>
-</footer> 
-
-<!-- JS -->
-<!-- <script type="javascript" src="public/js/utils.js"></script> -->
-<!-- <script type="javascript" src="public/js/projectsDescription.js"></script> -->
-<!-- <script type="javascript" src="public/js/controler.js"></script>  -->
 

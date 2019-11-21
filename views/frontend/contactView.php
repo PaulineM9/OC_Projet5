@@ -7,7 +7,17 @@
 </section>
 
 <section class="contact_container">
-    <section class="form_container">
+    <p id="loadBar" style="display:none;">
+		<strong>Sending Email via slick AJAX. Hold on just a sec&#8230;</strong>
+		<img src="img/loading.gif" alt="Loading..." title="Sending Email" />
+	</p>
+	<p id="emailSuccess" style="display:none;">
+		<strong style="color:green;">Success! Your Email has been sent.</strong>
+	</p>
+    <div id="contactFormArea">
+		
+	</div>
+    <!-- <section class="form_container">
         <form class="contact_form" method="post"> 
             <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required><br/>
             <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname" required><br/>
@@ -30,7 +40,7 @@
                 }
             }
         ?>
-    </section>
+    </section> -->
 
     <aside class="contact_infos_container">
         <div class="mail_number">
