@@ -27,18 +27,19 @@
             <input class="envoyer form" type="submit" name="envoyer" placeholder="Envoyer" id="envoyer"><br/>
         </form>
         <?php
-            if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['object']) && isset($_POST['content'])) {
+            if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['object']) && isset($_POST['content'])) :
                 $position_arobase = strpos($_POST['email'], '@');
-                if ($position_arobase === false)
+                if ($position_arobase === false):
                     echo '<p>Votre email doit comporter un arobase.</p>';
-                else {
+                else :
                     $retour = mail('contact.super.web@gmail.com', 'Envoi depuis la page Contact du site SUPER!', $_POST['content'], 'From: ' . $_POST['email']);
-                    if($retour)
+                    if($retour):
                         echo '<p>Votre message a été envoyé.</p>';
-                    else
+                    else:
                         echo '<p>Erreur. <br/> Merci de remplir tous les champs du formulaire.</p>';
-                }
-            }
+                    endif;
+                endif;
+            endif;
         ?>
     </section> -->
 

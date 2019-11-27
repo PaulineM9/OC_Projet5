@@ -15,7 +15,7 @@
     </div>
 </nav>
 
-<?php if (!isset($_GET['modif'])) { ?>
+<?php if (!isset($_GET['modif'])): ?>
 <section class="profil_infos">
     <h2>Modifier mes informations personnelles</h2>
     <p>mon identifiant: <?= $_SESSION['identifiant'] ?></p><br/>
@@ -24,8 +24,8 @@
 
 <div class="modif">
     <a class="modif_profil_link" href="index.php?action=admin_profil&id=<?= $_GET['id'] ?>&modif">Modifier mon profil ou mon mot de passe</a>
-    <?php } ?>
-    <?php if (isset($_GET['modif'])) { ?>
+<?php endif; ?>
+    <?php if (isset($_GET['modif'])): ?>
     <form class="sign_in_modif" action="index.php?action=admin_profil&id=<?= $_GET['id']?>&modif" method="post">
         <input class="identifiant_admin" type="text" name="identifiant"  placeholder="Identifiant" id="identifiant" value="<?= $_SESSION['identifiant'] ?>"><br/>
         <input class="email_admin" type="email" name="email" placeholder="Votre email" id="email" value="<?= $_SESSION['email'] ?>"><br/>
@@ -34,8 +34,8 @@
         <input class="submit_admin" type="submit" name="submit" value="Modifier" id="submit"><br/>
     </form>
     <p id="pw_message">Le mot de passe doit contenir plus de 6 caractères <br/> dont au moins une majuscule et un caractère spécial.</p>
-    <?php if(isset($_SESSION)) { 
+    <?php if(isset($_SESSION)): 
         include('views/flashMessages.php');
-    } ?>
-    <?php } ?>
+    endif; ?>
+    <?php endif; ?>
 </div>

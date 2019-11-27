@@ -28,25 +28,25 @@
     <h3>Gérer les portraits</h3>
     <section class="manage_portraits">
         <h3 class="general_portraits">Tous les portraits</h3>
-        <?php if (!empty($portraits)) {
-            foreach ($portraits as $cle => $elements) { ?>
+        <?php if (!empty($portraits)):
+            foreach ($portraits as $cle => $elements): ?>
                 <div class="portraits_published">
                     <h4><?= $elements->getTitle() ?></h4>
                     <p class="publication">Portrait publié le <?= $elements->getDatePortrait() ?></p>
                     <h5><?= $elements->getContent() ?></h5>
                     <a href="index.php?action=update_portrait&id=<?= $elements->getId() ?>">Modifier le portrait</a>
                 </div>
-        <?php }
-        } ?>
+            <?php endforeach;
+        endif; ?>
     </section>
 
     <section class="pagePagination">
-        <?php for ($i = 1; $i <= $nbPage; $i++) {
-            if ($i == $cPage) {
+        <?php for ($i = 1; $i <= $nbPage; $i++):
+            if ($i == $cPage):
                 echo " $i /";
-            } else {
+            else:
                 echo " <a href=\"index.php?action=admin_portrait&p=$i\">$i</a> /";
-            }
-        } ?>
+            endif;
+        endfor; ?>
     </section>
 </section>

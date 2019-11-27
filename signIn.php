@@ -66,8 +66,8 @@
             <input class="submit" type="submit" name="submit" value="Inscription" id="submit"><br />
         </form>
         <p>Le mot de passe doit contenir plus de 6 caractères <br /> dont au moins une majuscule et un caractère spécial.</p>
-        <?php if(isset($_SESSION)) { 
+        <?php if(isset($_SESSION)): 
             include('views/flashMessages.php');
-        } ?>
+		endif; ?>
     </section>
 </body>

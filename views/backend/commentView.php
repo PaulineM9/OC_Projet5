@@ -19,50 +19,50 @@
     <section class="container_all_articles_comments">
         <div class="all_articles_comments">
             <h3>Tous les commentaires d'articles</h3>
-            <?php if (!empty($commentArticle)) {
-                foreach ($commentArticle as $cle => $elements) { ?>
+            <?php if (!empty($commentArticle)):
+                foreach ($commentArticle as $cle => $elements): ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
                         <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_article"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
-            <?php }
-            } ?>
+                <?php endforeach;
+            endif; ?>
         </div>
         <div class="all_articles_comments_signaled">
             <h3>Commentaires d'articles signalés</h3>
-            <?php if (!empty($commentArticleSignaled)) {
-                foreach ($commentArticleSignaled as $cle => $elements) { ?>
+            <?php if (!empty($commentArticleSignaled)):
+                foreach ($commentArticleSignaled as $cle => $elements): ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
                         <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_article"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
-            <?php }
-            } ?>
+                <?php endforeach;
+            endif; ?>
         </div>
     </section>
 
     <section class="container_all_portraits_comments">
         <div class="all_portraits_comments">
             <h3>Tous les commentaires de portraits</h3>
-            <?php if (!empty($commentPortrait)) {
-                foreach ($commentPortrait as $cle => $elements) { ?>
+            <?php if (!empty($commentPortrait)):
+                foreach ($commentPortrait as $cle => $elements): ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
                         <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_portrait"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
-            <?php }
-            } ?>
+                <?php endforeach;
+            endif; ?>
         </div>
         <div class="all_portraits_comments_signaled">
             <h3>Commentaires de portraits signalés</h3>
-            <?php if (!empty($commentPortraitSignaled)) {
-                foreach ($commentPortraitSignaled as $cle => $elements) { ?>
+            <?php if (!empty($commentPortraitSignaled)):
+                foreach ($commentPortraitSignaled as $cle => $elements): ?>
                     <h4 class="title_ref"><?= $elements['title'] ?></h4><br />
                     <h5>[ <?= $elements['date_comment'] ?> ] Par <?= $elements['pseudo'] ?>:
                         <a href="index.php?action=admin_comments&id=<?= $elements['id'] ?>&delete_portrait"><i class="fas fa-times"></i></i></a>
                     <p class="show_comment"><?= $elements['content'] ?></p><br />
-            <?php }
-            } ?>
+                <?php endforeach;
+            endif; ?>
         </div>
     </section>
 </section>

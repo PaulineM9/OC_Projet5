@@ -7,7 +7,7 @@
 </section>
 
 <section class="portfolio_projects_container">  
-    <?php foreach ($projects as $project) { ?>
+    <?php foreach ($projects as $project): ?>
         <div class="all_projects_published"> 
             <h3><?= $project->getTitle() ?></h3>
             <h4><?= $project->getImage() ?></h4>
@@ -21,7 +21,7 @@
                 </div>
             </div>    
         </div>  
-    <?php } ?>
+    <?php endforeach; ?>
     
     <script>
         // Get the modal

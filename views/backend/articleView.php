@@ -28,25 +28,25 @@
     <h3>Gérer les articles</h3>
     <section class="manage_articles">
         <h3 class="general_articles">Tous les articles</h3>
-        <?php if (!empty($articles)) {
-            foreach ($articles as $cle => $elements) { ?>
+        <?php if (!empty($articles)):
+            foreach ($articles as $cle => $elements): ?>
                 <div class="articles_published">
                     <h4><?= $elements->getTitle() ?></h4>
                     <p class="publication">Article publié le <?= $elements->getDateArticle() ?></p>
                     <h5><?= $elements->getContent() ?></h5>
                     <a href="index.php?action=update_article&id=<?= $elements->getId() ?>">Modifier l'article</a>
                 </div>
-        <?php }
-        } ?>
+            <?php endforeach;
+        endif; ?>
     </section>
 
     <section class="pagePagination">
-        <?php for ($i = 1; $i <= $nbPage; $i++) {
-            if ($i == $cPage) {
+        <?php for ($i = 1; $i <= $nbPage; $i++):
+            if ($i == $cPage):
                 echo " $i /";
-            } else {
+            else:
                 echo " <a href=\"index.php?action=admin_article&p=$i\">$i</a> /";
-            }
-        } ?>
+            endif;
+        endfor; ?>
     </section>
 </section>

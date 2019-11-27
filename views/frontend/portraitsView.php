@@ -12,15 +12,15 @@
             <section class="comments_portrait">
                 <h3>COMMENTAIRES</h3>
                 <div class="comment_container">
-                    <?php if (!empty($commentedPortrait))
-                        { foreach ($commentedPortrait as $cle => $elements) { ?>
+                    <?php if (!empty($commentedPortrait)):
+                        foreach ($commentedPortrait as $cle => $elements): ?>
                             <p>Publié le <?= $elements->getDateComment() ?> Par <?= $elements->getPseudo() ?> (<a href="index.php?action=portraits&id=<?= $portrait->getId() ?>&idComment=<?= $elements->getId() ?>&signaled" class="signal">Signaler</a>): </p><br/> 
                             <p class="comment_published"><?= $elements->getContent() ?><br />                       
                             <div class="signal_message">
-                                <?php if (isset($_SESSION) AND isset($_GET['signaled']) AND $elements->getSignaled() == 1)  { include('views/flashMessages.php'); } ?>   
+                                <?php if (isset($_SESSION) AND isset($_GET['signaled']) AND $elements->getSignaled() == 1): include('views/flashMessages.php'); endif; ?>   
                             </div> 
-                        <?php }                    
-                    } ?> 
+                        <?php endforeach;                    
+                    endif; ?> 
                 </div>
                 <hr>   
             </section>
@@ -40,14 +40,14 @@
 
     <section class="all_portraits_list">
         <h5>Archives des portraits</h5>
-            <?php if (!empty($allPortraits)) {
-                foreach ($allPortraits as $cle => $elements) { ?>
+            <?php if (!empty($allPortraits)):
+                foreach ($allPortraits as $cle => $elements): ?>
                     <div class="all_portraits">
                         <a href="index.php?action=portraits&id=<?= $elements->getId() ?>">
                             <h3>- <?= $elements->getTitle() ?></h3>
                         </a>
                     </div>
-            <?php }
-        } ?>
+                <?php endforeach;
+            endif; ?>
     </section>
 </section>
