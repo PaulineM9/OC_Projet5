@@ -314,6 +314,11 @@ hr {
 .signal_message {
     color: red;
 }
+.error-message {
+    display: inline;
+    color: red;
+    display: none;
+}
 
 /*--------------------------*/
 /*----- MEDIA QUERIES ------*/

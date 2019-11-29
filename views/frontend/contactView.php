@@ -17,13 +17,18 @@
     <div id="contactFormArea">
 		
 	</div>
-    <!-- <section class="form_container">
+    <section class="form_container">
         <form class="contact_form" method="post"> 
-            <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required><br/>
-            <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname" required><br/>
-            <input class="email form" type="email" name="email" placeholder="Email" id="email" required><br/>
-            <input class="object form" type="text" name="object" placeholder="Objet" id="object" required><br/>
-            <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10" required></textarea><br/>
+            <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname">
+            <span class="error-message"></span><br/>
+            <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname">
+            <span class="error-message"></span><br/>
+            <input class="email form" type="email" name="email" placeholder="Email" id="email">
+            <span class="error-message"></span><br/>
+            <input class="object form" type="text" name="object" placeholder="Objet" id="object">
+            <span class="error-message"></span><br/>
+            <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10"></textarea>
+            <span class="error-message"></span><br/>
             <input class="envoyer form" type="submit" name="envoyer" placeholder="Envoyer" id="envoyer"><br/>
         </form>
         <?php
@@ -41,7 +46,7 @@
                 endif;
             endif;
         ?>
-    </section> -->
+    </section>
 
     <aside class="contact_infos_container">
         <div class="mail_number">
