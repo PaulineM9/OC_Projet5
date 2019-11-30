@@ -1,6 +1,6 @@
 <?php 
-// namespaces Models;
-// use \PDO;
+namespace Models;
+use \PDO;
 
 abstract class Manager 
 {

@@ -1,5 +1,7 @@
 <?php
 
+namespace Models;
+
 class Articles
 {
     private $_id,

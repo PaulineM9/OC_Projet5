@@ -1,29 +1,28 @@
 <?php
-// namespace Oc\projet_4;
+namespace Oc\projet_4;
 
 session_start();
 
-// function Autoload($class)
-// {
-//     // $class = str_replace('\\', '/', $class);
-//     // $class = str_replace(__NAMESPACE__, strtolower(__NAMESPACE__), $class);
-
-//     require $class . '.php'; 
-// }
-// // spl_autoload_register('Oc\projet_4\Autoload');
-// spl_autoload_register('Autoload');
-
-function AutoLoad($class)
+function Autoload($class)
 {
-    require 'models/' . $class . '.php';
+    $class = str_replace('\\', '/', $class);
+    $class = str_replace(__NAMESPACE__, strtolower(__NAMESPACE__), $class);
+
+    require $class . '.php'; 
 }
-spl_autoload_register('AutoLoad');
+spl_autoload_register('Oc\projet_4\Autoload');
+
+// function AutoLoad($class)
+// {
+//     require 'models/' . $class . '.php';
+// }
+// spl_autoload_register('AutoLoad');
 
 require("controllers/frontend.php");
 require("controllers/backend.php");
 
 if (isset($_GET['action'])) {
-    // FRONTEND
+// FRONTEND
     if ($_GET['action'] == 'home') {
         home();
     }
@@ -45,7 +44,7 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'mentions_legales') {
         mentions_legales();
     }
-    // FRONTEND BLOG
+// FRONTEND BLOG
     if ($_GET['action'] == 'blog') {
         blog();
     }
@@ -55,7 +54,7 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'portraits') {
         blogPortraits();
     }
-    // BACKEND
+// BACKEND
     if ($_GET['action'] == 'sign_in') {
         signIn();
     }

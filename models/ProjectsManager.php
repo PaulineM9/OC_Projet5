@@ -1,5 +1,6 @@
 <?php
-// require_once('models/Manager.php');
+namespace Models;
+use \PDO;
 
 class ProjectsManager extends Manager
 {
