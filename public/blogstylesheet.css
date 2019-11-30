@@ -295,6 +295,10 @@ hr {
 .comments_form textarea {
     font-family: 'poiret one', cursive;
     margin-bottom: 5px;
+    width: 610px;
+}
+#submit {
+    width: 100px;
 }
 .all_portraits_list h5,
 .all_articles_list h5 {
