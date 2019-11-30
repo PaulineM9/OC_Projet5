@@ -19,25 +19,25 @@ function home()
     $projects = $projectManager->getList();
 
     ob_start();
-    include('views/frontend/indexView.php');
+    include('views/frontend/site/indexView.php');
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
 
 function services()
 {
     ob_start();
-    include('views/frontend/servicesView.php');
+    include('views/frontend/site/servicesView.php');
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
 
 function about()
 {
     ob_start();
-    include('views/frontend/aboutView.php');
+    include('views/frontend/site/aboutView.php');
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
 
 function portfolio()
@@ -47,17 +47,17 @@ function portfolio()
     $projects = $projectManager->getList();
 
     ob_start();
-    include('views/frontend/portfolioView.php');
+    include('views/frontend/site/portfolioView.php');
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
 
 function contact()
 {
     ob_start();
-    include('views/frontend/contactView.php');
+    include('views/frontend/site/contactView.php');
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
 
 function blog()
@@ -73,9 +73,9 @@ function blog()
     $tree_portraits = $portraitManager->getLastTreePortraits();
 
     ob_start();
-    include('views/frontend/indexBlogView.php');
+    include('views/frontend/blog/indexBlogView.php');
     $content = ob_get_clean();
-    require("views/frontend/blogTemplate.php");
+    require("views/frontend/blog/blogTemplate.php");
 }
 
 function blogArticles()
@@ -115,9 +115,9 @@ function blogArticles()
     }
 
     ob_start();
-    include('views/frontend/articlesView.php');
+    include('views/frontend/blog/articlesView.php');
     $content = ob_get_clean();
-    require("views/frontend/blogTemplate.php");
+    require("views/frontend/blog/blogTemplate.php");
 }
 
 function blogPortraits()
@@ -157,9 +157,9 @@ function blogPortraits()
     }
 
     ob_start();
-    include('views/frontend/portraitsView.php');
+    include('views/frontend/blog/portraitsView.php');
     $content = ob_get_clean();
-    require("views/frontend/blogTemplate.php");
+    require("views/frontend/blog/blogTemplate.php");
 }
 
 function login()
@@ -200,15 +200,15 @@ function login()
     }
 
     ob_start();
-    include('views/frontend/loginView.php');  
+    include('views/frontend/site/loginView.php');  
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
 
 function mentions_legales()
 {
     ob_start();
-    include('views/frontend/mentionsLegalesView.php');  
+    include('views/frontend/site/mentionsLegalesView.php');  
     $content = ob_get_clean();
-    require("views/frontend/template.php");
+    require("views/frontend/site/template.php");
 }
