@@ -189,9 +189,9 @@
 
 <section class="links">
     <div class="linkedin">
-        <a target="new" href="https://www.linkedin.com/in/pauline-martin-8457a0bb/"><img alt="linkedin" src="public/images/linkedin_bk.png" width="35px">Profil LINKEDIN</a>
+        <a target="blank" href="https://www.linkedin.com/in/pauline-martin-8457a0bb/"><img alt="linkedin" src="public/images/linkedin_bk.png" width="35px">Profil LINKEDIN</a>
     </div>
     <div class="git">
-        <a target="new" href="https://github.com/PaulineM9"><img alt="github" src="public/images/github_bk.png" width="35px">Profil GITHUB</a>
+        <a target="blank" href="https://github.com/PaulineM9"><img alt="github" src="public/images/github_bk.png" width="35px">Profil GITHUB</a>
     </div>
 </section>

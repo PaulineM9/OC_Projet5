@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="copyright_container">
-            <p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="new" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="new" href="index.php?action=login">Connexion</a></p>
+            <p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="blank" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="blank" href="index.php?action=login">Connexion</a></p>
         </div>
     </footer>
 

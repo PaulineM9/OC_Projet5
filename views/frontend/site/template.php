@@ -63,7 +63,7 @@
 			<a href="index.php?action=services"><h2>Services</h2></a>
 			<a href="index.php?action=about"><h2>A Propos</h2></a>
 			<a href="index.php?action=portfolio"><h2>Portfolio</h2></a>
-			<a href="index.php?action=blog" target="new"><h2>Blog</h2></a>
+			<a href="index.php?action=blog" target="blank"><h2>Blog</h2></a>
 			<a href="index.php?action=contact"><h2>Contact</h2></a>
 		</div>
     </header>
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div class="copyright_container">
-			<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="new" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="new" href="index.php?action=login">Connexion</a></p>
+			<p class="copyright">Tous droits réservés SUPER! 2019 / réalisé par SUPER! / <a target="blank" href="index.php?action=mentions_legales">Mentions Légales</a> / <a target="blank" href="index.php?action=login">Connexion</a></p>
 		</div>
 	</footer> 
 
