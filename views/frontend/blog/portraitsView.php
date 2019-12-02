@@ -29,11 +29,11 @@
                 <h3>Postez votre commentaire</h3>
                 <h4>Faites nous part de vos <strong>expériences</strong>, de vos remarques ou posez-moi vos questions en lien avec ce portrait</h4>
                 <form class="comments_form" action="index.php?action=portraits&id=<?= $_GET['id'] ?>" method="post">
-                <input class="pseudo" type="text" name="pseudo" placeholder="Pseudo" id="pseudo">
+                    <input class="pseudo" type="text" name="pseudo" placeholder="Pseudo" id="pseudo" required>
                     <span class="error-message"></span><br/>
-                    <input class="mail" type="email" name="mail" placeholder="Email" id="mail">
+                    <input class="mail" type="email" name="mail" placeholder="Email" id="mail" required>
                     <span class="error-message"></span><br/>
-                    <textarea class="content" name="content" placeholder="Votre commentaire" id="content" cols="30" rows="10"></textarea><br/>
+                    <textarea class="content" name="content" placeholder="Votre commentaire" id="content" cols="30" rows="10" required></textarea><br/>
                     <input class="submit" type="submit" name="submit" placeholder="Envoyer" id="submit"><br/>
                 </form> 
             </section>

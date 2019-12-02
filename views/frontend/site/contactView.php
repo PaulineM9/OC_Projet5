@@ -18,34 +18,19 @@
 		
 	</div>
     <section class="form_container">
-        <form class="contact_form" method="post"> 
-            <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname">
+        <form class="contact_form" method="post" action="index.php?action=contact"> 
+            <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required>
             <span class="error-message"></span><br/>
-            <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname">
+            <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname" required>
             <span class="error-message"></span><br/>
-            <input class="email form" type="email" name="email" placeholder="Email" id="email">
+            <input class="email form" type="email" name="email" placeholder="Email" id="email" required>
             <span class="error-message"></span><br/>
-            <input class="object form" type="text" name="object" placeholder="Objet" id="object">
+            <input class="object form" type="text" name="object" placeholder="Objet" id="object" required>
             <span class="error-message"></span><br/>
-            <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10"></textarea>
+            <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10" required></textarea>
             <span class="error-message"></span><br/>
-            <input class="envoyer form" type="submit" name="envoyer" placeholder="Envoyer" id="envoyer"><br/>
+            <input class="envoyer form" type="submit" name="envoyer" value="Envoyer" id="envoyer"><br/>
         </form>
-        <?php
-            if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['object']) && isset($_POST['content'])) :
-                $position_arobase = strpos($_POST['email'], '@');
-                if ($position_arobase === false):
-                    echo '<p>Votre email doit comporter un arobase.</p>';
-                else :
-                    $retour = mail('contact.super.web@gmail.com', 'Envoi depuis la page Contact du site SUPER!', $_POST['content'], 'From: ' . $_POST['email']);
-                    if($retour):
-                        echo '<p>Votre message a été envoyé.</p>';
-                    else:
-                        echo '<p>Erreur. <br/> Merci de remplir tous les champs du formulaire.</p>';
-                    endif;
-                endif;
-            endif;
-        ?>
     </section>
 
     <aside class="contact_infos_container">

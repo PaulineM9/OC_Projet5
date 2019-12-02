@@ -54,6 +54,18 @@ function portfolio()
 
 function contact()
 {
+    $_SESSION['flash']['succes'] = '';
+    $_SESSION['flash']['danger'] = '';
+
+    if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['object']) && isset($_POST['content'])){
+        $message = $_POST['content'];
+        $headers = 'From: ' . $_POST['email'];
+        mail('contact.super.web@gmail.com', 'Formulaire de contact SUPER!', $message, $headers);
+        $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . "Votre message a bien été envoyé.";
+    } else {
+        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Merci de remplir tous les champs du formulaire";
+    }
+
     ob_start();
     include('views/frontend/site/contactView.php');
     $content = ob_get_clean();
@@ -111,7 +123,7 @@ function blogArticles()
         ]);
         $commentArticle->getSignal($comments);
 
-        $message = "Ce commentaire a été signalé à l'administrateur";
+        // $message = "Ce commentaire a été signalé à l'administrateur";
     }
 
     ob_start();
