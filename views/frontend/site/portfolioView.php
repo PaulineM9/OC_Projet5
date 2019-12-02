@@ -8,14 +8,16 @@
 
 <section class="portfolio_projects_container">  
     <?php foreach ($projects as $project): ?>
+        <?php 
+             $i++; ?>
         <div class="all_projects_published"> 
             <h3><?= $project->getTitle() ?></h3>
             <h4><?= $project->getImage() ?></h4>
             <a href="<?= $project->getLink() ?>">Visiter le site</a>
-            <button id="myBtn" class="description_btn">Description</button>
-            <div id="myModal" class="modal">
+            <button class="description_btn" data-btn="<?= $i ?>">Description</button>
+            <div class="modal" data-modal="<?= $i ?>">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="close" data-close="<?= $i ?>">&times;</span>
                     <h4>Description du projet</h4>
                     <h5><?= $project->getDescription() ?></h5>
                 </div>

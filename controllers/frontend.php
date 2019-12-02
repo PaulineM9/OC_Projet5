@@ -46,6 +46,8 @@ function portfolio()
     $projectManager =  new ProjectsManager();
     $projects = $projectManager->getList();
 
+    $i = 0;
+    
     ob_start();
     include('views/frontend/site/portfolioView.php');
     $content = ob_get_clean();
@@ -159,13 +161,16 @@ function blogPortraits()
     $commentedPortrait = $commentPortrait->getPortraitComment($_GET['id']);
 
     // signal a comment to the administration
+    $_SESSION['flash']['danger'] = '';
+
     if (isset($_GET['signaled'])) {
         $comments = new CommentsPortraits([
             'id' => $_GET['idComment']
         ]);
         $commentPortrait->getSignal($comments);
 
-        $message = "Ce commentaire a été signalé à l'administrateur";
+        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Ce commentaire a été signalé à l'administrateur.";
+
     }
 
     ob_start();
