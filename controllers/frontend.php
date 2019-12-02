@@ -182,7 +182,6 @@ function blogPortraits()
         $commentPortrait->getSignal($comments);
 
         $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Ce commentaire a été signalé à l'administrateur.";
-
     }
 
     ob_start();

@@ -15,10 +15,12 @@
                     <?php if (!empty($commentedArticle)) :
                         foreach ($commentedArticle as $cle => $elements) : ?>
                             <p>Publié le <?= $elements->getDateComment() ?> Par <?= $elements->getPseudo() ?> (<a href="index.php?action=articles&id=<?= $article->getId() ?>&idComment=<?= $elements->getId() ?>&signaled" class="signal">Signaler</a>): </p><br/> 
-                            <p class="comment_published"><?= $elements->getContent() ?><br />                       
+                            <p class="comment_published"><?= $elements->getContent() ?><br />   
                             <div class="signal_message">
-                            <?php if (isset($_SESSION) AND isset($_GET['signaled']) AND $elements->getSignaled() == 1): include('views/flashMessages.php'); endif; ?>   
-                            </div> 
+                                <?php if(isset($_SESSION)) :
+                                    include('views/flashMessages.php');
+                                endif; ?>  
+                            </div>                  
                         <?php endforeach;                   
                     endif; ?> 
                 </div>
