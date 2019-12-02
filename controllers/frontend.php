@@ -72,7 +72,7 @@ function contact()
         $object = $_POST['object'];
         $message = $_POST['content'];
 
-        $to = 'contact@creatiq.fr';
+        $to = 'contact.super.web@gmail.com';
         $sujet = 'Formulaire de contact From  '.$email;
         $msg = $message;
         mail($to, $sujet, $msg);
