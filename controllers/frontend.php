@@ -59,14 +59,26 @@ function contact()
     $_SESSION['flash']['succes'] = '';
     $_SESSION['flash']['danger'] = '';
 
-    if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['object']) && isset($_POST['content'])){
-        $message = $_POST['content'];
-        $headers = 'From: ' . $_POST['email'];
-        mail('contact.super.web@gmail.com', 'Formulaire de contact SUPER!', $message, $headers);
-        $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . "Votre message a bien été envoyé.";
+    $e = array();
+    $e['error'] = "Formulaire non valide";
+
+    if(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) || !isset($_POST['object']) || !isset($_POST['content']) ) {
+        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . 'Merci de renseigner une adresse mail valide';
     } else {
-        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Merci de remplir tous les champs du formulaire";
+        $e['error'] = 'Ok';
+        $nom = $_POST['firstname'];
+        $prenom = $_POST['lastname'];
+        $email = $_POST['email'];
+        $object = $_POST['object'];
+        $message = $_POST['content'];
+
+        $to = 'contact@creatiq.fr';
+        $sujet = 'Formulaire de contact From  '.$email;
+        $msg = $message;
+        mail($to, $sujet, $msg);
+        $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . 'Votre message a bien été envoyé';
     }
+echo json_encode($e);
 
     ob_start();
     include('views/frontend/site/contactView.php');

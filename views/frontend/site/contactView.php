@@ -7,16 +7,6 @@
 </section>
 
 <section class="contact_container">
-    <p id="loadBar" style="display:none;">
-		<strong>Sending Email via slick AJAX. Hold on just a sec&#8230;</strong>
-		<img src="img/loading.gif" alt="Loading..." title="Sending Email" />
-	</p>
-	<p id="emailSuccess" style="display:none;">
-		<strong style="color:green;">Success! Your Email has been sent.</strong>
-	</p>
-    <div id="contactFormArea">
-		
-	</div>
     <section class="form_container">
         <form class="contact_form" method="post" action="index.php?action=contact"> 
             <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required>
@@ -29,7 +19,7 @@
             <span class="error-message"></span><br/>
             <textarea class="content form" name="content" placeholder="Votre message" id="content" cols="30" rows="10" required></textarea>
             <span class="error-message"></span><br/>
-            <input class="envoyer form" type="submit" name="envoyer" value="Envoyer" id="envoyer"><br/>
+            <input class="envoyer form" type="submit" name="submit" value="Envoyer" id="submit"><br/>
         </form>
     </section>
 
