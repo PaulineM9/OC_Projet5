@@ -23,7 +23,7 @@
                 <h2>2012 - 2016</h2>
                 <h3>FRÈRE & SOEUR</h3>
                 <h4>CRÉATRICE & GÉRANTE</h4>
-                <P>Création de mon restaurant, concept de restaurantion rapide artisanale à Lyon: cuisine, service, communication, comptabilité, gestion du personnel...</P>
+                <P>Création de mon restaurant, concept de restauration rapide artisanale à Lyon: cuisine, service, communication, comptabilité, gestion du personnel...</P>
             </div>
             <div class="exp_4 experience">
                 <h2>2006 - 2012</h2>

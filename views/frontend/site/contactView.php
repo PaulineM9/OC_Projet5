@@ -21,6 +21,7 @@
             <span class="error-message"></span><br/>
             <input class="envoyer form" type="submit" name="submit" value="Envoyer" id="submit"><br/>
         </form>
+        <div id="msg">Votre message a bien été envoyé.</div>
     </section>
 
     <aside class="contact_infos_container">

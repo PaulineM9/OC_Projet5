@@ -53,7 +53,7 @@ $(document).ready(function() {
         object = $(this).find("#object").val();
         message = $(this).find("#content").val();
 
-        $.post('contact.php', {
+        $.post('../views/frontend/site/contact.php', {
             nom:nom,
             prenom:prenom,
             email:email,
@@ -62,7 +62,7 @@ $(document).ready(function() {
         },function(data) {
             if(data.error=='Ok') {
                 $('#contact_form').fadeOut('fast');
-                // $('#msg').fadeIn('slow');
+                $('#msg').fadeIn('slow');
             } else {
                 alert('voilà');
             }

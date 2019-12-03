@@ -1,17 +1,17 @@
 <?php
-// use \Models\Articles;
-// use \Models\ArticlesManager;
-// use \Models\CommentsArticles;
-// use \Models\CommentsArticlesManager;
-// use \Models\CommentsPortraits;
-// use \Models\CommentsPortraitsManager;
-// use \Models\Portraits;
-// use \Models\PortraitsManager;
-// use \Models\Projects;
-// use \Models\ProjectsManager;
-// use \Models\User;
-// use \Models\UserManager;
-// use \Models\Manager;
+use \Models\Articles;
+use \Models\ArticlesManager;
+use \Models\CommentsArticles;
+use \Models\CommentsArticlesManager;
+use \Models\CommentsPortraits;
+use \Models\CommentsPortraitsManager;
+use \Models\Portraits;
+use \Models\PortraitsManager;
+use \Models\Projects;
+use \Models\ProjectsManager;
+use \Models\User;
+use \Models\UserManager;
+use \Models\Manager;
 
 function home()
 {
@@ -56,14 +56,11 @@ function portfolio()
 
 function contact()
 {
-    $_SESSION['flash']['succes'] = '';
-    $_SESSION['flash']['danger'] = '';
-
     $e = array();
     $e['error'] = "Formulaire non valide";
 
-    if(!isset($_POST['firstname']) || !isset($_POST['lastname']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) || !isset($_POST['object']) || !isset($_POST['content']) ) {
-        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . 'Merci de renseigner une adresse mail valide';
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $e['email_invalide'] = "email_invalide";
     } else {
         $e['error'] = 'Ok';
         $nom = $_POST['firstname'];
@@ -73,10 +70,10 @@ function contact()
         $message = $_POST['content'];
 
         $to = 'contact.super.web@gmail.com';
-        $sujet = 'Formulaire de contact From  '.$email;
+        $sujet = ' Formulaire de contact  '.$email;
         $msg = $message;
         mail($to, $sujet, $msg);
-        $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . 'Votre message a bien été envoyé';
+
     }
 echo json_encode($e);
 
