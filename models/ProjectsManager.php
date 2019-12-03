@@ -1,6 +1,6 @@
 <?php
-namespace Models;
-use \PDO;
+// namespace Models;
+// use \PDO;
 
 class ProjectsManager extends Manager
 {

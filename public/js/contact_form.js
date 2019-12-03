@@ -45,26 +45,26 @@ $(function() {
     });
 }) ;
 
-$(document).ready(function() {
-    $('#contact_form').submit(function() {
+$(document).ready(function(){
+    $('#contact_form').submit(function(){
         nom = $(this).find("#firstname").val();
         prenom = $(this).find("#lastname").val();
         email = $(this).find("#email").val();
         object = $(this).find("#object").val();
-        message = $(this).find("#content").val();
+        message = $(this).find("#message").val();
 
-        $.post('../views/frontend/site/contact.php', {
+        $.post('contact.php',{
             nom:nom,
             prenom:prenom,
             email:email,
             object:object,
             message:message
-        },function(data) {
-            if(data.error=='Ok') {
+        },function(data){
+            if(data.error=='Ok'){
                 $('#contact_form').fadeOut('fast');
                 $('#msg').fadeIn('slow');
-            } else {
-                alert('voilà');
+            }else{
+                alert('entrer un mail valide');
             }
         },"json");
         return false;
