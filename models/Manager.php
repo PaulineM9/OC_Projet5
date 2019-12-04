@@ -1,5 +1,5 @@
 <?php 
-namespace Models;
+namespace Oc\Projet_5\Models;
 use \PDO;
 
 abstract class Manager 

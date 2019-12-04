@@ -1,17 +1,17 @@
 <?php
-// use \Models\Articles;
-// use \Models\ArticlesManager;
-// use \Models\CommentsArticles;
-// use \Models\CommentsArticlesManager;
-// use \Models\CommentsPortraits;
-// use \Models\CommentsPortraitsManager;
-// use \Models\Portraits;
-// use \Models\PortraitsManager;
-// use \Models\Projects;
-// use \Models\ProjectsManager;
-// use \Models\User;
-// use \Models\UserManager;
-// use \Models\Manager;
+use Oc\Projet_5\Models\Articles;
+use Oc\Projet_5\Models\ArticlesManager;
+use Oc\Projet_5\Models\CommentsArticles;
+use Oc\Projet_5\Models\CommentsArticlesManager;
+use Oc\Projet_5\Models\CommentsPortraits;
+use Oc\Projet_5\Models\CommentsPortraitsManager;
+use Oc\Projet_5\Models\Portraits;
+use Oc\Projet_5\Models\PortraitsManager;
+use Oc\Projet_5\Models\Projects;
+use Oc\Projet_5\Models\ProjectsManager;
+use Oc\Projet_5\Models\User;
+use Oc\Projet_5\Models\UserManager;
+// use Oc\Projet_5\Models\Manager;
 
 function signIn()
 {

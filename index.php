@@ -1,5 +1,5 @@
 <?php
-namespace Oc\projet_4;
+namespace Oc\Projet_5;
 
 session_start();
 
@@ -10,7 +10,7 @@ function Autoload($class)
 
     require $class . '.php'; 
 }
-spl_autoload_register('Oc\projet_4\Autoload');
+spl_autoload_register('Oc\Projet_5\Autoload');
 
 // function AutoLoad($class)
 // {
