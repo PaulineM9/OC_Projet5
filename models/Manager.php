@@ -1,6 +1,6 @@
 <?php 
-namespace Oc\Projet_5\Models;
-use \PDO;
+// namespace Oc\Projet_5\Models;
+// use \PDO;
 
 abstract class Manager 
 {
