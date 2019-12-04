@@ -1,6 +1,6 @@
 <?php 
-// namespace Models;
-// use \PDO;
+namespace Models;
+use \PDO;
 
 abstract class Manager 
 {
@@ -8,7 +8,7 @@ abstract class Manager
     {
         try {
             $db = new PDO(
-                'mysql:host=localhost;dbname=projet_5;charset=utf8', 'root', "root",
+                'mysql:host=localhost;dbname=mapa8726_projet_5;charset=utf8', 'mapa8726_paulineweb', "Gaspard0415",
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
             );
         return $db;
@@ -17,3 +17,5 @@ abstract class Manager
         }
     }
 }
+
+// 'mysql:host=localhost;dbname=projet_5;charset=utf8', 'root', "root",

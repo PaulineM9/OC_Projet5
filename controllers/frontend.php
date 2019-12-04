@@ -1,17 +1,17 @@
 <?php
-// use \Models\Articles;
-// use \Models\ArticlesManager;
-// use \Models\CommentsArticles;
-// use \Models\CommentsArticlesManager;
-// use \Models\CommentsPortraits;
-// use \Models\CommentsPortraitsManager;
-// use \Models\Portraits;
-// use \Models\PortraitsManager;
-// use \Models\Projects;
-// use \Models\ProjectsManager;
-// use \Models\User;
-// use \Models\UserManager;
-// use \Models\Manager;
+use \Models\Articles;
+use \Models\ArticlesManager;
+use \Models\CommentsArticles;
+use \Models\CommentsArticlesManager;
+use \Models\CommentsPortraits;
+use \Models\CommentsPortraitsManager;
+use \Models\Portraits;
+use \Models\PortraitsManager;
+use \Models\Projects;
+use \Models\ProjectsManager;
+use \Models\User;
+use \Models\UserManager;
+use \Models\Manager;
 
 function home()
 {
@@ -58,15 +58,16 @@ function contact()
 {
     $e = array();
     $e['error'] = "Formulaire non valide";
-    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $e['email_invalide'] = "email_invalide";
-    }else{
+    } else {
         $e['error'] = 'Ok';
         $nom = $_POST['firstname'];
         $prenom = $_POST['lastname'];
         $email = $_POST['email'];
         $object = $_POST['object'];
-        $message = $_POST['message'];
+        $message = $_POST['content'];
 
         $to = 'contact.super.web@gmail.com';
         $sujet = ' Formulaire de contact From  '.$email;

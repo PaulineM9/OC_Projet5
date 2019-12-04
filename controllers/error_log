@@ -1,0 +1,46 @@
+[03-Dec-2019 14:37:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mapa8726_projet_4.projects' doesn't exist in /home/mapa8726/site/projet-5.pauline-superweb.com/models/ProjectsManager.php:30
+Stack trace:
+#0 /home/mapa8726/site/projet-5.pauline-superweb.com/models/ProjectsManager.php(30): PDOStatement->execute()
+#1 /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php(19): ProjectsManager->getList()
+#2 /home/mapa8726/site/projet-5.pauline-superweb.com/index.php(27): home()
+#3 {main}
+  thrown in /home/mapa8726/site/projet-5.pauline-superweb.com/models/ProjectsManager.php on line 30
+[03-Dec-2019 14:38:18 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 16:07:42 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 21:49:27 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 21:49:51 UTC] PHP Notice:  Undefined index: message in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 69
+[03-Dec-2019 21:54:49 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 21:55:07 UTC] PHP Notice:  Undefined index: message in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 69
+[03-Dec-2019 22:00:15 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 22:00:50 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 22:01:59 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 22:02:21 UTC] PHP Notice:  Undefined index: message in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 69
+[03-Dec-2019 22:04:36 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[03-Dec-2019 22:08:29 UTC] PHP Notice:  Undefined index: firstname in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 61
+[03-Dec-2019 22:08:29 UTC] PHP Notice:  Undefined index: lastname in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[03-Dec-2019 22:08:29 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 63
+[03-Dec-2019 22:08:29 UTC] PHP Notice:  Undefined index: object in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 64
+[03-Dec-2019 22:08:29 UTC] PHP Notice:  Undefined index: content in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 65
+[03-Dec-2019 22:28:00 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[03-Dec-2019 22:52:04 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[03-Dec-2019 22:53:38 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[04-Dec-2019 08:02:01 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[04-Dec-2019 08:06:31 UTC] PHP Notice:  Undefined index: email in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 62
+[04-Dec-2019 08:13:18 UTC] PHP Warning:  include(../views/frontend/site/indexView.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 22
+[04-Dec-2019 08:13:18 UTC] PHP Warning:  include(../views/frontend/site/indexView.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 22
+[04-Dec-2019 08:13:18 UTC] PHP Warning:  include(): Failed opening '../views/frontend/site/indexView.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 22
+[04-Dec-2019 08:13:18 UTC] PHP Warning:  require(../views/frontend/site/template.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 24
+[04-Dec-2019 08:13:18 UTC] PHP Warning:  require(../views/frontend/site/template.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 24
+[04-Dec-2019 08:13:18 UTC] PHP Fatal error:  require(): Failed opening required '../views/frontend/site/template.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mapa8726/site/projet-5.pauline-superweb.com/controllers/frontend.php on line 24
+[04-Dec-2019 08:18:56 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:18:56 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:18:56 UTC] PHP Fatal error:  require(): Failed opening required 'Models/ProjectsManager.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:20:27 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:20:27 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:20:27 UTC] PHP Fatal error:  require(): Failed opening required 'Models/ProjectsManager.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:22:11 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:22:11 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:22:11 UTC] PHP Fatal error:  require(): Failed opening required 'Models/ProjectsManager.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:22:26 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:22:26 UTC] PHP Warning:  require(Models/ProjectsManager.php): failed to open stream: No such file or directory in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
+[04-Dec-2019 08:22:26 UTC] PHP Fatal error:  require(): Failed opening required 'Models/ProjectsManager.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mapa8726/site/projet-5.pauline-superweb.com/index.php on line 11
