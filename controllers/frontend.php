@@ -110,6 +110,8 @@ function blogArticles()
     }
 
     // get all comments about an article clicked 
+    $_SESSION['flash']['danger'] = '';
+
     $commentArticle = new CommentsArticlesManager();
     $commentedArticle = $commentArticle->getArticleComment($_GET['id']);
 
@@ -119,8 +121,8 @@ function blogArticles()
             'id' => $_GET['idComment']
         ]);
         $commentArticle->getSignal($comments);
-
-        // $message = "Ce commentaire a été signalé à l'administrateur";
+    
+        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Le commentaire a été signalé à l'administrateur.";
     }
 
     ob_start();
@@ -164,7 +166,7 @@ function blogPortraits()
         ]);
         $commentPortrait->getSignal($comments);
 
-        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Ce commentaire a été signalé à l'administrateur.";
+        $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Le commentaire a été signalé à l'administrateur.";
     }
 
     ob_start();

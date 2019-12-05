@@ -25,7 +25,7 @@ class CommentsArticlesManager extends Manager
     {
         $list = [];
 
-        $req = $this->_db->prepare('SELECT id_article, pseudo, mail, date_comment, content, DATE_FORMAT (date_comment, "%d/%m/%Y à %Hh%imin%ss") AS date_creation_comment FROM comments_articles ORDER BY date_comment DESC');
+        $req = $this->_db->prepare('SELECT id_article, pseudo, mail, date_comment, content FROM comments_articles ORDER BY date_comment DESC');
         $req->execute();
 
         $req_join = $this->_db->prepare('SELECT * FROM articles, comments_articles WHERE articles.id=comments_articles.id_article ORDER BY date_comment DESC');
@@ -45,7 +45,7 @@ class CommentsArticlesManager extends Manager
     {
         $list = [];
 
-        $req = $this->_db->prepare('SELECT id, pseudo, mail, content, date_comment, signaled, DATE_FORMAT (date_comment, "%d/%m/%Y à %Hh%imin%ss") AS date_creation_comment FROM comments_articles WHERE id_article= ? ORDER BY date_comment DESC LIMIT 0, 5');
+        $req = $this->_db->prepare('SELECT id, pseudo, mail, content, date_comment, signaled FROM comments_articles WHERE id_article= ? ORDER BY date_comment DESC LIMIT 0, 5');
         $req->execute(array(
             $_GET['id']
         ));
@@ -69,7 +69,7 @@ class CommentsArticlesManager extends Manager
     {
         $list = [];
 
-        $req = $this->_db->prepare('SELECT id_article, pseudo, mail, content, date_comment, DATE_FORMAT (date_comment, "%d/%m/%Y à %Hh%imin%ss") AS date_creation_comment FROM comments_articles WHERE signaled = 1 ORDER BY date_comment DESC');
+        $req = $this->_db->prepare('SELECT id_article, pseudo, mail, content, date_comment FROM comments_articles WHERE signaled = 1 ORDER BY date_comment DESC');
         $req->execute();
 
         $req_join = $this->_db->prepare('SELECT * FROM articles, comments_articles WHERE articles.id=comments_articles.id_article AND signaled = 1 ORDER BY date_comment DESC');

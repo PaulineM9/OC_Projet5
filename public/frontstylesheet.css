@@ -597,7 +597,7 @@ footer {
     padding: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
-    margin-left: 50px;
+    margin-left: 27px;
 }
 .all_projects_published h3 {
     font-size: 0.7em;
@@ -608,6 +608,9 @@ footer {
 .all_projects_published h4 {
     width: 200px;
     margin-bottom: 10px;
+}
+.all_projects_published a {
+    width: 200px;
 }
 .all_projects_published a,
 .description_btn {
