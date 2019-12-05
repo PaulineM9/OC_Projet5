@@ -1,6 +1,4 @@
 <?php
-// namespace Oc\Projet_5\Models;
-// use \PDO;
 
 class UserManager extends Manager
 {

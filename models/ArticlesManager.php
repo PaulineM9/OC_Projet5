@@ -1,6 +1,5 @@
 <?php
-// namespace Oc\Projet_5\Models;
-// use \PDO;
+
 
 class ArticlesManager extends Manager
 {

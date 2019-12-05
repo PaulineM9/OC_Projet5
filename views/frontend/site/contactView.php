@@ -8,7 +8,7 @@
 
 <section class="contact_container">
     <section class="form_container">
-        <form class="contact_form" method="post" action="index.php?action=contact"> 
+        <form class="contact_form" id="contact_form" method="post" action="index.php?action=contact"> 
             <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required>
             <span class="error-message"></span><br/>
             <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname" required>
