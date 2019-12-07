@@ -54,7 +54,7 @@ $(function() {
         object = $(this).find("#object").val();
         message = $(this).find("#content").val();
 
-        $.post('http://wwww.projet-5.pauline-superweb/index.php?action=contact', {
+        $.post('http://www.projet-5.pauline-superweb.com/index.php?action=contact', {
             nom:nom,
             prenom:prenom,
             email:email,
