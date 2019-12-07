@@ -1,4 +1,8 @@
 <?php 
+namespace Oc\Projet_5\Models;
+
+use Exception;
+use \PDO;
 
 abstract class Manager 
 {

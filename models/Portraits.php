@@ -1,4 +1,5 @@
 <?php
+namespace Oc\Projet_5\Models;
 
 class Portraits
 {

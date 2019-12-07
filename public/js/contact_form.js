@@ -61,6 +61,7 @@ $(function() {
             object:object,
             message:message
         }, function(data) {
+            console.log("Hello bis");
             if (data.error=='Ok') {
                 // $('#contact_form').fadeOut('fast');
                 $('#msg').show();
