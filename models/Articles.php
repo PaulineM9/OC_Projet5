@@ -1,5 +1,6 @@
 <?php
 namespace Oc\Projet_5\Models;
+
 class Articles
 {
     private $_id,
