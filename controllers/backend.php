@@ -1,5 +1,4 @@
 <?php
-// namespace Oc\Projet_5\Controllers;
 
 // use \Oc\Projet_5\Models\Articles;
 // use \Oc\Projet_5\Models\ArticlesManager;
