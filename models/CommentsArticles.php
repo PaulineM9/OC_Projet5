@@ -1,5 +1,5 @@
 <?php
-namespace Oc\Projet_5\Models;
+namespace Models;
 
 class CommentsArticles
 {

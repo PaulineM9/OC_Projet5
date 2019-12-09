@@ -1,9 +1,9 @@
 <?php
-namespace Oc\Projet_5\Models;
+namespace Models;
 
-use \Oc\Projet_5\Models\Manager;
-use \Oc\Projet_5\Models\Portraits;
 use \PDO; 
+use Models\Manager;
+use Models\Portraits;
 
 class PortraitsManager extends Manager
 {

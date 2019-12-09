@@ -1,9 +1,9 @@
 <?php
-namespace Oc\Projet_5\Models;
+namespace Models;
 
-use \Oc\Projet_5\Models\Manager;
-use \Oc\Projet_5\Models\CommentsArticles;
 use \PDO;
+use Models\Manager;
+use Models\CommentsArticles;
 
 class CommentsArticlesManager extends Manager
 {

@@ -1,9 +1,9 @@
 <?php
-namespace Oc\Projet_5\Models;
+namespace Models;
 
-use \Oc\Projet_5\Models\Manager;
-use \Oc\Projet_5\Models\User;
 use \PDO;
+use Models\User;
+use Models\Manager;
 
 class UserManager extends Manager
 {
