@@ -1,8 +1,9 @@
 <?php
-// namespace Oc\Projet_5\Models;
+namespace Oc\Projet_5\Models;
 
-// use \Oc\Projet_5\Models\Manager;
-// use \PDO;
+use \Oc\Projet_5\Models\Manager;
+use \Oc\Projet_5\Models\Articles;
+use \PDO;
 
 class ArticlesManager extends Manager
 {

@@ -1,25 +1,38 @@
 <?php
-// namespace Oc\Projet_5;
+namespace Oc\Projet_5;
 
 session_start();
 
-// function autoload($class)
-// {
-//     $class = str_replace('\\', '/', $class);
-//     $class = str_replace(__NAMESPACE__, strtolower(__NAMESPACE__), $class);
-
-//     require $class . '.php'; 
-// }
-// spl_autoload_register('Oc\Projet_5\autoload');
+require("controllers/frontend.php");
+require("controllers/backend.php");
+// require("models/Manager.php");
+// require("models/Articles.php");
+// require("models/ArticlesManager.php");
+// require("models/CommentsArticles.php");
+// require("models/CommentsArticlesManager.php");
+// require("models/CommentsPortraits.php");
+// require("models/CommentsPortraitsManager.php");
+// require("models/Portraits.php");
+// require("models/PortraitsManager.php");
+// require("models/Projects.php");
+// require("models/ProjectsManager.php");
+// require("models/User.php");
+// require("models/UserManager.php");
 
 function autoLoad($class)
 {
-    require 'models/' . $class . '.php';
-}
-spl_autoload_register('autoLoad');
+    $class = str_replace('\\', '/', $class);
+    $class = str_replace(__NAMESPACE__, strtolower(__NAMESPACE__), $class);
 
-require("controllers/frontend.php");
-require("controllers/backend.php");
+    require $class . '.php'; 
+}
+spl_autoload_register('Oc\Projet_5\autoLoad');
+
+// function autoLoad($class)
+// {
+//     require 'models/' . $class . '.php';
+// }
+// spl_autoload_register('autoLoad');
 
 if (isset($_GET['action'])) {
 // FRONTEND
