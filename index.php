@@ -1,22 +1,22 @@
 <?php
-namespace Oc\Projet_5;
+// namespace Oc\Projet_5;
 
 session_start();
 
-function autoload($class)
-{
-    $class = str_replace('\\', '/', $class);
-    $class = str_replace(__NAMESPACE__, strtolower(__NAMESPACE__), $class);
-
-    require $class . '.php'; 
-}
-spl_autoload_register('Oc\Projet_5\autoload');
-
-// function autoLoad($class)
+// function autoload($class)
 // {
-//     require 'models/' . $class . '.php';
+//     $class = str_replace('\\', '/', $class);
+//     $class = str_replace(__NAMESPACE__, strtolower(__NAMESPACE__), $class);
+
+//     require $class . '.php'; 
 // }
-// spl_autoload_register('autoLoad');
+// spl_autoload_register('Oc\Projet_5\autoload');
+
+function autoLoad($class)
+{
+    require 'models/' . $class . '.php';
+}
+spl_autoload_register('autoLoad');
 
 require("controllers/frontend.php");
 require("controllers/backend.php");

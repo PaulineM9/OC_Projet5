@@ -45,7 +45,6 @@ $(function() {
     });
 
 // send messages with Ajax
-// $(document).ready(function() {
     $('#contact_form').submit(function() {
         console.log("hello");
         nom = $(this).find("#firstname").val();
@@ -54,7 +53,19 @@ $(function() {
         object = $(this).find("#object").val();
         message = $(this).find("#content").val();
 
-        $.post('http://www.projet-5.pauline-superweb.com/index.php?action=contact', {
+
+        var invocation = new XMLHttpRequest();
+        var url = 'http://www.projet-5.pauline-superweb.com/index.php?action=contact';
+        
+        function callOtherDomain() {
+            if(invocation) {    
+                invocation.open('GET', url, true);
+                invocation.onreadystatechange = handler;
+                invocation.send();
+            }
+        }
+
+        $.post(url, {
             nom:nom,
             prenom:prenom,
             email:email,
@@ -71,6 +82,4 @@ $(function() {
         },"json");
         return false;
     });
-// });
-
 });
