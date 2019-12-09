@@ -12,17 +12,17 @@
             <section class="comments_portrait">
                 <h3>COMMENTAIRES</h3>
                 <div class="comment_container">
+                    <div class="signal_message">
+                        <?php if(isset($_SESSION)) :
+                            include('views/flashMessages.php');
+                        endif; ?>  
+                    </div> 
                     <?php if (!empty($commentedPortrait)):
                         foreach ($commentedPortrait as $cle => $elements): ?>
                             <p>Publié le <?= $elements->getDateComment() ?> Par <?= $elements->getPseudo() ?> (<a href="index.php?action=portraits&id=<?= $portrait->getId() ?>&idComment=<?= $elements->getId() ?>&signaled" class="signal">Signaler</a>): </p><br/> 
                             <p class="comment_published"><?= $elements->getContent() ?><br />                        
                         <?php endforeach;                    
                     endif; ?> 
-                    <div class="signal_message">
-                        <?php if(isset($_SESSION)) :
-                            include('views/flashMessages.php');
-                        endif; ?>  
-                    </div> 
                 </div>
                 <hr>   
             </section>

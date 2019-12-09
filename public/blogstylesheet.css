@@ -317,6 +317,7 @@ hr {
 }
 .signal_message {
     color: red;
+    margin-bottom: 20px;
 }
 .error-message {
     display: inline;
