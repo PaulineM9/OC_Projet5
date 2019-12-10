@@ -12,7 +12,7 @@
              $i++; ?>
         <div class="all_projects_published"> 
             <h3><?= $project->getTitle() ?></h3>
-            <h4><?= $project->getImage() ?></h4>
+            <?= $project->getImage() ?>
             <a href="http://<?= $project->getLink() ?>" target="blank"><?= $project->getLink() ?></a>
             <button class="description_btn" data-btn="<?= $i ?>">Description</button>
             <div class="modal" data-modal="<?= $i ?>">

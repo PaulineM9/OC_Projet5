@@ -88,10 +88,10 @@
 			</div>
 			<div class="suivez-moi">
 				<h4>SUIVEZ-MOI</h4>
-				<a target="new" href=""><img class="facebook_icon" alt="icone-facebook" src="public/images/fb_bk.png" width="30px"></a>
-				<a target="new" href=""><img class="instagram_icon" alt="icone-instagram" src="public/images/insta_bk.png" width="30px"></a>
-				<a target="new" href=""><img class="linkedin_icon" alt="icone-linkedin" src="public/images/linkedin_bk.png" width="30px"></a>
-				<a target="new" href=""><img class="github_icon" alt="icone-github" src="public/images/github_bk.png" width="30px"></a>
+				<a target="new" href=""><img class="facebook_icon footer_icons" alt="icone-facebook" src="public/images/fb_bk.png"></a>
+				<a target="new" href=""><img class="instagram_icon footer_icons" alt="icone-instagram" src="public/images/insta_bk.png"></a>
+				<a target="new" href=""><img class="linkedin_icon footer_icons" alt="icone-linkedin" src="public/images/linkedin_bk.png"></a>
+				<a target="new" href=""><img class="github_icon footer_icons" alt="icone-github" src="public/images/github_bk.png"></a>
 			</div>
 		</div>
 		<div class="copyright_container">
@@ -100,8 +100,8 @@
 	</footer> 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="public/js/contact_form.js"></script>
-<script type="text/javascript" src="public/js/modal.js"></script>
+<script src="public/js/contact_form.js"></script>
+<script src="public/js/modal.js"></script>
 </body>
 
 

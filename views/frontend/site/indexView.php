@@ -2,7 +2,7 @@
 
 <section class="intro">
     <div class="intro_container">
-        <h1><img class="logo_intro_container" src="public/images/logo_super!.jpg"></h1>
+        <img alt="logo_super" class="logo_intro_container" src="public/images/logo_super!.jpg">
 
         <div class="intro_container_text">
             <h3>Création de sites web</h3>

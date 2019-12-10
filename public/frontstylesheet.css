@@ -136,6 +136,9 @@ footer {
     width: 40%;
     margin-left: 10%;
 }
+.footer_icons {
+    width: 30px;
+}
 .copyright_container {
     display: flex;
     margin: 0 auto;
@@ -606,7 +609,7 @@ footer {
     margin: 0 auto;
     margin-bottom: 10px;
 }
-.all_projects_published h4 {
+.all_projects_published img {
     width: 200px;
     margin-bottom: 10px;
 }
@@ -727,8 +730,10 @@ footer {
     margin: 0 auto;
     height: 30px;
 }
-#msg {
+#msg-ok,
+#msg-notok {
     display: none;
+    color: red;
 }
 .contact_infos_container h4 {
     font-family: 'Major Mono Display', cursive;
