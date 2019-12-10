@@ -730,10 +730,16 @@ footer {
     margin: 0 auto;
     height: 30px;
 }
-#msg-ok,
+/* #msg {
+    display: none;
+} */
+#msg-ok {
+    display: none;
+    color: goldenrod;
+}
 #msg-notok {
     display: none;
-    color: red;
+    color: coral;
 }
 .contact_infos_container h4 {
     font-family: 'Major Mono Display', cursive;
