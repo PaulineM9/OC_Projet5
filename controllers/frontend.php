@@ -94,16 +94,25 @@ function contact()
             $to = 'contact.super.web@gmail.com';
             $sujet = $object;
             $message = $content;
-            $headers = 'From ' . $nom . $prenom. $email;
+            $headers = 'From ' . $nom . $prenom . $email;
             mail($to, $sujet, $message, $headers);
-        }
-        echo json_encode($e);
-    } else {
-        ob_start();
-        include('views/frontend/site/contactView.php');
-        $content = ob_get_clean();
-        require("views/frontend/site/template.php");
-    }
+        } 
+        // echo json_encode($e);
+    } 
+
+    ob_start();
+    include('views/frontend/site/contactView.php');
+    $content = ob_get_clean();
+    require("views/frontend/site/template.php");
+
+        
+        // echo json_encode($e);
+    // } else {
+    //     ob_start();
+    //     include('views/frontend/site/contactView.php');
+    //     $content = ob_get_clean();
+    //     require("views/frontend/site/template.php");
+    // }
 
 }
 

@@ -62,6 +62,37 @@ $(function() {
         // });
     // });
   
+    // $('#contact_form').submit(function() {
+    //     nom = $(this).find("#firstname").val();
+    //     prenom = $(this).find("#lastname").val();
+    //     email = $(this).find("#email").val();
+    //     object = $(this).find("#object").val();
+    //     message = $(this).find("#content").val();
+
+    //     var url = 'http://www.projet-5.pauline-superweb.com/index.php?action=contact';
+        
+    //     $.post(url, {
+    //         nom:nom,
+    //         prenom:prenom,
+    //         email:email,
+    //         object:object,
+    //         message:message,
+    //         submit: true
+    //     }, function(data) {
+    //         data = JSON.parse(data);
+    //         if (data.error == 'Ok') {
+    //             console.log("hello ok");
+    //             $('#contact_form').fadeOut('fast');
+    //             $('#msg-ok').show();
+    //         } else {
+    //             console.log("Hello not ok");
+    //             $('#msg-notok').show();
+    //         }
+    //     });
+    //     return false;
+    // });
+
+    'use strict';
     $('#contact_form').submit(function() {
         nom = $(this).find("#firstname").val();
         prenom = $(this).find("#lastname").val();
@@ -69,26 +100,13 @@ $(function() {
         object = $(this).find("#object").val();
         message = $(this).find("#content").val();
 
-        var url = 'http://www.projet-5.pauline-superweb.com/index.php?action=contact';
-        
-        $.post(url, {
-            nom:nom,
-            prenom:prenom,
-            email:email,
-            object:object,
-            message:message,
-            submit: true
-        }, function(data) {
-            data = JSON.parse(data);
-            if (data.error == 'Ok') {
-                console.log("hello ok");
-                $('#contact_form').fadeOut('fast');
+        $.ajax({
+            type: "POST",
+            data: { nom:nom, prenom:prenom, email:email, object:object, content:content },
+            url: 'http://www.projet-5.pauline-superweb.com/index.php?action=contact',
+            success: function(data){
                 $('#msg-ok').show();
-            } else {
-                console.log("Hello not ok");
-                $('#msg-notok').show();
             }
-        });
-        return false;
+        })
     });
 });
