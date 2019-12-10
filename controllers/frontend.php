@@ -74,13 +74,14 @@ function contact()
             mail($to, $sujet, $msg);
         }
 
-    echo json_encode($e);
+        echo json_encode($e);
+    } else {
+        ob_start();
+        include('views/frontend/site/contactView.php');
+        $content = ob_get_clean();
+        require("views/frontend/site/template.php");
     }
 
-    ob_start();
-    include('views/frontend/site/contactView.php');
-    $content = ob_get_clean();
-    require("views/frontend/site/template.php");
 }
 
 function blog()
