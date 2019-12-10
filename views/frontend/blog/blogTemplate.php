@@ -12,8 +12,11 @@
     <link rel="icon" type="image/jpg" href="public/images/favicon_super!.jpg" /><!-- favicon -->
 
     <!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display|Pacifico|Tajawal&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet"> 
     
     <!-- Fontawesome Icones -->
     <script src="https://kit.fontawesome.com/504cd5157f.js"></script>

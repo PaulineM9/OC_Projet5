@@ -10,8 +10,12 @@
 	<link rel="icon" type="image/jpg" href="public/images/favicon_super!.jpg" /><!-- favicon -->
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display|Pacifico|Tajawal&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">  
+
 
 	<!-- Fontawesome Icones -->
 	<script src="https://kit.fontawesome.com/504cd5157f.js"></script>
@@ -48,7 +52,7 @@
 		a:hover {
 
 			text-decoration: none;
-			color: #128f8c;
+			color: #107370;
 		}
 	</style>
 </head>
@@ -99,7 +103,8 @@
 		</div>
 	</footer> 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 <script src="public/js/contact_form.js"></script>
 <script src="public/js/modal.js"></script>
 </body>

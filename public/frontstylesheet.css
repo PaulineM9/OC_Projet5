@@ -197,14 +197,14 @@ footer {
     margin-bottom: 20px;
     margin-left: 10%;
 }
-.services_container h2 {
+.services_container h3 {
     font-family: 'poiret one', cursive;
     font-weight: 700;
     font-size: 1.6em;
     margin: 0 auto;
     padding-bottom: 20px;
 }
-.services_container h3 {
+.services_container h4 {
     font-family: 'poiret one', cursive;
     font-weight: 700;
 }
@@ -230,7 +230,7 @@ footer {
     display: inline-block;
 }
 .services_page_link:hover {
-    color: #128f8c!important;
+    color: #107370!important;
 }
 
         /*----- PORTFOLIO -----*/
@@ -283,7 +283,7 @@ footer {
     display: inline-block;
 }
 .portfolio_page_link:hover {
-    color: #128f8c!important;
+    color: #107370!important;
 }
 
         /*----- ABOUT -----*/
@@ -300,7 +300,7 @@ footer {
     height: 200px;
     margin-bottom: 90px;
 }
-.about_container h2 {
+.about_container h3 {
     margin: 0 auto;
 }
 .about_container p {
@@ -323,7 +323,7 @@ footer {
     display: inline-block;
 }
 .about_page_link:hover {
-    color: #128f8c!important;
+    color: #107370!important;
 }
 
 /*----- SERVICES PAGE -----*/
@@ -555,7 +555,7 @@ footer {
 }
 .git a:hover,
 .linkedin a:hover {
-    color: #128f8c;
+    color: #107370;
 } 
 .linkedin p,
 .git p {
