@@ -46,36 +46,26 @@ $(function() {
 
 // send messages with Ajax
     $('#contact_form').submit(function() {
-        console.log("hello");
         nom = $(this).find("#firstname").val();
         prenom = $(this).find("#lastname").val();
         email = $(this).find("#email").val();
         object = $(this).find("#object").val();
         message = $(this).find("#content").val();
 
-
-        var invocation = new XMLHttpRequest();
-        var url = 'http://www.projet-5.pauline-superweb.com/index.php?action=contact';
-        
-        function callOtherDomain() {
-            if(invocation) {    
-                invocation.open('GET', url, true);
-                invocation.onreadystatechange = handler;
-                invocation.send();
-            }
-        }
+        var url =  'http://www.projet-5.pauline-superweb.com/index.php?action=contact';
 
         $.post(url, {
             nom:nom,
             prenom:prenom,
             email:email,
             object:object,
-            message:message
+            message:message,
+            submit:true
         }, function(data) {
-            console.log("Hello bis");
-            if (data.error == 'Ok') {
-                console.log("hello ok");
-                $('#msg-ok').show();
+            data = JSON.parse(data)
+            if (data.error=='Ok') {
+                $('#contact_form').fadeOut('fast');
+                $('#msg').show();
             } else {
                 console.log("hello not ok");
                 $('#msg-notok').show();
