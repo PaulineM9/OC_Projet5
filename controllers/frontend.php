@@ -53,6 +53,7 @@ function portfolio()
 
 function contact()
 {
+
     if (isset($_POST['submit'])) {
 
         $e = array();

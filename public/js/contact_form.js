@@ -55,7 +55,13 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            data: { nom:nom, prenom:prenom, email:email, object:object, content:content },
+            data: { 
+                nom:nom, 
+                prenom:prenom, 
+                email:email, 
+                object:object, 
+                content:content 
+            },
             url: 'http://www.projet-5.pauline-superweb.com/index.php?action=contact',
             success: function(data) {
                 $('#msg-ok').show();       
