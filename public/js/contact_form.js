@@ -47,6 +47,7 @@ $(function() {
 // send messages with Ajax
     'use strict';
     $('#contact_form').submit(function() {
+
         nom = $(this).find("#firstname").val();
         prenom = $(this).find("#lastname").val();
         email = $(this).find("#email").val();
@@ -64,10 +65,11 @@ $(function() {
             },
             url: 'http://www.projet-5.pauline-superweb.com/index.php?action=contact',
             success: function(data) {
-                $('#msg-ok').show();       
+                $("#contact_form").hide();
+                $('#msg-ok').fadeIn();  
             },
             error: function() {
-                $('#msg-notok').show();
+                $('#msg-notok').fadeIn();
             }
         })
     });
