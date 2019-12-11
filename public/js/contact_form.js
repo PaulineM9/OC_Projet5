@@ -45,53 +45,6 @@ $(function() {
     });
 
 // send messages with Ajax
-    // 'use strict';
-    
-    // $('#contact_form').submit(function (event) {
-        // Annule l'action par défaut (on ne veut pas que la page se recharge)
-        // event.preventDefault();
-        // Envoi de la requête XHR
-        // $.post($(this).attr('action'), $(this).serializeArray(), function (data) {
-        //     let $aside = $('#contact_form aside');
-        //     // Notifications
-        //     if (data.result) {
-        //         $aside.addClass('alert-success').text('Le message a bien été envoyé !').removeClass('d-none');
-        //     } else {
-        //         $aside.addClass('alert-danger').text('Erreur lors de l\'envoi du message !').removeClass('d-none');
-        //     }
-        // });
-    // });
-  
-    // $('#contact_form').submit(function() {
-    //     nom = $(this).find("#firstname").val();
-    //     prenom = $(this).find("#lastname").val();
-    //     email = $(this).find("#email").val();
-    //     object = $(this).find("#object").val();
-    //     message = $(this).find("#content").val();
-
-    //     var url = 'http://www.projet-5.pauline-superweb.com/index.php?action=contact';
-        
-    //     $.post(url, {
-    //         nom:nom,
-    //         prenom:prenom,
-    //         email:email,
-    //         object:object,
-    //         message:message,
-    //         submit: true
-    //     }, function(data) {
-    //         data = JSON.parse(data);
-    //         if (data.error == 'Ok') {
-    //             console.log("hello ok");
-    //             $('#contact_form').fadeOut('fast');
-    //             $('#msg-ok').show();
-    //         } else {
-    //             console.log("Hello not ok");
-    //             $('#msg-notok').show();
-    //         }
-    //     });
-    //     return false;
-    // });
-
     'use strict';
     $('#contact_form').submit(function() {
         nom = $(this).find("#firstname").val();
@@ -104,8 +57,11 @@ $(function() {
             type: "POST",
             data: { nom:nom, prenom:prenom, email:email, object:object, content:content },
             url: 'http://www.projet-5.pauline-superweb.com/index.php?action=contact',
-            success: function(data){
-                $('#msg-ok').show();
+            success: function(data) {
+                $('#msg-ok').show();       
+            },
+            error: function() {
+                $('#msg-notok').show();
             }
         })
     });

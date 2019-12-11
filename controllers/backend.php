@@ -201,11 +201,11 @@ function update_portrait()
 {
     $sessionConnect = sessionConnect();
 
-    // get article title and content 
+    // get portrait title and content 
     $portraitManager = new PortraitsManager(); 
     $portraits = $portraitManager->get($_GET['id']); 
 
-    // add changes on an article
+    // add changes on an portrait
     if (isset($_POST['title']) or isset($_POST['content'])) {
         $portraits = new Portraits([
             'id' => $_GET['id'],
@@ -324,6 +324,7 @@ function admin_profil()
         $acount = new UserManager();
         $newAcount = $acount->verifyUser();
         $_SESSION['flash']['danger'] = '';
+        $_SESSION['flash']['succes'] = '';
 
         if (strlen($passwordAdmin) < 6) {
             $validation = false;
@@ -352,8 +353,8 @@ function admin_profil()
             $profilAcount = new UserManager();
             $profilAcount->getChanges($profil);
 
-            $_SESSION['flash']['succes'] = $_SESSION['flash']['danger'] . "Vos informations personnelles ont bien été modifiées." . '<br/>';
-            $_SESSION['flash']['succes'] = $_SESSION['flash']['danger'] . 'Merci de vous reconnecter:' . '<a href="index.php? action=login" style="text-decoration: underline;">Nouvelle connexion</a>' . '<br/>';
+            $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . "Vos informations personnelles ont bien été modifiées." . '<br/>';
+            $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . 'Merci de vous reconnecter:' . '<a href="index.php? action=login" style="text-decoration: underline;">Nouvelle connexion</a>' . '<br/>';
             unset($_SESSION['user']);
             session_destroy();
         }

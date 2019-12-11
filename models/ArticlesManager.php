@@ -14,7 +14,7 @@ class ArticlesManager extends Manager
         $this->_db = $this->dbConnect();
     }
 
-    public function addArticle(Articles $articles) // créé un article et insère les informations en post / get dans la BDD
+    public function addArticle(Articles $articles) // create an article
     {
         $req = $this->_db->prepare('INSERT INTO articles (title, date_article, content) VALUES ( ?, NOW(), ?)');
         $req->execute([
@@ -23,18 +23,18 @@ class ArticlesManager extends Manager
         ]);
     }
 
-    public function get($id) // récupère les articles dans la BDD 
+    public function get($id) // get all articles in bdd
     {
         $req = $this->_db->prepare('SELECT * FROM articles WHERE id = ?');
         $req->execute([
             $id
         ]);
-        $articles = $req->fetch(); // récupère les données et les stocke dans la variable $articles sous forme de tableau clé / valeur qui récupère de la bdd
+        $articles = $req->fetch(); 
 
         return new Articles($articles);
     }
 
-    public function getList() // on créé une liste dans laquelle on récupère tous les articles pour les afficher
+    public function getList() // create a list for all articles
     {
         $list = [];
 

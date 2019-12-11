@@ -26,7 +26,7 @@
     <a class="modif_profil_link" href="index.php?action=admin_profil&id=<?= $_GET['id'] ?>&modif">Modifier mon profil ou mon mot de passe</a>
 <?php endif; ?>
     <?php if (isset($_GET['modif'])): ?>
-    <form class="sign_in_modif" action="index.php?action=admin_profil&id=<?= $_GET['id']?>&modif" method="post">
+    <form class="sign_in_modif" action="index.php?action=admin_profil&id=<?= $_GET['id'] ?>&modif" method="post">
         <input class="identifiant_admin" type="text" name="identifiant"  placeholder="Identifiant" id="identifiant" value="<?= $_SESSION['identifiant'] ?>"><br/>
         <input class="email_admin" type="email" name="email" placeholder="Votre email" id="email" value="<?= $_SESSION['email'] ?>"><br/>
         <input class="password_admin" type="password" name="password" placeholder="Nouveau mot de passe" id="password"><br/>

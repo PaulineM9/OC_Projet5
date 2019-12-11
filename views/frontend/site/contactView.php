@@ -9,8 +9,6 @@
 <section class="contact_container">
     <section class="form_container">
         <form class="contact_form" id="contact_form" method="post" action="index.php?action=contact"> 
-            <!-- <aside class="alert d-none">
-            </aside> -->
             <input class="firstname form" type="text" name="firstname" placeholder="Nom" id="firstname" required>
             <span class="error-message"></span><br/>
             <input class="lastname form" type="text" name="lastname" placeholder="Prénom" id="lastname" required>
@@ -23,7 +21,7 @@
             <span class="error-message"></span><br/>
             <input class="envoyer form" type="submit" name="submit" value="Envoyer" id="submit"><br/>
         </form>
-        <div id="msg-ok">Votre message a bien été envoyé.</div>
+        <div id="msg-ok">Merci. Votre message a bien été envoyé.</div>
         <div id="msg-notok">Merci de renseigner correctement tous les champs .</div>
 
     </section>

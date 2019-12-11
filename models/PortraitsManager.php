@@ -14,7 +14,7 @@ class PortraitsManager extends Manager
         $this->_db = $this->dbConnect();
     }
 
-    public function addPortrait(Portraits $portraits) // créé un portrait et insère les informations en post / get dans la BDD
+    public function addPortrait(Portraits $portraits) 
     {
         $req = $this->_db->prepare('INSERT INTO portraits (title, date_portrait, content) VALUES ( ?, NOW(), ?)');
         $req->execute([
@@ -23,18 +23,18 @@ class PortraitsManager extends Manager
         ]);
     }
 
-    public function get($id) // récupère les portraits dans la BDD 
+    public function get($id) 
     {
         $req = $this->_db->prepare('SELECT * FROM portraits WHERE id = ?');
         $req->execute([
             $id
         ]);
-        $portraits = $req->fetch(); // récupère les données et les stocke dans la variable $portraits sous forme de tableau clé / valeur qui récupère de la bdd
+        $portraits = $req->fetch(); 
 
         return new Portraits($portraits);
     }
 
-    public function getList() // on créé une liste dans laquelle on récupère tous les portraits pour les afficher
+    public function getList() 
     {
         $list = [];
 
@@ -47,7 +47,7 @@ class PortraitsManager extends Manager
         return $list;
     }
 
-    public function getLastOnePortrait() // show only the last one portrait into the blog front page 
+    public function getLastOnePortrait() 
     {
         $list = [];
 
@@ -60,7 +60,7 @@ class PortraitsManager extends Manager
         return $list;
     }
 
-    public function getLastTreePortraits() // show only the 3 lasts ones portraits into the blog front page 
+    public function getLastTreePortraits() 
     {
         $list = [];
 
@@ -73,7 +73,7 @@ class PortraitsManager extends Manager
         return $list;
     }
 
-    public function getAllPortraits() // show portraits into a list of archives
+    public function getAllPortraits() 
     {
         $list = [];
 
@@ -86,7 +86,7 @@ class PortraitsManager extends Manager
         return $list;
     }
 
-    public function getCount() // permet de compter les portraits écrits
+    public function getCount() 
     {
         $req = $this->_db->prepare('SELECT COUNT(id) as nbPort FROM portraits');
         $req->execute();
@@ -95,7 +95,7 @@ class PortraitsManager extends Manager
         return $data['nbPort'];
     }
 
-    public function getPortraitForPagination($perPage2, $perPage) // permet l'affichage en pagination
+    public function getPortraitForPagination($perPage2, $perPage) 
     {
         $list = [];
 

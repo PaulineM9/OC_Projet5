@@ -53,35 +53,12 @@ function portfolio()
 
 function contact()
 {
-    // if (isset($_POST['submit'])) {
-
-    //     $to = 'contact.super.web@gmail.com';
-    //     $object = $_POST['object'];
-    //     $message = $_POST['content'];
-    //     $headers = 'From: ' . $_POST['email'] . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-       
-    //     // On envoie le mail et on stocke le résultat
-    //     $result = mail($to, $object, $message, $headers);
-
-    //     // Le contenu sera renvoyé au format JSON
-    //     header('Content-Type: application/json');
-    //     echo json_encode([
-    //         'result' => $result
-    //     ]);
-    // }
-
-    // ob_start();
-    // include('views/frontend/site/contactView.php');
-    // $content = ob_get_clean();
-    // require("views/frontend/site/template.php");
-
-
     if (isset($_POST['submit'])) {
 
         $e = array();
         $e['error'] = "Formulaire non valide";
 
-        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['object']) && isset($_POST['content']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $e['email_invalide'] = "email_invalide";
         } else {
             $e['error'] = 'Ok';
@@ -94,26 +71,15 @@ function contact()
             $to = 'contact.super.web@gmail.com';
             $sujet = $object;
             $message = $content;
-            $headers = 'From ' . $nom . $prenom . $email;
+            $headers = 'From ' . $nom . ' ' . $prenom . ' ' . $email;
             mail($to, $sujet, $message, $headers);
         } 
-        // echo json_encode($e);
     } 
 
     ob_start();
     include('views/frontend/site/contactView.php');
     $content = ob_get_clean();
     require("views/frontend/site/template.php");
-
-        
-        // echo json_encode($e);
-    // } else {
-    //     ob_start();
-    //     include('views/frontend/site/contactView.php');
-    //     $content = ob_get_clean();
-    //     require("views/frontend/site/template.php");
-    // }
-
 }
 
 function blog()
