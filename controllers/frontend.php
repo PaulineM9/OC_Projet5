@@ -66,11 +66,11 @@ function contact()
             $prenom = $_POST['lastname'];
             $email = $_POST['email'];
             $object = $_POST['object'];
-            $content = $_POST['content'];
+            $message = $_POST['content'];
 
             $to = 'contact.super.web@gmail.com';
             $sujet = $object;
-            $message = $content;
+            $message = $message;
             $headers = 'From ' . $nom . ' ' . $prenom . ' ' . $email;
             mail($to, $sujet, $message, $headers);
         } 
