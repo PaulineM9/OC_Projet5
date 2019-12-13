@@ -589,7 +589,7 @@ footer {
     font-size: 2em;
     font-weight: 700;
     color: black;
-    height: auto;
+    height: 800px;
     margin: 20px auto;
 }
 .all_projects_published {
@@ -689,7 +689,7 @@ footer {
     display: flex;
     flex-direction: row;
     margin-top: 90px;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 }
 .form_container {
     display: flex;
