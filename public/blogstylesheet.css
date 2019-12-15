@@ -295,7 +295,7 @@ hr {
 .comments_form textarea {
     font-family: 'poiret one', cursive;
     margin-bottom: 5px;
-    width: 610px;
+    width: 630px;
 }
 #submit {
     width: 100px;
@@ -513,6 +513,10 @@ hr {
     .comments_form {
         width: 100%;
     }
+    .comments_form input, 
+    .comments_form textarea {
+        width: 232px;
+    }
     .all_portraits_list, 
     .all_articles_list {
         margin-left: 10px;
@@ -544,6 +548,10 @@ hr {
     }
     .comments_form {
         width: 100%;
+    }
+    .comments_form input, 
+    .comments_form textarea {
+        width: 288px;
     }
     .all_portraits_list, 
     .all_articles_list {
@@ -577,6 +585,10 @@ hr {
     .comments_form {
         width: 100%;
     }
+    .comments_form input, 
+    .comments_form textarea {
+        width: 338px;
+    }
     .all_portraits_list, 
     .all_articles_list {
         margin-left: 10px;
@@ -609,6 +621,10 @@ hr {
     .comments_form {
         width: 100%;
     }
+    .comments_form input, 
+    .comments_form textarea {
+        width: 680px;
+    }
     .all_portraits_list, 
     .all_articles_list {
         margin-left: 10px;
@@ -617,5 +633,8 @@ hr {
     }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-   
+    .comments_form input, 
+    .comments_form textarea {
+        width: 426px;
+    }
 }

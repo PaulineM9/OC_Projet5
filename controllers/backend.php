@@ -309,61 +309,65 @@ function admin_comments()
 function admin_profil()
 {
     $sessionConnect = sessionConnect();
+ 
+    if (!isset($_GET['id']) || $_GET['id'] <1) {
+        require("views/errorPage.php");
+    } else {
+        // get new inscription for administration
+        if (isset($_POST['submit'])) {
+            $validation = true;
 
-    // get new inscription for administration
-    if (isset($_POST['submit'])) {
-        $validation = true;
+            $identifiantAdmin = htmlspecialchars($_POST['identifiant']);
+            $emailAdmin = htmlspecialchars($_POST['email']);
+            $passwordAdmin = htmlspecialchars($_POST['password']);
+            $checkPassword = htmlspecialchars($_POST['check_password']);
+            $regex_letters = preg_match("#[A-Z]{1,}#", $passwordAdmin);
+            $regex_specials = preg_match("#[\#\.\!\$\(\)\[\]\{\}\?\+\=\*\|]{1}#", $passwordAdmin);
 
-        $identifiantAdmin = htmlspecialchars($_POST['identifiant']);
-        $emailAdmin = htmlspecialchars($_POST['email']);
-        $passwordAdmin = htmlspecialchars($_POST['password']);
-        $checkPassword = htmlspecialchars($_POST['check_password']);
-        $regex_letters = preg_match("#[A-Z]{1,}#", $passwordAdmin);
-        $regex_specials = preg_match("#[\#\.\!\$\(\)\[\]\{\}\?\+\=\*\|]{1}#", $passwordAdmin);
+            $acount = new UserManager();
+            $newAcount = $acount->verifyUser();
+            $_SESSION['flash']['danger'] = '';
+            $_SESSION['flash']['succes'] = '';
 
-        $acount = new UserManager();
-        $newAcount = $acount->verifyUser();
-        $_SESSION['flash']['danger'] = '';
-        $_SESSION['flash']['succes'] = '';
+            if (strlen($passwordAdmin) < 6) {
+                $validation = false;
+                $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Mot de passe < 6 caractères." . '<br/>';
+            }
 
-        if (strlen($passwordAdmin) < 6) {
-            $validation = false;
-            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Mot de passe < 6 caractères." . '<br/>';
+            if ($passwordAdmin != $checkPassword) {
+                $validation = false;
+                $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Les mots de passe ne correspondent pas." . '<br/>';
+            }
+
+            if (!$regex_specials or !$regex_letters) {
+                $validation = false;
+                $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Votre mot de passe doit contenir au moins 6 caractères, 1 majuscule et 1 caractère spécial." . '<br/>';
+            }
+
+            if ($validation) {
+                $pass_hache = password_hash($passwordAdmin, PASSWORD_DEFAULT);
+
+                $profil = new User([
+                    'id' => $_GET['id'],
+                    'identifiant'  => $_POST['identifiant'],
+                    'email' => $_POST['email'],
+                    'password' => $pass_hache
+                ]);
+                $profilAcount = new UserManager();
+                $profilAcount->getChanges($profil);
+
+                $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . "Vos informations personnelles ont bien été modifiées." . '<br/>';
+                $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . 'Merci de vous reconnecter:' . '<a href="index.php? action=login" style="text-decoration: underline;">Nouvelle connexion</a>' . '<br/>';
+                unset($_SESSION['user']);
+                session_destroy();
+            }
         }
 
-        if ($passwordAdmin != $checkPassword) {
-            $validation = false;
-            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Les mots de passe ne correspondent pas." . '<br/>';
-        }
-
-        if (!$regex_specials or !$regex_letters) {
-            $validation = false;
-            $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Votre mot de passe doit contenir au moins 6 caractères, 1 majuscule et 1 caractère spécial." . '<br/>';
-        }
-
-        if ($validation) {
-            $pass_hache = password_hash($passwordAdmin, PASSWORD_DEFAULT);
-
-            $profil = new User([
-                'id' => $_GET['id'],
-                'identifiant'  => $_POST['identifiant'],
-                'email' => $_POST['email'],
-                'password' => $pass_hache
-            ]);
-            $profilAcount = new UserManager();
-            $profilAcount->getChanges($profil);
-
-            $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . "Vos informations personnelles ont bien été modifiées." . '<br/>';
-            $_SESSION['flash']['succes'] = $_SESSION['flash']['succes'] . 'Merci de vous reconnecter:' . '<a href="index.php? action=login" style="text-decoration: underline;">Nouvelle connexion</a>' . '<br/>';
-            unset($_SESSION['user']);
-            session_destroy();
-        }
+        ob_start();
+        include('views/backend/profilView.php');
+        $content = ob_get_clean();
+        require("views/backend/template.php");
     }
-
-    ob_start();
-    include('views/backend/profilView.php');
-    $content = ob_get_clean();
-    require("views/backend/template.php");
 }
 
 function logout()

@@ -589,7 +589,8 @@ footer {
     font-size: 2em;
     font-weight: 700;
     color: black;
-    height: 800px;
+    min-height: 800px;
+    height: auto;
     margin: 20px auto;
 }
 .all_projects_published {
@@ -816,6 +817,26 @@ footer {
     margin-top: 30px;
 }
 
+/*----- ERROR PAGE  -----*/
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    font-family: 'poiret one', 'cursive';
+    font-size: 1.3em;
+    height: auto;
+    margin-top: 280px;
+    margin-bottom: 280px;
+}
+.errorPageMsg,
+.goBackAccueil {
+    margin: 0 auto;
+}
+.goBackAccueil {
+    text-decoration: underline;
+    color: coral;
+    margin-top: 20px;
+}
+
 
 /*--------------------------*/
 /*----- MEDIA QUERIES ------*/
@@ -961,7 +982,7 @@ footer {
         width: 80%;
     }
     .services_page_link {
-        margin-left: 15%;
+        margin-left: 18%;
     }
     .portfolio_container {
         width: 90%;
@@ -1083,7 +1104,18 @@ footer {
     }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-    
+    .services_page_link {
+        margin-left: 70%;
+    }
+    .portfolio_page_link {
+        margin-left: 32%;
+    }
+    .about_page_link {
+        margin-left: 73%;
+        margin-top: 4px;
+        padding-top: 15px;
+        padding-bottom: 12px;
+    }
 }
 
 /*------ SERVICES PAGE -----*/
@@ -1230,6 +1262,9 @@ footer {
     .links {
         width: 29%;
     }
+    .portfolio_container {
+        margin-left: 17px;
+    }
 }
 @media all and (min-width: 375px) and (max-width: 424px){
     .experience_container {
@@ -1247,6 +1282,9 @@ footer {
     }
     .links {
         width: 29%;
+    }
+    .portfolio_container {
+        margin-left: 18px;
     }
 }
 @media all and (min-width: 425px) and (max-width: 767px){
@@ -1266,12 +1304,19 @@ footer {
     .links {
         width: 29%;
     }
+    .portfolio_container {
+        margin-left: 20px;
+    }
 }
 @media all and (min-width: 768px) and (max-width: 1023px){
-
+    .portfolio_container {
+        margin-left: 40px;
+    }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px){
-
+    .portfolio_container {
+        margin-left: 200px;
+    }
 }
 
 /*------ PORTFOLIOVIEW PAGE -----*/

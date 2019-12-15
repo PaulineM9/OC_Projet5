@@ -138,14 +138,16 @@ function blogArticles()
         $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Le commentaire a été signalé à l'administrateur.";
     }
 
-    ob_start();
-    include('views/frontend/blog/articlesView.php');
-    $content = ob_get_clean();
-    require("views/frontend/blog/blogTemplate.php");
-}
+ob_start();
+include('views/frontend/blog/articlesView.php');
+$content = ob_get_clean();
+require("views/frontend/blog/blogTemplate.php");
+
+}   
 
 function blogPortraits()
 {
+    
     $portraitManager = new PortraitsManager();
     $allPortraits = $portraitManager->getAllPortraits();
     $portrait = $portraitManager->get($_GET['id']);
