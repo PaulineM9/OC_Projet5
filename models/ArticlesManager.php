@@ -1,6 +1,7 @@
 <?php
 namespace Models;
 
+use Exception;
 use \PDO;
 use Models\Manager;
 use Models\Articles;
@@ -31,7 +32,11 @@ class ArticlesManager extends Manager
         ]);
         $articles = $req->fetch(); 
 
-        return new Articles($articles);
+        if ($articles == false) {
+            throw new Exception();
+        } else {
+            return new Articles($articles);
+        }
     }
 
     public function getList() // create a list for all articles

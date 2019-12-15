@@ -104,7 +104,11 @@ function blogArticles()
 {
     $articleManager = new ArticlesManager();
     $allArticles = $articleManager->getAllArticles();
-    $article = $articleManager->get($_GET['id']); 
+    $article = $articleManager->get($_GET['id']);
+
+    if ($article == false) {
+        throw new Exception();
+    }
 
     // create a comment about an article
     if (isset($_POST['pseudo']) && isset($_POST['mail']) && isset($_POST['content']) && !empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['content'])) 
@@ -134,20 +138,19 @@ function blogArticles()
             'id' => $_GET['idComment']
         ]);
         $commentArticle->getSignal($comments);
-    
+
         $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Le commentaire a été signalé à l'administrateur.";
     }
 
-ob_start();
-include('views/frontend/blog/articlesView.php');
-$content = ob_get_clean();
-require("views/frontend/blog/blogTemplate.php");
+    ob_start();
+    include('views/frontend/blog/articlesView.php');
+    $content = ob_get_clean();
+    require("views/frontend/blog/blogTemplate.php");
 
-}   
+    }  
 
 function blogPortraits()
 {
-    
     $portraitManager = new PortraitsManager();
     $allPortraits = $portraitManager->getAllPortraits();
     $portrait = $portraitManager->get($_GET['id']);
@@ -184,11 +187,12 @@ function blogPortraits()
         $_SESSION['flash']['danger'] = $_SESSION['flash']['danger'] . "Le commentaire a été signalé à l'administrateur.";
     }
 
-    ob_start();
-    include('views/frontend/blog/portraitsView.php');
-    $content = ob_get_clean();
-    require("views/frontend/blog/blogTemplate.php");
+ob_start();
+include('views/frontend/blog/portraitsView.php');
+$content = ob_get_clean();
+require("views/frontend/blog/blogTemplate.php");
 }
+
 
 function login()
 {

@@ -2,6 +2,7 @@
 namespace Models;
 
 use \PDO; 
+use Exception;
 use Models\Manager;
 use Models\Portraits;
 
@@ -31,7 +32,11 @@ class PortraitsManager extends Manager
         ]);
         $portraits = $req->fetch(); 
 
-        return new Portraits($portraits);
+        if ($portraits == false) {
+            throw new Exception();
+        } else {
+            return new Portraits($portraits);
+        }
     }
 
     public function getList() 

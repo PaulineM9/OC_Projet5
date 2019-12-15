@@ -1,6 +1,7 @@
 <?php
 namespace Models;
 
+use Exception;
 use \PDO;
 use Models\User;
 use Models\Manager;
@@ -19,8 +20,12 @@ class UserManager extends Manager
         $req = $this->_db->prepare('SELECT * FROM user');
         $req->execute();
         $data = $req->fetch();
-    
-        return $data;
+
+        if ($data == false) {
+            throw new Exception();
+        } else {
+            return $data;
+        }
     }
 
     public function getInscription(User $profil)
