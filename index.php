@@ -91,7 +91,7 @@ try {
             throw new Exception();
         }
     } else {
-        throw new Exception();
+        home();
     }
 }
 catch (Exception $e) {
